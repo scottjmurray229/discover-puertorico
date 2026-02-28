@@ -1,0 +1,821 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Travel Tips', url: '/practical/' },
+];
+
+const pageTitle = 'Puerto Rico Travel Tips — Visa, Money, Transport & Safety Guide 2026';
+const pageDescription = 'Everything you need before your first (or tenth) trip to Puerto Rico — visa rules, ATMs, SIM cards, transport, safety, packing, and cultural etiquette.';
+
+interface TopicSection {
+  id: string;
+  icon: string;
+  title: string;
+  gradient: string;
+  video?: string;
+  items: { label: string; text: string }[];
+}
+
+const topics: TopicSection[] = [
+  {
+    id: 'visa',
+    icon: '🛂',
+    title: 'Entry Requirements',
+    gradient: 'linear-gradient(135deg, #1565C0 0%, #42A5F5 100%)',
+    video: '/videos/pillar/practical-break-visa.mp4',
+    items: [
+      { label: 'No Passport Needed (US Citizens)', text: 'Puerto Rico is a US territory — if you\'re a US citizen, you do NOT need a passport. A valid state-issued driver\'s license or ID is all you need. You\'re flying domestically. No customs, no immigration, no visa. It\'s the easiest "international-feeling" trip you\'ll ever take.' },
+      { label: 'International Visitors', text: 'Non-US citizens need the same visa requirements as entering the mainland United States. If you need a visa for the US, you need one for Puerto Rico. If you have an ESTA (Visa Waiver Program), it works here too. Entry is through US Customs and Border Protection.' },
+      { label: 'Documents to Carry', text: 'US citizens: bring a government-issued photo ID (driver\'s license works). Non-US citizens: bring your passport and any applicable visa documents. We always carry a photocopy of our IDs on our phones as backup. If you\'re renting a car, you\'ll need your driver\'s license.' },
+      { label: 'What to Know Before You Go', text: 'Puerto Rico uses US currency (dollars), US postal service, and US cell networks. Your health insurance may or may not cover you here — check your plan before traveling. Medicare works in Puerto Rico. It\'s America, but with a Caribbean vibe, incredible food, and a culture all its own.' },
+      { label: 'REAL ID Reminder', text: 'Starting May 2025, you\'ll need a REAL ID-compliant driver\'s license (or passport) to board domestic flights — including flights to Puerto Rico. Check that your license has the star symbol in the upper corner. If it doesn\'t, get it updated before your trip or bring your passport as backup.' },
+    ],
+  },
+  {
+    id: 'money',
+    icon: '💰',
+    title: 'Money & Payments',
+    gradient: 'linear-gradient(135deg, #2E7D32 0%, #66BB6A 100%)',
+    video: '/videos/pillar/practical-break-money.mp4',
+    items: [
+      { label: 'US Dollar — No Exchange Needed', text: 'Puerto Rico uses the US Dollar ($). No currency exchange, no conversion math, no ATM foreign transaction fees. Your US bank cards, credit cards, and cash all work exactly like they do on the mainland. This is one of the biggest advantages of visiting Puerto Rico over other Caribbean destinations.' },
+      { label: 'ATM Strategy', text: 'ATMs are widely available from Banco Popular, FirstBankPR, and Oriental Bank. Since you\'re using US dollars, your normal bank card works with standard domestic fees. Use bank-affiliated ATMs to avoid surcharges. I use a Fidelity Cash Management card and never pay a fee anywhere.' },
+      { label: 'Credit Cards Are Widely Accepted', text: 'Visa and Mastercard are accepted almost everywhere — hotels, restaurants, gas stations, supermarkets. Even smaller restaurants in tourist areas take cards. Amex is less common. Cash is handy for roadside food stands (chinchorros), small kiosks, and tipping.' },
+      { label: 'Digital Payments', text: 'Venmo, Cash App, and Zelle all work in Puerto Rico since it\'s a US territory. Apple Pay and Google Pay are accepted at most chain stores and many restaurants. ATH Movil is Puerto Rico\'s local payment app — widely used by locals and some businesses.' },
+      { label: 'Daily Budget Ranges', text: 'Budget: $80–120/day — guesthouses, local food, públicos. Mid-range: $150–250/day — hotels, restaurants, rental car, tours. Luxury: $350+/day — resorts, fine dining, private charters. Puerto Rico is pricier than mainland Latin America but cheaper than most Caribbean islands.' },
+      { label: 'Tipping', text: 'Tipping culture is the same as the US mainland — 18–20% at restaurants, $1–2 per drink at bars, $5–10/day for hotel housekeeping, 15–20% for tour guides. Service workers rely on tips just like on the mainland.' },
+    ],
+  },
+  {
+    id: 'transport',
+    icon: '✈️',
+    title: 'Getting Around',
+    gradient: 'linear-gradient(135deg, #E65100 0%, #FF9800 100%)',
+    video: '/videos/pillar/practical-break-transport.mp4',
+    items: [
+      { label: 'Flights to Puerto Rico', text: 'Major airlines fly direct from the US mainland: JetBlue, Spirit, United, Southwest, Delta, American, and Frontier. JetBlue has the most routes. Flights from NYC/Fort Lauderdale start around $100–200 round trip if you book early. Luis Munoz Marin International Airport (SJU) in San Juan is the main hub.' },
+      { label: 'Rental Cars', text: 'A rental car is the best way to explore Puerto Rico beyond San Juan. All major US rental companies operate here (Hertz, Avis, Enterprise, Budget). Rates start around $35–60/day. Your US driver\'s license works. Roads are generally good but mountain roads can be narrow and winding. GPS is essential — addresses can be confusing.' },
+      { label: 'Públicos (Shared Vans)', text: 'Públicos are shared passenger vans that run fixed routes between towns. They\'re cheap ($2–10 depending on distance) but have no set schedules — they leave when full. Terminals are usually near the town plaza. Great for budget travelers with flexible schedules.' },
+      { label: 'Tren Urbano & AMA Buses', text: 'San Juan has the Tren Urbano metro system (one line, 16 stations) connecting Bayamon to Santurce — $1.50 per ride. AMA buses cover the metro San Juan area for $0.75. Both are useful for getting around the city without a car, but coverage is limited.' },
+      { label: 'Uber & Lyft', text: 'Uber works well in the San Juan metro area, Ponce, and other larger cities. Lyft has limited coverage. Outside major cities, ride-hailing options thin out quickly — another reason a rental car is worth it for exploring the island.' },
+      { label: 'Ferries to Vieques & Culebra', text: 'The Puerto Rico ferry system runs from Ceiba (east coast) to the islands of Vieques and Culebra. Tickets are $2 for residents, $2.50 for tourists. Book online at porferry.com well in advance — ferries sell out fast, especially on weekends and holidays. The ride is about 30 minutes to Vieques, 45 minutes to Culebra.' },
+    ],
+  },
+  {
+    id: 'connectivity',
+    icon: '📱',
+    title: 'Phones & Connectivity',
+    gradient: 'linear-gradient(135deg, #6A1B9A 0%, #AB47BC 100%)',
+    video: '/videos/pillar/practical-break-connectivity.mp4',
+    items: [
+      { label: 'Your US Phone Plan Works', text: 'Puerto Rico is a US territory — AT&T, T-Mobile, Verizon, and all US carriers treat it as domestic. No roaming charges, no international plan needed. Your calls, texts, and data work exactly like they do at home. This is a huge perk over other Caribbean destinations.' },
+      { label: 'Claro & Local Carriers', text: 'Claro (owned by America Movil) and Liberty Mobile are the main local carriers. T-Mobile and AT&T also have strong local networks. If you\'re an international visitor without a US plan, you can pick up a prepaid SIM at the airport or any electronics store.' },
+      { label: 'Data Coverage', text: '4G/LTE coverage is strong across most of the island, especially in cities and along major highways. 5G is available in parts of San Juan. Mountain areas and remote beaches may have spotty coverage. El Yunque rainforest has limited signal in deeper sections.' },
+      { label: 'WiFi Availability', text: 'Hotels, Airbnbs, restaurants, and cafes almost universally offer free WiFi. Speeds vary — San Juan hotels typically get 20–50 Mbps, while rural guesthouses may be slower. Starbucks, McDonald\'s, and Plaza las Americas mall all have reliable free WiFi if you need a backup.' },
+    ],
+  },
+  {
+    id: 'safety',
+    icon: '🏥',
+    title: 'Safety & Health',
+    gradient: 'linear-gradient(135deg, #C62828 0%, #EF5350 100%)',
+    video: '/videos/pillar/practical-break-safety.mp4',
+    items: [
+      { label: 'Travel Insurance', text: 'Still a good idea even in a US territory. Your mainland health insurance may not cover you in Puerto Rico (check your plan). Medicare does work here. We use <a href="https://safetywing.com/?referenceID=24858745&utm_source=24858745&utm_medium=Ambassador" target="_blank" rel="noopener sponsored">SafetyWing</a> for all our trips — it covers trip interruption, lost luggage, and medical expenses. Worth the peace of mind.' },
+      { label: 'Tap Water', text: 'Tap water in Puerto Rico meets EPA standards and is safe to drink in urban areas and most hotels. Some rural areas and mountain towns may have older infrastructure — when in doubt, grab bottled water. Bottled water is $1–2 at any convenience store.' },
+      { label: 'Hospitals & Clinics', text: 'Puerto Rico has modern hospitals and medical facilities. Major hospitals include Centro Medico in San Juan (the island\'s largest), Hospital HIMA San Pablo (multiple locations), and Auxilio Mutuo. Emergency care is available island-wide. Dial 911 for emergencies — same as the US mainland.' },
+      { label: 'Mosquitoes & Zika', text: 'Mosquitoes are present year-round in tropical Puerto Rico. Use DEET-based repellent, especially at dawn and dusk. Zika and dengue cases have occurred historically — check CDC travel advisories before your trip. Air-conditioned rooms with screens are your best defense.' },
+      { label: 'Hurricane Season', text: 'June through November is hurricane season, with August–October being peak months. Puerto Rico sits in the hurricane belt — Hurricane Maria (2017) and Hurricane Fiona (2022) were devastating reminders. Monitor NOAA and local weather before and during your trip. Most hotels have hurricane protocols. Travel insurance with trip interruption coverage is essential during these months.' },
+      { label: 'General Safety', text: 'Use the same common sense you\'d use in any US city. Avoid isolated areas at night, don\'t leave valuables visible in rental cars, and be aware of your surroundings in crowded tourist areas. Beach safety: watch for rip currents, especially on the north coast. La Parguera and bioluminescent bays require guided tours at night — always go with licensed operators.' },
+    ],
+  },
+  {
+    id: 'packing',
+    icon: '🎒',
+    title: 'Packing Essentials',
+    gradient: 'linear-gradient(135deg, #78350F 0%, #D97706 100%)',
+    video: '/videos/pillar/practical-break-packing.mp4',
+    items: [
+      { label: 'Reef-Safe Sunscreen', text: 'Puerto Rico is working to protect its coral reefs. Bring reef-safe sunscreen (no oxybenzone or octinoxate). We use <a href="https://www.amazon.com/dp/B07PKWHT$1?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">this reef-safe SPF 50+</a>; the tropical sun here is strong and you will burn faster than you expect.' },
+      { label: 'Mosquito Repellent', text: 'Bring <a href="https://www.amazon.com/dp/B004H89KFC?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">DEET-based repellent</a> (40% concentration or higher). Local stores carry OFF! and other brands, but having your own ensures you\'re covered from day one. Essential for evenings, hikes through El Yunque, and island excursions to Vieques and Culebra.' },
+      { label: 'Waterproof Dry Bag', text: 'An <a href="https://www.amazon.com/dp/B0BKQGXYQ9?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Osprey ultralight dry bag</a> (10–20L) protects your phone, wallet, and camera during boat trips to Vieques/Culebra, kayaking in bioluminescent bays, and sudden tropical downpours. You\'ll use this constantly.' },
+      { label: 'Power & Plugs — Same as Home', text: 'Puerto Rico uses the same Type A and Type B plugs and 120V electricity as the US mainland. No adapters, no converters, no worries. Bring a <a href="https://www.amazon.com/dp/B0CXD881LN?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">travel power strip with USB ports</a> — hotel rooms in older buildings sometimes have limited outlets.' },
+      { label: 'Rain Jacket or Poncho', text: 'Tropical showers can hit any time, especially in the mountains and rainforest areas. A <a href="https://www.amazon.com/dp/B0CL$8QXKW?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">lightweight packable rain jacket</a> is essential for El Yunque hikes and boat trips. Rainy season (Aug–Nov) means daily afternoon showers are almost guaranteed.' },
+      { label: 'Footwear', text: 'Skip the flip-flops for walking Old San Juan — the cobblestone streets (adoquines) are beautiful but uneven. <a href="https://www.amazon.com/dp/B097755RHH?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Closed-toe Crocs</a> or <a href="https://www.amazon.com/dp/B002Y25BSS?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Keen Newport sandals</a> are what we wear daily. For El Yunque trails and waterfall hikes, bring proper hiking shoes with grip. Water shoes for rocky beaches and snorkeling.' },
+      { label: 'First Aid & Hydration', text: 'Pack a <a href="https://www.amazon.com/dp/B0DB794BKQ?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">small first aid kit</a> — bandages, antiseptic, Imodium, and pain relievers. Bring <a href="https://www.amazon.com/dp/B0DK26RFG4?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">electrolyte tablets</a> for dehydration — the tropical heat and humidity will drain you faster than you think. Walgreens and CVS are everywhere on the island if you forget anything.' },
+      { label: 'Clothing & Sun Protection', text: 'Pack lightweight <a href="https://www.amazon.com/dp/B0DQC8QTPL?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">UV-rated rashguards</a> and a <a href="https://www.amazon.com/dp/B08DYF$4PN?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">cooling UV hat</a> — the tropical sun is intense and you\'ll be outside all day. <a href="https://www.amazon.com/dp/B0B1LHFCBP?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Cargo shorts</a> are a must. My cargo short system is battle-tested: loose bills in front right pocket, larger bills in right cargo pocket, one credit card in front left, phone in left cargo.' },
+      { label: 'Swim & Snorkel Gear', text: 'Bring 2–3 <a href="https://www.amazon.com/dp/B0CLQRX346?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">swim trunks with pockets</a> so they can dry between days. Grab a <a href="https://www.amazon.com/dp/B0DZXJPX6X?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">water wallet</a> for cash and your room key, and keep your phone dry in a <a href="https://www.amazon.com/dp/B079HV3TC9?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">waterproof phone pouch</a>. Bring your own mask and snorkel — rental gear at most places is scratched and leaks. We use the <a href="https://www.amazon.com/dp/B001P$12QI?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Cressi Big Eyes Evolution mask</a> and <a href="https://www.amazon.com/dp/B007MAKHUO?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Cressi Supernova dry snorkel</a>. Pack <a href="https://www.amazon.com/dp/B0DSG9CH7W?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">water shoes</a> for snorkeling and rocky beaches.' },
+      { label: 'Light Layers for Mountains', text: 'If you\'re heading to the central mountains (Jayuya, Adjuntas, Barranquitas), bring a <a href="https://www.amazon.com/dp/B0CHMSD8S2?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">light hoodie or pullover</a>. Elevations above 2,000 feet can drop into the upper 60s°F at night — refreshing compared to the coast but cool enough for a layer. Bring a <a href="https://www.amazon.com/dp/B079X4S4DQ?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Cabeau travel pillow</a> for the flight if you\'re coming from the West Coast.' },
+      { label: 'Packing & Day Bag', text: 'Use <a href="https://www.amazon.com/dp/B014VBI5MS?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">packing cubes</a> to organize your bag — one for clean clothes, one for dirty, one for swim gear. For daily exploring, a <a href="https://www.amazon.com/dp/B0DKTBMFZJ?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">crossbody sling bag</a> keeps your essentials accessible and secure — phone, cash, sunscreen, and water bottle all within reach without a bulky backpack.' },
+    ],
+  },
+  {
+    id: 'culture',
+    icon: '🇵🇷',
+    title: 'Language & Cultural Etiquette',
+    gradient: 'linear-gradient(135deg, #0D7377 0%, #14B8A6 100%)',
+    video: '/videos/pillar/practical-break-culture.mp4',
+    items: [
+      { label: 'Basic Spanish Phrases', text: '"Gracias" (thank you), "Buenos dias" (good morning), "¿Cuanto cuesta?" (how much?), "¿Donde esta...?" (where is...?), "Cerveza" (beer), "Agua" (water), "Bano" (bathroom), "La cuenta, por favor" (the check, please). Even a few Spanish words earn massive goodwill with locals.' },
+      { label: '¡Wepa! & Boricua Pride', text: 'Puerto Ricans are called Boricuas, and they\'re fiercely proud of their island. "¡Wepa!" is the go-to exclamation for excitement, surprise, or celebration — you\'ll hear it everywhere. "¿Qué es la que hay?" is casual slang for "What\'s up?" Embrace the energy and you\'ll fit right in.' },
+      { label: 'Tipping Norms', text: 'Same as the US mainland: 18–20% at sit-down restaurants, $1–2 per drink at bars, 15–20% for tour guides and drivers. Hotel housekeeping: $3–5/day. Puerto Rico\'s minimum wage is lower than most US states, so tips make a real difference for service workers.' },
+      { label: 'Church & Historical Sites', text: 'Cover shoulders and knees when visiting churches — Puerto Rico is predominantly Catholic with stunning historical churches across the island. San Juan Cathedral (built 1521) and Porta Coeli in San German are must-visits. Be respectful during services.' },
+      { label: 'Friendly Culture', text: 'Puerto Ricans are famously warm and welcoming. Don\'t be surprised if locals strike up conversations, offer recommendations, or invite you to share a meal. Personal space is smaller than on the mainland — cheek kisses as greetings are common. Accepting hospitality (even briefly) builds genuine connections.' },
+      { label: 'Language Situation', text: 'Spanish and English are both official languages. Most Puerto Ricans speak Spanish as their primary language, with English widely understood in tourist areas, hotels, and businesses. Government services are available in both languages. Menus often have English translations. Learning basic Spanish shows respect and enhances your experience.' },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="prac-hero">
+    <video class="prac-hero-video" autoplay muted loop playsinline preload="metadata">
+      <source src="/videos/pillar/practical-hero.mp4" type="video/mp4" />
+    </video>
+    <div class="prac-hero-gradient"></div>
+    <div class="prac-hero-noise"></div>
+    <div class="prac-hero-content">
+      <h1 class="prac-hero-title">Puerto Rico Travel Essentials</h1>
+      <p class="prac-hero-subtitle">Visa rules, ATM strategy, transport cheat sheets, SIM cards, safety tips, packing lists, and the cultural etiquette that turns a good trip into a great one.</p>
+      <div class="prac-hero-meta">
+        <div class="prac-hero-meta-item">
+          <span class="prac-hero-meta-label">Topics</span>
+          <span class="prac-hero-meta-value">7</span>
+        </div>
+        <div class="prac-hero-meta-item">
+          <span class="prac-hero-meta-label">Updated</span>
+          <span class="prac-hero-meta-value">Feb 2026</span>
+        </div>
+        <div class="prac-hero-meta-item">
+          <span class="prac-hero-meta-label">Trips</span>
+          <span class="prac-hero-meta-value">25+</span>
+        </div>
+      </div>
+    </div>
+    <div class="prac-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="prac-personal reveal">
+    <div class="container-content">
+      <blockquote class="prac-personal-quote">
+        <p>I've made every mistake in this guide at least once — from underestimating the sun in Rincon to missing the last ferry to Culebra. After multiple trips across the island, I've figured out the practical side of Puerto Rico travel so you don't have to learn the hard way. This is the cheat sheet I wish someone had handed me before my first trip.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Quick Nav -->
+  <section class="prac-quicknav reveal">
+    <div class="container-content">
+      <div class="prac-quicknav-grid">
+        {topics.map((t) => (
+          <a href={`#${t.id}`} class="prac-quicknav-chip">
+            <span class="prac-quicknav-icon">{t.icon}</span>
+            <span class="prac-quicknav-label">{t.title.split(' ').slice(0, 2).join(' ')}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic Sections -->
+  {topics.map((topic) => (
+    <section class="prac-topic reveal" id={topic.id}>
+      <div class="container-content">
+        <div class="prac-topic-header" style={`background: ${topic.gradient};`}>
+          {topic.video && (
+            <video class="prac-topic-video" autoplay muted loop playsinline preload="none">
+              <source src={topic.video} type="video/mp4" />
+            </video>
+          )}
+          <div class="prac-topic-header-inner">
+            <span class="prac-topic-icon">{topic.icon}</span>
+            <h2 class="prac-topic-title">{topic.title}</h2>
+            <span class="prac-topic-count">{topic.items.length} tips</span>
+          </div>
+        </div>
+
+        <div class="prac-tip-grid">
+          {topic.items.map((item) => (
+            <div class="prac-tip-card">
+              <h3 class="prac-tip-label">{item.label}</h3>
+              <p class="prac-tip-text" set:html={item.text} />
+            </div>
+          ))}
+        </div>
+
+        {topic.id === 'transport' && (
+          <div class="prac-transport-widget">
+            <h3 class="prac-transport-widget-title">Search Routes & Book Transport</h3>
+            <p class="prac-transport-widget-desc">Compare ferries, buses, and flights between Puerto Rico destinations.</p>
+            <div class="prac-transport-widget-inner">
+              <script src="//cdn0.trainbusferry.com/tools/form/en/?id=15062413&domain=12go.asia" data-one2go="15062413" data-color="blue" data-language="en" data-width="250" data-height="320" data-border="1" data-radius="8" data-caption="Find Transport in Puerto Rico" data-sub_id="discoverpr" data-domain="12go.asia"></script>
+            </div>
+            <div class="prac-transport-widget-powered">Powered by <a href="https://12go.asia/?z=15062413&sub_id=discoverpr" target="_blank" rel="noopener sponsored">12Go Asia</a></div>
+          </div>
+        )}
+      </div>
+    </section>
+  ))}
+
+  <!-- Affiliate Disclosure -->
+  <div class="container-content reveal" style="padding-bottom: 0;">
+    <p class="prac-affiliate-disclosure">Some links on this page are affiliate links — we earn a small commission if you purchase through them, at no extra cost to you. We only recommend gear we personally use on our Puerto Rico trips. <a href="/legal/affiliate-disclosure/">Full disclosure</a>.</p>
+  </div>
+
+  <!-- Bottom CTA -->
+  <section class="prac-cta-section reveal">
+    <div class="container-content">
+      <div class="prac-cta-card">
+        <h2 class="prac-cta-heading">Plan Your Puerto Rico Trip</h2>
+        <p class="prac-cta-text">Tell our AI planner your dates, budget, and interests — it builds a custom day-by-day itinerary with flights, hotels, and activities.</p>
+        <a href="/plan/" class="prac-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={[
+    { question: "Do I need a passport to visit Puerto Rico?", answer: "If you're a US citizen, NO — Puerto Rico is a US territory. A valid state-issued driver's license or ID is all you need. You're on a domestic flight. Non-US citizens need the same documents required to enter the United States (passport, visa or ESTA as applicable)." },
+    { question: "Is Puerto Rico safe for tourists?", answer: "Puerto Rico is generally safe for tourists, especially in popular areas like Old San Juan, Condado, Rincon, and Vieques. Use the same common sense you'd use in any US city: avoid isolated areas at night, don't leave valuables visible in your rental car, and be aware of your surroundings. The tourism areas are well-policed and welcoming." },
+    { question: "How much money should I bring to Puerto Rico?", answer: "Puerto Rico uses US dollars — no currency exchange needed. Budget travelers: $80-120/day for guesthouses, local food, and públicos. Mid-range: $150-250/day for hotels, restaurants, rental car, and tours. Luxury: $350+/day for resorts, fine dining, and private experiences. Credit cards are widely accepted; carry some cash for roadside food stands and small vendors." },
+    { question: "Can I use my credit card in Puerto Rico?", answer: "Yes — credit and debit cards are widely accepted across Puerto Rico. Visa and Mastercard work almost everywhere. Amex is accepted at most hotels and larger restaurants. Keep some cash for chinchorros (roadside food kiosks), small vendors, and tipping. Venmo, Cash App, Zelle, and Apple Pay also work since it's a US territory." },
+    { question: "What is the best way to get around Puerto Rico?", answer: "Rent a car — it's the best way to explore beyond San Juan. All major US rental companies operate here. In San Juan, Uber works well and the Tren Urbano metro covers some routes. Públicos (shared vans) connect towns on a budget. Ferries run from Ceiba to Vieques and Culebra — book well in advance as they sell out fast." },
+    { question: "Does my US phone plan work in Puerto Rico?", answer: "Yes — all major US carriers (AT&T, T-Mobile, Verizon) treat Puerto Rico as domestic. No roaming charges, no international plan needed. Your calls, texts, and data work normally. This is one of Puerto Rico's biggest advantages over other Caribbean destinations. 4G/LTE coverage is strong across most of the island." },
+  ]} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Get Our Free Puerto Rico Travel Essentials Guide"
+      description="A printable PDF covering everything in this guide — plus offline maps, emergency contacts, and a packing checklist."
+      bullets={[
+        'Entry requirements checklist for US citizens and international visitors',
+        'Daily budget planner by travel style with real prices in USD',
+        'Printable Spanish phrase card for restaurants and transport',
+        'Packing checklist with beach, rainforest, and mountain variants',
+      ]}
+      guideTag="pillar-practical"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="prac-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="prac-crosslinks-heading">Explore More</h3>
+      <div class="prac-crosslinks-grid">
+        <a href="/destinations/" class="prac-crosslink-card">
+          <span class="prac-crosslink-icon">&#127754;</span>
+          <span class="prac-crosslink-label">Snorkeling Guide</span>
+          <span class="prac-crosslink-desc">14 destinations ranked by what you'll see in the water</span>
+        </a>
+        <a href="/festivals/" class="prac-crosslink-card">
+          <span class="prac-crosslink-icon">&#127914;</span>
+          <span class="prac-crosslink-label">Festival Calendar</span>
+          <span class="prac-crosslink-desc">32 festivals across 29 destinations, month by month</span>
+        </a>
+        <a href="/cuisine/" class="prac-crosslink-card">
+          <span class="prac-crosslink-icon">&#127860;</span>
+          <span class="prac-crosslink-label">Food & Cuisine</span>
+          <span class="prac-crosslink-desc">35 dishes by region with where to find the best version</span>
+        </a>
+        <a href="/history/" class="prac-crosslink-card">
+          <span class="prac-crosslink-icon">&#127963;</span>
+          <span class="prac-crosslink-label">WWII Heritage</span>
+          <span class="prac-crosslink-desc">The sites, stories, and memorials across the islands</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<!-- Scroll Reveal Observer -->
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  /* ================================================================
+     HERO — Practical travel gradient (no video)
+     ================================================================ */
+  .prac-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem var(--space-6) 60px;
+    overflow: hidden;
+  }
+
+  .prac-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .prac-hero-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%);
+  }
+
+  .prac-hero-noise {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .prac-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 720px;
+  }
+
+  .prac-hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: var(--weight-bold);
+    color: #fff;
+    line-height: 1.1;
+    margin: 0 0 var(--space-3);
+  }
+
+  .prac-hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0 0 var(--space-5);
+    max-width: 580px;
+  }
+
+  .prac-hero-meta {
+    display: flex;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+
+  .prac-hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .prac-hero-meta-label {
+    font-size: 0.65rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .prac-hero-meta-value {
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+    color: #fff;
+  }
+
+  .prac-scroll-hint {
+    position: absolute;
+    bottom: 16px;
+    right: var(--space-6);
+    z-index: 3;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    animation: pracBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes pracBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ================================================================
+     PERSONAL INTRO
+     ================================================================ */
+  .prac-personal {
+    padding-block: var(--space-8);
+  }
+
+  .prac-personal-quote {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-8);
+    border-left: 4px solid var(--color-ocean-teal);
+    background: var(--color-sky);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .prac-personal-quote p {
+    font-size: var(--text-body);
+    color: var(--color-heading);
+    line-height: var(--leading-body);
+    font-style: italic;
+    margin-bottom: var(--space-3);
+  }
+
+  .prac-personal-quote cite {
+    font-size: var(--text-caption);
+    color: var(--color-ocean-teal);
+    font-weight: var(--weight-semibold);
+    font-style: normal;
+  }
+
+  /* ================================================================
+     QUICK NAV — Jump-to chips
+     ================================================================ */
+  .prac-quicknav {
+    padding: 0 0 var(--space-6);
+  }
+
+  .prac-quicknav-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .prac-quicknav-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-slate);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+
+  .prac-quicknav-chip:hover {
+    background: var(--color-sky);
+    color: var(--color-ocean-teal);
+    transform: translateY(-2px);
+  }
+
+  .prac-quicknav-icon {
+    font-size: 1rem;
+  }
+
+  .prac-quicknav-label {
+    white-space: nowrap;
+  }
+
+  /* ================================================================
+     TOPIC SECTION
+     ================================================================ */
+  .prac-topic {
+    padding: var(--space-4) 0 var(--space-6);
+    scroll-margin-top: 80px;
+  }
+
+  .prac-topic-header {
+    position: relative;
+    border-radius: 20px;
+    padding: var(--space-5) var(--space-6);
+    margin-bottom: var(--space-5);
+    overflow: hidden;
+  }
+
+  .prac-topic-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.35;
+  }
+
+  .prac-topic-header-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .prac-topic-icon {
+    font-size: 1.6rem;
+  }
+
+  .prac-topic-title {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: var(--weight-bold);
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .prac-topic-count {
+    font-size: 0.7rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ================================================================
+     TIP CARDS
+     ================================================================ */
+  .prac-tip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 768px) {
+    .prac-tip-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .prac-tip-card {
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    padding: var(--space-5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .prac-tip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .prac-tip-label {
+    font-size: 0.95rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    margin: 0 0 var(--space-2);
+    line-height: 1.3;
+  }
+
+  .prac-tip-text {
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .prac-tip-text :global(a) {
+    color: var(--color-ocean-teal);
+    font-weight: var(--weight-semibold);
+    text-decoration: underline;
+    text-decoration-color: rgba(13, 115, 119, 0.3);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  .prac-tip-text :global(a:hover) {
+    text-decoration-color: var(--color-ocean-teal);
+  }
+
+  /* ================================================================
+     12GO TRANSPORT WIDGET
+     ================================================================ */
+  .prac-transport-widget {
+    text-align: center;
+    margin-top: var(--space-6);
+    padding: var(--space-6);
+    background: var(--color-sky);
+    border-radius: 16px;
+  }
+
+  .prac-transport-widget-title {
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    margin: 0 0 var(--space-1);
+  }
+
+  .prac-transport-widget-desc {
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    margin: 0 0 var(--space-4);
+  }
+
+  .prac-transport-widget-inner {
+    display: inline-block;
+    max-width: 282px;
+  }
+
+  .prac-transport-widget-powered {
+    font-size: 0.7rem;
+    color: var(--color-slate);
+    margin-top: var(--space-2);
+  }
+
+  .prac-transport-widget-powered a {
+    color: var(--color-ocean-teal);
+    text-decoration: underline;
+  }
+
+  /* ================================================================
+     AFFILIATE DISCLOSURE
+     ================================================================ */
+  .prac-affiliate-disclosure {
+    font-size: 0.75rem;
+    color: var(--color-slate);
+    line-height: 1.5;
+    text-align: center;
+    padding: var(--space-4) var(--space-6);
+    background: var(--color-sky);
+    border-radius: 10px;
+    margin-bottom: var(--space-4);
+  }
+
+  .prac-affiliate-disclosure a {
+    color: var(--color-ocean-teal);
+    text-decoration: underline;
+  }
+
+  /* ================================================================
+     BOTTOM CTA
+     ================================================================ */
+  .prac-cta-section {
+    padding: var(--space-6) 0 var(--space-8);
+  }
+
+  .prac-cta-card {
+    background: linear-gradient(135deg, var(--color-deep-night) 0%, #2D3748 100%);
+    border-radius: 20px;
+    padding: var(--space-8) var(--space-6);
+    text-align: center;
+    color: #fff;
+  }
+
+  .prac-cta-heading {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: var(--weight-bold);
+    margin: 0 0 var(--space-3);
+    color: #fff;
+  }
+
+  .prac-cta-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 520px;
+    margin: 0 auto var(--space-5);
+    line-height: 1.6;
+  }
+
+  .prac-cta-button {
+    display: inline-block;
+    background: var(--color-warm-coral);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: var(--weight-semibold);
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .prac-cta-button:hover {
+    background: #d4553b;
+    transform: translateY(-2px);
+  }
+
+  /* ================================================================
+     CROSS-LINKS
+     ================================================================ */
+  .prac-crosslinks {
+    padding: 0 0 var(--space-10);
+  }
+
+  .prac-crosslinks-heading {
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    text-align: center;
+    margin: 0 0 var(--space-4);
+  }
+
+  .prac-crosslinks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .prac-crosslinks-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .prac-crosslinks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .prac-crosslink-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-5) var(--space-4);
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .prac-crosslink-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .prac-crosslink-icon {
+    font-size: 1.8rem;
+  }
+
+  .prac-crosslink-label {
+    font-size: 0.95rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+  }
+
+  .prac-crosslink-desc {
+    font-size: 0.78rem;
+    color: var(--color-slate);
+    line-height: 1.4;
+  }
+
+  /* ================================================================
+     RESPONSIVE
+     ================================================================ */
+  @media (max-width: 640px) {
+    .prac-hero {
+      min-height: 50vh;
+      padding: 0 var(--space-4) 40px;
+    }
+
+    .prac-hero-meta {
+      gap: var(--space-4);
+    }
+
+    .prac-scroll-hint {
+      display: none;
+    }
+
+    .prac-topic-header {
+      padding: var(--space-4) var(--space-4);
+    }
+  }
+</style>

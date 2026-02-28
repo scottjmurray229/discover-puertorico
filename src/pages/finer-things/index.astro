@@ -1,0 +1,885 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'The Finer Things', url: '/finer-things/' },
+];
+
+const pageTitle = 'The Finer Things — Puerto Rico Luxury Resorts, Fine Dining & Premium Experiences 2026';
+const pageDescription = 'St. Regis Bahia Beach, Dorado Beach Ritz-Carlton, Old San Juan fine dining, private bioluminescent bay tours, luxury catamarans, and championship golf.';
+
+interface TopicSection {
+  id: string;
+  icon: string;
+  title: string;
+  gradient: string;
+  items: { label: string; text: string; link?: string }[];
+}
+
+const topics: TopicSection[] = [
+  {
+    id: 'luxury-resorts',
+    icon: '🏖',
+    title: 'Luxury Resorts',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #D4A574 100%)',
+    items: [
+      { label: 'St. Regis Bahia Beach', text: 'The crown jewel of Puerto Rico luxury, set on 483 acres between El Yunque rainforest and the Atlantic Ocean in Rio Grande. Rooms from $800/night, suites from $1,500. Every room has a private balcony with either ocean or rainforest views. The beach is pristine and never crowded — it\'s a private 2-mile stretch. Butler service is standard. The Iridium Spa uses local botanicals from El Yunque. The Robert Trent Jones Jr. golf course (green fees $250–350 for non-guests) is one of the best in the Caribbean. This is where you go when you want to disappear into paradise without leaving US soil.' },
+      { label: 'Dorado Beach, a Ritz-Carlton Reserve', text: 'One of only five Ritz-Carlton Reserve properties in the world, on 1,400 acres of former Rockefeller estate in Dorado, 30 minutes west of San Juan. Rooms from $1,200/night — these are freestanding hacienda-style residences with plunge pools. The Spa Botanico ($295–495 per treatment) is an outdoor sanctuary with tree house treatment rooms, a waterfall garden, and a pineapple meditation space. Two championship golf courses by Robert Trent Jones Sr. This place redefines what a resort can be. No detail is overlooked.' },
+      { label: 'Condado Vanderbilt Hotel', link: '/destinations/condado/', text: 'Art Deco grandeur in the heart of Condado, the luxury strip of San Juan. Originally built in 1919, meticulously restored with modern amenities. Rooms from $450/night, ocean-view suites from $800. The infinity pool overlooks the Atlantic. <strong>1919 Restaurant</strong> is the hotel\'s fine dining anchor — elevated Puerto Rican cuisine with a tasting menu ($165 per person). Walking distance to Condado Beach and the boutique shopping along Ashford Avenue.' },
+      { label: 'Royal Isabela', text: 'A cliffside retreat on the northwest coast near Isabela, built into the dramatic limestone karst landscape. Just 20 casitas, each with ocean views and private plunge pools. Rooms from $600/night. The Links golf course (designed by Stanley and Charles Thompson, green fees $175) runs along the cliff edge — it\'s one of the most scenic courses in the world. The restaurant sources from the on-site organic farm. No TVs in the rooms — this place is about disconnecting. A 2-hour drive from San Juan, but worth every minute.' },
+      { label: 'O:LV Fifty Five Hotel', link: '/destinations/condado/', text: 'The boutique luxury option in Condado — 35 rooms, adults-only, design-forward. Rooms from $350/night. The rooftop pool and bar has one of the best sunset views in San Juan. Minimalist aesthetic, attentive service, and a quieter alternative to the larger resorts. Walking distance to everything in Condado. This is where design-conscious travelers stay when they want luxury without the sprawl of a mega-resort.' },
+    ],
+  },
+  {
+    id: 'fine-dining',
+    icon: '🍽',
+    title: 'Fine Dining',
+    gradient: 'linear-gradient(135deg, #78350F 0%, #D4A574 100%)',
+    items: [
+      { label: 'Marmalade', link: '/destinations/san-juan/', text: 'The most celebrated fine dining restaurant in Old San Juan, set in a beautifully restored colonial building on Calle Fortaleza. Chef Peter Schintler\'s tasting menu ($125 per person, wine pairing $75) blends French technique with Caribbean ingredients — think plantain ravioli with truffle, local lobster with coconut foam. The wine list is exceptional for the island. Reservations essential, especially Thursday through Saturday. Dress code is smart casual. This is the restaurant that put Puerto Rico on the fine dining map.' },
+      { label: '1919 at Condado Vanderbilt', link: '/destinations/condado/', text: 'Named for the year the hotel opened, this restaurant delivers elevated Puerto Rican cuisine in a stunning beachfront setting. Chef Juan Jose Cuevas (a Michelin-trained alum) creates dishes that honor island traditions with modern technique. Tasting menu $165 per person, a la carte entrees $45–65. The mofongo with foie gras is legendary. Floor-to-ceiling ocean views make dinner here feel like a special occasion even on a Tuesday.' },
+      { label: 'Cocina Abierta', link: '/destinations/condado/', text: 'The neighborhood favorite in Condado for creative, globally-influenced small plates. Chef Martin Louzao rotates the menu based on what\'s fresh and inspiring. Small plates $16–32, larger dishes $28–45. The vibe is energetic and social — this is where San Juan\'s food-savvy locals eat. No reservations for parties under 6, so arrive early (before 7pm) or prepare to wait. The rum cocktail program is one of the best on the island. Casual dress, serious food.' },
+      { label: 'Santaella', link: '/destinations/san-juan/', text: 'Chef Jose Santaella\'s flagship in La Placita de Santurce, the restaurant that helped transform this neighborhood into San Juan\'s dining epicenter. Modern Puerto Rican cuisine with a farm-to-table ethos — Santaella owns his own farm outside San Juan. Entrees $28–48. The bar program leans heavily on local rum and tropical ingredients. Thursday and Saturday nights, La Placita comes alive with street music and bar-hopping — have dinner at Santaella and then join the party outside.' },
+      { label: 'Vianda', link: '/destinations/san-juan/', text: 'New-wave Puerto Rican cuisine in Santurce by chef Francis Guzman. The ever-changing menu celebrates local ingredients with technique and restraint — this isn\'t fusion, it\'s Puerto Rican food evolved. Small plates $14–28, entrees $32–48. The space is intimate and modern. Vianda has quickly become one of the most talked-about restaurants on the island. Reservations recommended, especially on weekends.' },
+    ],
+  },
+  {
+    id: 'premium-experiences',
+    icon: '✨',
+    title: 'Premium Experiences',
+    gradient: 'linear-gradient(135deg, #4C1D95 0%, #E8654A 100%)',
+    items: [
+      { label: 'Private Bioluminescent Bay Tour', link: '/destinations/bioluminescent-bays/', text: 'The public kayak tours at Mosquito Bay in Vieques and Laguna Grande in Fajardo are incredible — but a private tour is a different level. Private kayak or electric boat tours ($150–250 per person for groups of 2–6) offer a guide to yourself, flexible timing, and access to the best viewing spots without a crowd. The bioluminescence is caused by dinoflagellates — microorganisms that glow electric blue when disturbed. New moon nights are brightest. Book through a certified operator (bay access is regulated). This is one of the most magical natural phenomena on earth, and Puerto Rico has three of the world\'s five bio bays.' },
+      { label: 'Luxury Catamaran to Culebra', link: '/destinations/culebra/', text: 'Culebra\'s Flamenco Beach is regularly ranked among the world\'s best beaches, and the luxury way to get there is by private or semi-private catamaran from Fajardo. Full-day charters ($1,500–3,000 for up to 12 guests) include snorkeling at pristine reefs, a gourmet lunch prepared on board, open bar, and beach time at Flamenco. Semi-private options ($150–250 per person) offer the same route with a small group. The sail through the passage between mainland Puerto Rico and Culebra is stunning — turquoise water, scattered cays, and often dolphins.' },
+      { label: 'Helicopter Tours', text: 'See the island from above on a helicopter tour departing from Isla Grande Airport in San Juan. Tours range from a 15-minute San Juan coast flight ($200 per person) to a full-island circuit covering El Yunque, the bioluminescent bays, and the western coastline ($500–800 per person for 60–90 minutes). Sunset flights over Old San Juan ($350 per person) are the sweet spot — the golden light on the colonial buildings and fort walls is extraordinary. <strong>Island Helicopters PR</strong> and <strong>Caribbean Buzz</strong> are the most reputable operators.' },
+      { label: 'Casa Bacardi Premium Tasting', text: 'Everyone does the basic Casa Bacardi tour in Catano (free, includes 2 drinks) — and it\'s worth doing. But the premium experiences are where it gets interesting. The <strong>Rum Artisan Experience</strong> ($85 per person) includes a private tour of the production facility, a barrel room visit, and a guided tasting of reserve rums not available for purchase. The <strong>Mixology Class</strong> ($75 per person) teaches you to make 3 cocktails with a professional bartender. Both require advance booking and run with small groups (6–12 people). The reserve rums alone are worth the premium.' },
+      { label: 'Private Surfing Lessons in Rincon', link: '/destinations/rincon/', text: 'Rincon is the surf capital of the Caribbean, and private lessons ($100–150 per person per hour) with a local instructor are the best way to experience it — whether you\'re a beginner or looking to improve. November through March brings the big winter swells that attract pro surfers, but summer offers gentler waves perfect for learning. After your lesson, the sunset from Steps Beach or Domes Beach is one of the best in Puerto Rico. Several operators also offer stand-up paddleboard tours along the coastline for a mellower experience ($75–100 per person).' },
+    ],
+  },
+  {
+    id: 'rooftop-cocktails',
+    icon: '🍸',
+    title: 'Rooftop Bars & Cocktails',
+    gradient: 'linear-gradient(135deg, #9D174D 0%, #FB923C 100%)',
+    items: [
+      { label: 'La Concha Renaissance - Perla', link: '/destinations/condado/', text: 'The seashell-shaped Perla restaurant at La Concha sits right on the Condado beachfront with a design that\'s as impressive as the cocktails. Craft cocktails $16–22. The indoor space has a sculptural, almost space-age feel, while the terrace puts your feet in the sand. Sunday brunch here ($45–65 per person) is a Condado institution. Come for sunset drinks and stay for dinner — the seafood is excellent.' },
+      { label: 'La Factoria', link: '/destinations/san-juan/', text: 'The most famous cocktail bar in Puerto Rico, and one of the best in the world — it\'s been on the World\'s 50 Best Bars list. Hidden behind an unmarked door on Calle San Sebastian in Old San Juan. Multiple rooms unfold as you walk deeper — a front bar, a dance floor, a jazz room, a back bar. Cocktails $14–18, all made with precision using local ingredients. No reservations, first-come-first-served. Thursday through Saturday gets packed after 10pm. Go early for cocktails, stay late for the music.' },
+      { label: 'Lote 23', link: '/destinations/san-juan/', text: 'Not a rooftop bar but a food park in Santurce that\'s become ground zero for San Juan\'s culinary and cocktail scene. A collection of food stalls and bars in a converted parking lot, string lights overhead, live music on weekends. Individual drinks $8–14. The vibe is relaxed and social — this is where San Juan goes on a Wednesday night. <strong>Barra del Fondo</strong> serves excellent craft cocktails, <strong>La Cubanita</strong> makes great sandwiches, and the energy is infectious. Open-air, casual dress, no pretension.' },
+      { label: 'The Cannon Club', link: '/destinations/san-juan/', text: 'A speakeasy-style bar inside the walls of Old San Juan, overlooking the ocean near Castillo San Cristobal. Craft cocktails $14–20 in an intimate, candlelit setting with exposed stone walls that date back centuries. The rum-based cocktails are the stars — the bartenders know Puerto Rican rum better than anyone. Small plates available. This is the kind of bar where you settle in for the evening and lose track of time. Reservations recommended on weekends.' },
+      { label: 'Jungle Bird at The St. Regis', text: 'The poolside bar at the St. Regis Bahia Beach serves cocktails that rival any standalone bar in San Juan, but with the added bonus of a rainforest backdrop and ocean breeze. Cocktails $18–25. Named after the classic tiki cocktail, the menu leans tropical with local rum and fresh fruit. Even if you\'re not a hotel guest, the bar is accessible for dinner reservations at the resort\'s restaurants. This is the most beautiful setting for a cocktail on the island — no contest.' },
+    ],
+  },
+  {
+    id: 'golf-spa',
+    icon: '⛳',
+    title: 'Championship Golf & Spa',
+    gradient: 'linear-gradient(135deg, #065F46 0%, #14B8A6 100%)',
+    items: [
+      { label: 'TPC Dorado Beach', text: 'Two championship courses — the East and the Sugarcane — designed by Robert Trent Jones Sr. and renovated by his son. The East Course hosted the PGA Tour\'s Puerto Rico Open. Green fees $225–350 depending on season and tee time. The Sugarcane Course is the more forgiving of the two, with wider fairways and spectacular ocean views on the back nine. Both courses are immaculately maintained year-round. The pro shop is well-stocked, and the post-round lunch at the clubhouse is a tradition. This is the best golf in the Caribbean, period.' },
+      { label: 'St. Regis Golf (Bahia Beach)', text: 'Robert Trent Jones Jr. designed this course to integrate with the mangroves, wetlands, and coastline of the St. Regis resort. Green fees $250–350 for non-guests, complimentary for resort guests. The 16th hole — a par 3 with the ocean directly behind the green — is the signature shot. Audubon International certified as a sanctuary, meaning you\'ll share the course with egrets, pelicans, and the occasional iguana. Cart-path-only policy keeps the course pristine. Caddies available for $50 plus tip.' },
+      { label: 'Royal Isabela Links', text: 'A links-style course built into the limestone cliffs of Isabela on the northwest coast. 18 holes ($175 green fee) with dramatic elevation changes and ocean views on nearly every hole. The 12th through 15th holes run along the cliff edge — visually stunning and strategically demanding. Walking only (no carts), which is part of the charm. Caddies are mandatory ($40 plus tip) and they know every break and wind pattern. This is the most scenic golf course in Puerto Rico and one of the most dramatic in the Caribbean.' },
+      { label: 'Spa Botanico at Dorado Beach', text: 'The Spa Botanico is set within a lush tropical garden on the Dorado Beach Ritz-Carlton Reserve grounds. Treatments ($295–495) take place in open-air tree house pavilions, a garden courtyard, or beside a waterfall. The signature treatment incorporates local botanicals — coffee, coconut, and tropical flowers. The relaxation areas include a pineapple meditation garden and a cold plunge pool. Allow at least 3 hours to enjoy the full experience — the facilities alone are worth the visit. This is one of the top 10 spas in the Caribbean by any measure.' },
+      { label: 'Iridium Spa at St. Regis', text: 'The 10,000-square-foot Iridium Spa uses local ingredients — coffee scrubs, coconut wraps, El Yunque botanicals — in treatments that range from $225 to $425. The couples\' suite has a private terrace overlooking the rainforest. The hydrotherapy circuit (hot/cold pools, steam, sauna) is complimentary for spa guests. Pre-treatment, you\'ll select your essential oil blend from a curated menu. Post-treatment, the relaxation lounge serves organic juices and light bites. Less expansive than Spa Botanico but more intimate and refined.' },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="ft-hero">
+    <div class="ft-hero-gradient"></div>
+    <div class="ft-hero-noise"></div>
+    <div class="ft-hero-content">
+      <h1 class="ft-hero-title">The Finer Things</h1>
+      <p class="ft-hero-subtitle">World-class resorts on former Rockefeller estates, Michelin-caliber dining in colonial Old San Juan, private bioluminescent bay tours, luxury catamarans to Caribbean-best beaches, championship golf on cliff-edge courses, and spa treatments in rainforest tree houses — all without a passport.</p>
+      <div class="ft-hero-meta">
+        <div class="ft-hero-meta-item">
+          <span class="ft-hero-meta-label">Topics</span>
+          <span class="ft-hero-meta-value">5</span>
+        </div>
+        <div class="ft-hero-meta-item">
+          <span class="ft-hero-meta-label">Luxury Resorts</span>
+          <span class="ft-hero-meta-value">5</span>
+        </div>
+        <div class="ft-hero-meta-item">
+          <span class="ft-hero-meta-label">Golf Courses</span>
+          <span class="ft-hero-meta-value">4</span>
+        </div>
+      </div>
+    </div>
+    <div class="ft-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="ft-personal ft-reveal">
+    <div class="container-content">
+      <blockquote class="ft-personal-quote">
+        <p>Puerto Rico has this incredible advantage that most people overlook: it's the only place in the Caribbean where you get true tropical luxury without a passport, without currency exchange, without international phone charges, and with the protection of US consumer laws. The Dorado Beach Ritz-Carlton Reserve rivals any resort I've experienced anywhere in the world — and I've stayed at a lot of them. The food scene in San Juan has exploded. The golf is world-class. And the bioluminescent bays are something you'll remember for the rest of your life. It's the most underrated luxury destination in the Americas.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Quick Facts Strip -->
+  <section class="ft-quickfacts ft-reveal">
+    <div class="container-content">
+      <div class="ft-quickfacts-bar">
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Cocktail (Upscale)</span>
+          <span class="ft-quickfact-value">$14–25</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Fine Dining</span>
+          <span class="ft-quickfact-value">$45–165pp</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Luxury Resort</span>
+          <span class="ft-quickfact-value">$450+/night</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Green Fees</span>
+          <span class="ft-quickfact-value">$175–350</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Currency</span>
+          <span class="ft-quickfact-value">USD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Nav -->
+  <section class="ft-quicknav ft-reveal">
+    <div class="container-content">
+      <div class="ft-quicknav-grid">
+        {topics.map((t) => (
+          <a href={`#${t.id}`} class="ft-quicknav-chip">
+            <span class="ft-quicknav-icon">{t.icon}</span>
+            <span class="ft-quicknav-label">{t.title.split(' ').slice(0, 2).join(' ')}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic Sections -->
+  {topics.map((topic) => (
+    <section class="ft-topic ft-reveal" id={topic.id}>
+      <div class="container-content">
+        <div class="ft-topic-header" style={`background: ${topic.gradient};`}>
+          <div class="ft-topic-header-inner">
+            <span class="ft-topic-icon">{topic.icon}</span>
+            <h2 class="ft-topic-title">{topic.title}</h2>
+            <span class="ft-topic-count">{topic.items.length} tips</span>
+          </div>
+        </div>
+
+        <div class="ft-tip-grid">
+          {topic.items.map((item) => (
+            <div class="ft-tip-card">
+              <h3 class="ft-tip-label">{item.label}</h3>
+              <p class="ft-tip-text" set:html={item.text} />
+              {item.link && (
+                <a href={item.link} class="ft-tip-link">Explore {item.label.split(':')[0]} &rarr;</a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Scott's Pro Tips -->
+  <section class="ft-protips ft-reveal">
+    <div class="container-content">
+      <div class="ft-protips-card">
+        <h2 class="ft-protips-heading">Scott's Pro Tips</h2>
+        <div class="scott-tips">
+          <ul>
+            <li><strong>No Passport Needed:</strong> Puerto Rico is a US territory — you fly domestic, use your US phone plan, and pay in dollars. TSA PreCheck and Global Entry work. This is the single biggest advantage of Puerto Rico as a luxury destination. No customs, no currency exchange, no surprises.</li>
+            <li><strong>Best Time for Luxury Travel:</strong> December through April is peak season — perfect weather, higher prices, busier restaurants. May through June is the sweet spot: rates drop 30–40% at luxury resorts, the weather is still excellent, and restaurants are easier to book. Hurricane season runs June through November, with September–October being the riskiest months.</li>
+            <li><strong>Reservations Strategy:</strong> San Juan's top restaurants (Marmalade, 1919, Santaella) book up 2–3 weeks ahead for weekend tables. Book before you fly. Weekday dining is easier and the experience is often better — smaller crowds, more attention from the kitchen. OpenTable works for most upscale restaurants on the island.</li>
+            <li><strong>Resort vs. City:</strong> The big resorts in Dorado and Rio Grande are 30–45 minutes from San Juan and designed for self-contained stays. If you want to combine resort luxury with city dining and nightlife, consider splitting your trip — 3 nights in Condado, 3 nights at a resort. A car rental makes this easy and affordable ($40–60/day).</li>
+            <li><strong>Golf Tip:</strong> Morning tee times (before 8am) are the best — cooler temperatures, less wind, and better course conditions. Afternoon rates drop significantly at most courses. Bring your own clubs if you're serious — rental sets at the resorts are decent but not great.</li>
+            <li><strong>Bio Bay Timing:</strong> Book bioluminescent bay tours during a new moon for maximum brightness. Full moon nights significantly reduce the glow. Tours book up fast during new moon weekends — reserve at least 2 weeks ahead. Mosquito Bay in Vieques is brighter than Laguna Grande in Fajardo, but requires a flight or ferry to Vieques.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="ft-cta-section ft-reveal">
+    <div class="container-content">
+      <div class="ft-cta-card">
+        <h2 class="ft-cta-heading">Plan Your Luxury Puerto Rico Trip</h2>
+        <p class="ft-cta-text">Tell our AI planner your dates and interests — it'll build a custom itinerary with the best resorts, restaurants, and premium experiences.</p>
+        <a href="/plan/" class="ft-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email Capture -->
+  <div class="container-content ft-reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Get Our Free Puerto Rico Luxury Guide"
+      description="Resorts, fine dining, golf, and premium experiences — packed into one PDF."
+      bullets={[
+        'Top 5 luxury resorts compared with pricing',
+        'Best fine dining restaurants with reservation tips',
+        'Championship golf course guide',
+        'Private tour operators for bio bays and islands',
+      ]}
+      guideTag="pillar-finer-things"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="ft-crosslinks ft-reveal">
+    <div class="container-content">
+      <h3 class="ft-crosslinks-heading">Explore More</h3>
+      <div class="ft-crosslinks-grid">
+        <a href="/practical/" class="ft-crosslink-card">
+          <span class="ft-crosslink-icon">&#128218;</span>
+          <span class="ft-crosslink-label">Travel Tips</span>
+          <span class="ft-crosslink-desc">Getting there, getting around, and essential planning info</span>
+        </a>
+        <a href="/destinations/" class="ft-crosslink-card">
+          <span class="ft-crosslink-icon">&#127965;</span>
+          <span class="ft-crosslink-label">All Destinations</span>
+          <span class="ft-crosslink-desc">San Juan, Vieques, Culebra, Rincon, and more</span>
+        </a>
+        <a href="/plan/" class="ft-crosslink-card">
+          <span class="ft-crosslink-icon">&#128506;</span>
+          <span class="ft-crosslink-label">AI Trip Planner</span>
+          <span class="ft-crosslink-desc">Build a custom Puerto Rico itinerary in minutes</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>
+
+<!-- Scroll Reveal Observer (uses ft-reveal/ft-visible to avoid Tailwind .visible conflict) -->
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const ftRevealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('ft-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.ft-reveal').forEach((el) => ftRevealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.ft-reveal').forEach((el) => el.classList.add('ft-visible'));
+  }
+</script>
+
+<style>
+  /* ================================================================
+     HERO — Warm amber/whiskey gradient
+     ================================================================ */
+  .ft-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem var(--space-6) 60px;
+    overflow: hidden;
+  }
+
+  .ft-hero-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, #1A2332 0%, #78350F 40%, #D4A574 100%);
+  }
+
+  .ft-hero-noise {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .ft-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 720px;
+  }
+
+  .ft-hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: var(--weight-bold);
+    color: #fff;
+    line-height: 1.1;
+    margin: 0 0 var(--space-3);
+  }
+
+  .ft-hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0 0 var(--space-5);
+    max-width: 580px;
+  }
+
+  .ft-hero-meta {
+    display: flex;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+
+  .ft-hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ft-hero-meta-label {
+    font-size: 0.65rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .ft-hero-meta-value {
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+    color: #fff;
+  }
+
+  .ft-scroll-hint {
+    position: absolute;
+    bottom: 16px;
+    right: var(--space-6);
+    z-index: 3;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    animation: ftBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes ftBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ================================================================
+     PERSONAL INTRO
+     ================================================================ */
+  .ft-personal {
+    padding-block: var(--space-8);
+  }
+
+  .ft-personal-quote {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-8);
+    border-left: 4px solid #D4A574;
+    background: var(--color-sky);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .ft-personal-quote p {
+    font-size: var(--text-body);
+    color: var(--color-heading);
+    line-height: var(--leading-body);
+    font-style: italic;
+    margin-bottom: var(--space-3);
+  }
+
+  .ft-personal-quote cite {
+    font-size: var(--text-caption);
+    color: #78350F;
+    font-weight: var(--weight-semibold);
+    font-style: normal;
+  }
+
+  /* ================================================================
+     QUICK FACTS STRIP
+     ================================================================ */
+  .ft-quickfacts {
+    padding: 0 0 var(--space-4);
+  }
+
+  .ft-quickfacts-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-5);
+    background: var(--color-sky);
+    border-radius: 16px;
+    padding: var(--space-4) var(--space-6);
+    flex-wrap: wrap;
+  }
+
+  .ft-quickfact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+  }
+
+  .ft-quickfact-label {
+    font-size: 0.65rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-slate);
+  }
+
+  .ft-quickfact-value {
+    font-size: 1.05rem;
+    font-weight: var(--weight-extrabold);
+    color: var(--color-deep-night);
+  }
+
+  .ft-quickfact-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  /* ================================================================
+     QUICK NAV — Jump-to chips
+     ================================================================ */
+  .ft-quicknav {
+    padding: 0 0 var(--space-6);
+  }
+
+  .ft-quicknav-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .ft-quicknav-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: var(--weight-medium);
+    color: #4A5568;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+
+  .ft-quicknav-chip:hover {
+    background: #FDF8F0;
+    color: #78350F;
+    transform: translateY(-2px);
+  }
+
+  .ft-quicknav-icon {
+    font-size: 1rem;
+  }
+
+  .ft-quicknav-label {
+    white-space: nowrap;
+  }
+
+  /* ================================================================
+     TOPIC SECTION
+     ================================================================ */
+  .ft-topic {
+    padding: var(--space-4) 0 var(--space-6);
+    scroll-margin-top: 80px;
+  }
+
+  .ft-topic-header {
+    position: relative;
+    border-radius: 20px;
+    padding: var(--space-5) var(--space-6);
+    margin-bottom: var(--space-5);
+    overflow: hidden;
+  }
+
+  .ft-topic-header-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .ft-topic-icon {
+    font-size: 1.6rem;
+  }
+
+  .ft-topic-title {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: var(--weight-bold);
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .ft-topic-count {
+    font-size: 0.7rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ================================================================
+     TIP CARDS
+     ================================================================ */
+  .ft-tip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 768px) {
+    .ft-tip-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ft-tip-card {
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    padding: var(--space-5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ft-tip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .ft-tip-label {
+    font-size: 0.95rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    margin: 0 0 var(--space-2);
+    line-height: 1.3;
+  }
+
+  .ft-tip-text {
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .ft-tip-text :global(a) {
+    color: #78350F;
+    font-weight: var(--weight-semibold);
+    text-decoration: underline;
+    text-decoration-color: rgba(120, 53, 15, 0.3);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  .ft-tip-text :global(a:hover) {
+    text-decoration-color: #78350F;
+  }
+
+  .ft-tip-link {
+    display: inline-block;
+    margin-top: var(--space-3);
+    font-size: 0.8rem;
+    font-weight: var(--weight-semibold);
+    color: #78350F;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .ft-tip-link:hover {
+    color: #D4A574;
+  }
+
+  /* ================================================================
+     SCOTT'S PRO TIPS
+     ================================================================ */
+  .ft-protips {
+    padding: var(--space-4) 0 var(--space-6);
+  }
+
+  .ft-protips-card {
+    background: linear-gradient(135deg, #1A2332 0%, #2D3748 100%);
+    border-radius: 20px;
+    padding: var(--space-6) var(--space-6);
+  }
+
+  .ft-protips-heading {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: var(--weight-bold);
+    color: #D4A574;
+    margin: 0 0 var(--space-4);
+  }
+
+  .ft-protips-card .scott-tips {
+    background: transparent;
+    border-left: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ft-protips-card .scott-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .ft-protips-card .scott-tips li {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.65;
+    padding-left: var(--space-4);
+    position: relative;
+  }
+
+  .ft-protips-card .scott-tips li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D4A574;
+  }
+
+  .ft-protips-card .scott-tips :global(strong) {
+    color: #D4A574;
+    font-weight: var(--weight-semibold);
+  }
+
+  .ft-protips-card .scott-tips :global(a) {
+    color: #FB923C;
+    font-weight: var(--weight-semibold);
+    text-decoration: underline;
+    text-decoration-color: rgba(251, 146, 60, 0.4);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  .ft-protips-card .scott-tips :global(a:hover) {
+    text-decoration-color: #FB923C;
+  }
+
+  /* ================================================================
+     BOTTOM CTA
+     ================================================================ */
+  .ft-cta-section {
+    padding: var(--space-6) 0 var(--space-8);
+  }
+
+  .ft-cta-card {
+    background: linear-gradient(135deg, #78350F 0%, #D4A574 100%);
+    border-radius: 20px;
+    padding: var(--space-8) var(--space-6);
+    text-align: center;
+    color: #fff;
+  }
+
+  .ft-cta-heading {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: var(--weight-bold);
+    margin: 0 0 var(--space-3);
+    color: #fff;
+  }
+
+  .ft-cta-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 520px;
+    margin: 0 auto var(--space-5);
+    line-height: 1.6;
+  }
+
+  .ft-cta-button {
+    display: inline-block;
+    background: var(--color-deep-night);
+    color: #D4A574;
+    font-size: 0.9rem;
+    font-weight: var(--weight-semibold);
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .ft-cta-button:hover {
+    background: #0D1117;
+    transform: translateY(-2px);
+  }
+
+  /* ================================================================
+     CROSS-LINKS
+     ================================================================ */
+  .ft-crosslinks {
+    padding: 0 0 var(--space-10);
+  }
+
+  .ft-crosslinks-heading {
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    text-align: center;
+    margin: 0 0 var(--space-4);
+  }
+
+  .ft-crosslinks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .ft-crosslinks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ft-crosslink-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-5) var(--space-4);
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ft-crosslink-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .ft-crosslink-icon {
+    font-size: 1.8rem;
+  }
+
+  .ft-crosslink-label {
+    font-size: 0.95rem;
+    font-weight: var(--weight-bold);
+    color: #1A2332;
+  }
+
+  .ft-crosslink-desc {
+    font-size: 0.78rem;
+    color: #4A5568;
+    line-height: 1.4;
+  }
+
+  /* ================================================================
+     SCROLL REVEAL
+     ================================================================ */
+  .ft-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .ft-reveal.ft-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes ftRevealFallback {
+    to { opacity: 1; transform: none; }
+  }
+
+  .ft-reveal {
+    animation: ftRevealFallback 0s 3s forwards;
+  }
+
+  /* ================================================================
+     RESPONSIVE
+     ================================================================ */
+  @media (max-width: 640px) {
+    .ft-hero {
+      min-height: 50vh;
+      padding: 0 var(--space-4) 40px;
+    }
+
+    .ft-hero-meta {
+      gap: var(--space-4);
+    }
+
+    .ft-scroll-hint {
+      display: none;
+    }
+
+    .ft-topic-header {
+      padding: var(--space-4) var(--space-4);
+    }
+
+    .ft-quickfacts-bar {
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .ft-quickfact-divider {
+      display: none;
+    }
+
+    .ft-quickfact {
+      min-width: 80px;
+    }
+
+    .ft-personal-quote {
+      padding: var(--space-4) var(--space-5);
+    }
+
+    .ft-protips-card {
+      padding: var(--space-5) var(--space-4);
+    }
+  }
+</style>

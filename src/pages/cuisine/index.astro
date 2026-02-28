@@ -1,0 +1,285 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Puerto Rican Cuisine Guide', url: '/cuisine/' },
+];
+
+const pageTitle = 'Puerto Rican Cuisine Guide — From Mofongo to Lechón and Beyond';
+const pageDescription = 'A complete guide to Puerto Rican food — mofongo, lechón, tostones, alcapurrias, the piña colada, Barranquitas coffee, chinchorreo culture, and the lechoneras of Guavate.';
+
+interface TopicSection {
+  id: string;
+  icon: string;
+  title: string;
+  gradient: string;
+  items: { label: string; text: string }[];
+}
+
+const topics: TopicSection[] = [
+  {
+    id: 'iconic-dishes',
+    icon: '🍽️',
+    title: 'Iconic Puerto Rican Dishes',
+    gradient: 'linear-gradient(135deg, #C62828 0%, #EF5350 100%)',
+    items: [
+      { label: 'Mofongo — Puerto Rico\'s Signature Dish', text: 'Mofongo is the crown jewel of Puerto Rican cuisine — fried green plantains mashed in a pilón (wooden mortar) with garlic, olive oil, pork cracklings (chicharrón), and salt. The result is a golden dome of garlicky, porky, starchy perfection. It\'s served as a side or stuffed with shrimp, chicken, or beef in a rich criollo sauce. Every restaurant in Puerto Rico serves mofongo, but the best versions come from small spots where you can hear the rhythmic pounding of the pilón in the kitchen. Mofongo relleno de camarones (stuffed with shrimp) is the luxury version.' },
+      { label: 'Lechón Asado — Whole Roasted Pig', text: 'Lechón is Puerto Rico\'s most celebratory food — a whole pig rubbed with adobo seasoning (garlic, oregano, salt, pepper, sour orange juice) and slow-roasted over hardwood charcoal for 6-8 hours until the skin is crackling and the meat is impossibly tender. The cuerito (crispy skin) is the most prized part — people stand in line for it. The Ruta del Lechón in Guavate (a stretch of Route 184 in Cayey) has a dozen lechoneras carving fresh lechón all weekend. Weekends are best; arrive by 11 AM before the cuerito runs out.' },
+      { label: 'Arroz con Gandules', text: 'Arroz con gandules (rice with pigeon peas) is Puerto Rico\'s unofficial national dish — served at every holiday dinner, family gathering, and Sunday comida. The rice is cooked in sofrito (a blend of peppers, onions, garlic, cilantro, and tomatoes) with pigeon peas, olives, capers, and pork. The sofrito is everything — every Puerto Rican cook has their own blend, and the recipe is passed down through generations. At Christmas, arroz con gandules is non-negotiable. It pairs with everything, but especially lechón and pasteles.' },
+      { label: 'Pernil — Slow-Roasted Pork Shoulder', text: 'Pernil is the everyday version of lechón — a bone-in pork shoulder marinated in adobo mojado (wet adobo paste of garlic, oregano, vinegar, olive oil, and sazón) overnight, then slow-roasted for hours until fork-tender. Every Puerto Rican family has a pernil recipe, and arguments about whose is best can last through dessert. The pan drippings are liquid gold — spooned over rice. Pernil is the centerpiece of Nochebuena (Christmas Eve) dinner alongside arroz con gandules, pasteles, and coquito.' },
+      { label: 'Asopao — Puerto Rico\'s Comfort Soup', text: 'Asopao is a thick, soul-warming gumbo-like rice soup — the dish Puerto Ricans crave when they\'re sick, cold, or homesick. Asopao de pollo (chicken) is the classic: chicken simmered in sofrito with olives, capers, rice, and a generous amount of broth. The rice swells and the consistency sits between soup and stew. Asopao de mariscos (seafood) with shrimp, lobster, and crab is the special-occasion version. Every fonda (local lunch counter) has asopao on the menu, and it costs $8-12 for a massive bowl.' },
+    ],
+  },
+  {
+    id: 'street-food',
+    icon: '🥟',
+    title: 'Street Food & Fritters',
+    gradient: 'linear-gradient(135deg, #E65100 0%, #FF9800 100%)',
+    items: [
+      { label: 'Alcapurrias', text: 'Alcapurrias are the king of Puerto Rican street food — torpedo-shaped fritters made from a dough of grated green banana and yautía (taro root), stuffed with seasoned ground beef (picadillo) or crab, then deep-fried until golden and crispy. The outside shatters when you bite; the inside is meaty and savory. Found at every kiosko and beachside food stand across the island, especially at Luquillo Beach. Each one costs $2-3 and weighs about a quarter pound. Two alcapurrias and a cold Medalla beer is the quintessential Puerto Rican beach lunch.' },
+      { label: 'Bacalaítos', text: 'Bacalaítos are thin, crispy codfish fritters — bacalao (salt cod) mixed into a seasoned batter and fried flat into golden discs. They\'re Puerto Rico\'s answer to chips — salty, crunchy, and impossible to eat just one. The Piñones boardwalk east of San Juan is bacalaíto central, where a dozen vendors fry them fresh in front of you. A bacalaíto costs $1-2 and is best eaten standing at the counter, hot from the oil, with a squeeze of lime. The combination of Piñones + bacalaítos + sunset is one of Puerto Rico\'s most perfect experiences.' },
+      { label: 'Tostones & Amarillos', text: 'Tostones (twice-fried smashed green plantains) appear at every Puerto Rican meal — salty, crispy, and served as a side or base. Amarillos (sweet fried ripe plantains) are the sweet counterpart — caramelized and candy-like. Together, they provide the salty-sweet contrast that defines Boricua cooking. Tostones rellenos (stuffed with chicken, shrimp, or carne frita) are a newer innovation — essentially edible bowls. Street vendors sell a bag of 6 tostones for $3-5. They\'re as fundamental to Puerto Rican food as rice.' },
+      { label: 'Empanadillas & Pastelillos', text: 'Empanadillas are deep-fried turnovers filled with seasoned ground beef, chicken, or pizza ingredients (ham, cheese, sauce). Pastelillos are the flaky, thinner cousin — crescent-shaped with crimped edges, stuffed with crab, cheese, or guava paste with cream cheese. Both are found at every bakery, gas station, and panadería across the island. At $1-3 each, they\'re the go-to grab-and-go snack. The best empanadillas come from roadside stands in the mountains, where they\'re fried fresh in lard for maximum crunch.' },
+      { label: 'Pinchos — Puerto Rican Skewers', text: 'Pinchos are grilled meat skewers — marinated chunks of chicken or pork threaded on a stick, basted with a BBQ sauce, and grilled over charcoal. They\'re sold at roadside stands (called pincheros) for $2-3 per stick, often with a piece of bread on the end to catch the drippings. Pinchos de pollo (chicken) are the most common. The best pincheros fire up around 4 PM and run until the meat runs out. A pincho, a Medalla Light, and a plastic chair by the road — that\'s peak Puerto Rican chill.' },
+    ],
+  },
+  {
+    id: 'drinks',
+    icon: '🍹',
+    title: 'Drinks & Coffee Culture',
+    gradient: 'linear-gradient(135deg, #1B5E20 0%, #388E3C 100%)',
+    items: [
+      { label: 'The Piña Colada — Born in Puerto Rico', text: 'The piña colada was invented in Puerto Rico — though two San Juan bars claim credit. The Caribe Hilton says bartender Ramón "Monchito" Marrero created it in 1954. Barrachina restaurant in Old San Juan claims their bartender beat him to it in 1963. Regardless, the cocktail — rum, coconut cream, pineapple juice, and crushed ice — is Puerto Rico\'s official drink (declared by the government in 1978). Skip the tourist versions and find one made with fresh pineapple and real coconut cream. The original at the Caribe Hilton costs about $18 but the setting is iconic.' },
+      { label: 'Puerto Rican Coffee', text: 'Puerto Rico grows some of the best coffee in the world — particularly in the central mountain towns of Adjuntas, Lares, Jayuya, and Maricao. The Arabica beans grown at 2,000+ feet in volcanic soil produce a smooth, chocolatey coffee that was once served to the Vatican and European courts. Café de Barranquitas, Alto Grande, and Yaucono are the premium brands. Puerto Rican coffee is strong, sweet (often with sugar), and served as a cortadito (espresso with a splash of steamed milk). A mountain coffee tour is one of the most underrated experiences on the island.' },
+      { label: 'Coquito — Puerto Rican Eggnog', text: 'Coquito is Puerto Rico\'s Christmas drink — a rich, creamy coconut-based cocktail made with rum, coconut cream, condensed milk, evaporated milk, cinnamon, and vanilla. It\'s essentially Caribbean eggnog (without the eggs, in the traditional version). Every family guards their coquito recipe like a state secret, and taste-testing different versions is a December tradition. Some add nutmeg, cloves, or coffee. The best coquito is always homemade — asking a Puerto Rican for their recipe is the highest compliment you can pay.' },
+      { label: 'Medalla Light & Local Beer', text: 'Medalla Light is Puerto Rico\'s beer — a crisp, light lager brewed by Cervecería de Puerto Rico since 1978. It\'s everywhere: every bar, every beach cooler, every gas station. The 10 oz cans are designed for the tropical heat — small enough to finish cold. At $1-2 per can, it\'s the island\'s social lubricant. Beyond Medalla, craft breweries are emerging: Ocean Lab in San Juan, Boquerón Brewing Co., and FOK Brewing Company in Bayamón. But Medalla remains king — ask for "una fría" (a cold one) and everyone knows what you mean.' },
+      { label: 'Tropical Juices & Parcha', text: 'Puerto Rico\'s tropical fruits make incredible juices and batidas (smoothies). Parcha (passion fruit) is the star — tangy, aromatic, and refreshing. Guanábana (soursop), papaya, and guava juices are available at roadside stands and supermarkets. Fresh coconut water (agua de coco) is sold from vendors who hack open green coconuts with a machete. Malta Puerto Rico (a non-alcoholic malt beverage) is a distinctly Puerto Rican refreshment — sweet, dark, and fizzy. Limber (frozen fruit cups) are the island\'s popsicle equivalent, sold from home freezers for $1.' },
+    ],
+  },
+  {
+    id: 'chinchorreo',
+    icon: '🏖️',
+    title: 'Chinchorreo Culture & Food Trails',
+    gradient: 'linear-gradient(135deg, #0D7377 0%, #4DB6AC 100%)',
+    items: [
+      { label: 'What Is Chinchorreo?', text: 'Chinchorreo is a Puerto Rican tradition of bar-and-food-hopping along a string of roadside chinchorros — casual open-air bars and eateries that serve cold beer, fried food, and live music. It\'s not a restaurant crawl; it\'s a vibe. Families, friends, and strangers pile into chinchorros on weekends, eating alcapurrias, drinking Medalla, and dancing to reggaetón, salsa, or bomba. The best chinchorros are unmarked, unfancy, and operated by someone\'s abuela. The Piñones strip east of San Juan is the most famous chinchorreo route, but every region has its own.' },
+      { label: 'The Ruta del Lechón — Guavate', text: 'The Ruta del Lechón (Lechón Route) on Route 184 in Guavate, Cayey, is Puerto Rico\'s most famous food destination. A dozen lechoneras line the mountain road, each roasting whole pigs over charcoal pits since early morning. You pull over, walk up to a carving station, and order lechón by the pound ($12-15/lb) with sides of arroz con gandules, morcilla (blood sausage), tostones, and yuca. The cuerito (crispy skin) sells out first. Weekends are best — live music, cold beer, and the smell of roasting pork fills the mountain air.' },
+      { label: 'Piñones — San Juan\'s Food Strip', text: 'Piñones is a stretch of coastline just east of San Juan lined with dozens of food kiosks serving the island\'s best fried food. Bacalaítos, alcapurrias, empanadillas, and fresh seafood are fried to order for $1-5 per item. The vibe is entirely local — families set up chairs, kids splash in the waves, and reggaetón competes with the surf. El Boricua and Donde Olga are popular stops. Sunday afternoon in Piñones is as authentically Puerto Rican as it gets. No reservations, no dress code, no pretension.' },
+      { label: 'Luquillo Kiosks', text: 'The Luquillo Beach kiosks (Kioskos de Luquillo) are 60+ food stands along the beach — everything from alcapurrias and pinchos to lobster mofongo and fresh ceviche. Kiosk #2 (La Parilla) and Kiosk #5 (El Jefe) are local favorites. The setting is gorgeous — palm trees, ocean views, and cold beer. Prices are tourist-friendly ($8-20 per dish) but the food is genuinely good. Go on a weekday for smaller crowds. The kioskos are the gateway drug that gets visitors hooked on Puerto Rican food.' },
+      { label: 'Mountain Food Trails', text: 'The central mountains have their own food culture distinct from the coast. Jayuya, Adjuntas, and Barranquitas are coffee country — stop at roadside coffee farms for freshly roasted beans and a café con leche. Roadside vendors sell fresh tropical fruit, queso del país (local white cheese), and roasted corn. The mountain panaderas (bakeries) make pan de agua, pan sobao, and mallorcas that rival anything on the coast. A drive through the Ruta Panorámica (mountain scenic route) is as much a food tour as a scenic one.' },
+    ],
+  },
+  {
+    id: 'holiday-food',
+    icon: '🎄',
+    title: 'Holiday Food & Traditions',
+    gradient: 'linear-gradient(135deg, #6A1B9A 0%, #AB47BC 100%)',
+    items: [
+      { label: 'Nochebuena — Christmas Eve Feast', text: 'Christmas Eve (Nochebuena) is the biggest food event of the Puerto Rican year. The table features lechón or pernil (slow-roasted pork), arroz con gandules, pasteles (meat-filled plantain tamales wrapped in banana leaves), tembleque (coconut pudding), coquito (coconut rum drink), and arroz con dulce (sweet rice with coconut milk, raisins, and spices). Family members start cooking days in advance. The meal is served late — 10 PM or later — and eating continues through midnight. The leftovers last through Christmas Day and beyond.' },
+      { label: 'Pasteles — Puerto Rican Tamales', text: 'Pasteles are Puerto Rico\'s most labor-intensive dish — and the one that brings families together. A masa of grated green banana, yautía, and calabaza is spread on a banana leaf, filled with seasoned pork (or chicken), folded into a rectangle, tied with string, and boiled. Making pasteles is a communal event — entire families gather to grate, fill, wrap, and tie hundreds of pasteles in assembly-line fashion. Each one is a love letter to patience and tradition. Pasteles appear at Christmas, but many families make them year-round for special occasions.' },
+      { label: 'Tembleque & Arroz con Dulce', text: 'Tembleque is a coconut milk pudding set with cornstarch and dusted with cinnamon — it trembles (tiembla) when you jiggle the plate, hence the name. It\'s simple, creamy, and coconutty. Arroz con dulce is sweet rice cooked in coconut milk with cinnamon, cloves, ginger, raisins, and sometimes vanilla — served cold as a dessert. Both are Christmas staples that appear on every Nochebuena table. Arroz con dulce is eaten for breakfast on Christmas morning, cold from the fridge. Both are vegan, though most Puerto Ricans would never describe them that way.' },
+      { label: 'Parrandas — Singing & Eating Through the Night', text: 'A parranda (also called an asalto navideño) is a Puerto Rican Christmas tradition where a group of friends shows up unannounced at someone\'s house at midnight with instruments — guitar, cuatro, güiro, maracas — singing aguinaldos (Christmas carols). The startled host opens the door, serves food and coquito, and then joins the group to surprise the next house. The parranda continues all night, growing larger at each stop. It\'s caroling meets a food crawl meets a surprise party. The food at each house is part of the tradition — you eat your way through Christmas.' },
+    ],
+  },
+  {
+    id: 'restaurants',
+    icon: '🍴',
+    title: 'Where to Eat & Dining Tips',
+    gradient: 'linear-gradient(135deg, #1565C0 0%, #42A5F5 100%)',
+    items: [
+      { label: 'San Juan Restaurant Scene', text: 'San Juan\'s food scene has exploded in recent years. La Placita de Santurce transforms from a daytime farmers market into a street food and nightlife hub every Thursday-Saturday. Viejo San Juan has upscale spots like Marmalade and casual local joints like El Jibarito (famous mofongo). Condado has trendy restaurants and beachfront dining. Santurce is where the chef-driven restaurants are — 1919 at the Condado Vanderbilt, Cocina Abierta, and Santaella are standouts. Budget $25-50/person for a nice dinner.' },
+      { label: 'Fondas — Puerto Rico\'s Hidden Gems', text: 'A fonda is a small, family-run lunch counter serving home-cooked criollo food at rock-bottom prices. Rice, beans, meat, and a side for $6-10. Fondas are where working Puerto Ricans eat lunch — they\'re open weekdays from 11 AM to 2 PM, and the food runs out when it runs out. There\'s no menu — you point at what looks good behind the counter. Fondas are found in every town, often unmarked or with just a hand-painted sign. Ask locals: "Dónde hay una buena fonda?" and follow their directions.' },
+      { label: 'Bakeries & Panaderías', text: 'Puerto Rican bakeries (panaderías) are treasure houses of affordable carbs. Mallorcas (sweet, buttery rolls dusted with powdered sugar) are the breakfast standard — $2-3 at any bakery. Pan de agua is airy, crusty bread. Pan sobao is enriched, pillowy, and slightly sweet. Quesitos (cream cheese-filled puff pastry) are the perfect coffee companion. Polvorosas (shortbread cookies), besitos de coco (coconut kisses), and brazo gitano (jelly roll cake) round out the selection. Kasalta Bakery in Ocean Park, San Juan, is the most famous — Obama ate lunch there.' },
+      { label: 'Eating on a Budget', text: 'Puerto Rico is affordable if you eat like a local. Fondas serve full plates for $6-10. Alcapurrias and empanadillas cost $1-3 each. Bakery breakfast (mallorca + café con leche) runs $3-5. Lechón by the pound at Guavate is $12-15 for more food than one person can eat. Supermarkets (Econo, Ralph\'s, Pueblo) are well-stocked. Budget travelers eating at fondas, bakeries, and kiosks can eat very well for $20-30/day. The most expensive meals are at San Juan tourist restaurants — avoid them unless they\'re specifically recommended.' },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  breadcrumbs={breadcrumbs}
+>
+  <header class="cuis-hero">
+    <div class="cuis-hero-gradient"></div>
+    <div class="cuis-hero-noise"></div>
+    <div class="cuis-hero-content">
+      <h1 class="cuis-hero-title">The Boricua Table</h1>
+      <p class="cuis-hero-subtitle">Mofongo pounded to order, lechón crackling on the spit at Guavate, alcapurrias sizzling at Piñones, and the piña colada born right here in San Juan.</p>
+      <div class="cuis-hero-meta">
+        <div class="cuis-hero-meta-item"><span class="cuis-hero-meta-label">Topics</span><span class="cuis-hero-meta-value">6</span></div>
+        <div class="cuis-hero-meta-item"><span class="cuis-hero-meta-label">Dishes</span><span class="cuis-hero-meta-value">30+</span></div>
+        <div class="cuis-hero-meta-item"><span class="cuis-hero-meta-label">Food Trails</span><span class="cuis-hero-meta-value">5</span></div>
+      </div>
+    </div>
+    <div class="cuis-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <div class="container-content"><Breadcrumb items={breadcrumbs} /></div>
+
+  <section class="cuis-personal reveal">
+    <div class="container-content">
+      <blockquote class="cuis-personal-quote">
+        <p>Puerto Rican food hit me like a wall of flavor on my first trip. I was standing at a kiosk in Piñones, eating a bacalaíto straight from the fryer, drinking a Medalla Light, watching the surf roll in, and I thought: this is it. This is the food culture they don't tell you about. Not fancy, not Instagram-ready, just impossibly good fried things made by people who've been making them their whole lives. Every trip since, I've eaten my way deeper into the island's food traditions — from the lechoneras of Guavate to the fondas of Ponce. This guide is what I've learned.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="cuis-quicknav reveal">
+    <div class="container-content">
+      <div class="cuis-quicknav-grid">
+        {topics.map((t) => (
+          <a href={`#${t.id}`} class="cuis-quicknav-chip">
+            <span class="cuis-quicknav-icon">{t.icon}</span>
+            <span class="cuis-quicknav-label">{t.title.split(' ').slice(0, 2).join(' ')}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {topics.map((topic) => (
+    <section class="cuis-topic reveal" id={topic.id}>
+      <div class="container-content">
+        <div class="cuis-topic-header" style={`background: ${topic.gradient};`}>
+          <div class="cuis-topic-header-inner">
+            <span class="cuis-topic-icon">{topic.icon}</span>
+            <h2 class="cuis-topic-title">{topic.title}</h2>
+            <span class="cuis-topic-count">{topic.items.length} items</span>
+          </div>
+        </div>
+        <div class="cuis-tip-grid">
+          {topic.items.map((item) => (
+            <div class="cuis-tip-card">
+              <h3 class="cuis-tip-label">{item.label}</h3>
+              <p class="cuis-tip-text" set:html={item.text} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="cuis-cta-section reveal">
+    <div class="container-content">
+      <div class="cuis-cta-card">
+        <h2 class="cuis-cta-heading">Plan Your Puerto Rico Food Trip</h2>
+        <p class="cuis-cta-text">Tell our AI planner you're a foodie and it will build a Puerto Rico itinerary around the best restaurants, food trails, and culinary experiences across the island.</p>
+        <a href="/plan/" class="cuis-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={[
+    { question: "What is Puerto Rico's most famous dish?", answer: "Mofongo is Puerto Rico's signature dish — fried green plantains mashed with garlic, olive oil, and pork cracklings. Lechón (whole roasted pig) is the most celebratory dish, served at the famous lechoneras along the Ruta del Lechón in Guavate. Arroz con gandules (rice with pigeon peas) is the most culturally significant — it appears at every holiday and family gathering." },
+    { question: "Where was the piña colada invented?", answer: "The piña colada was invented in Puerto Rico — two San Juan bars claim credit. The Caribe Hilton says bartender Ramón 'Monchito' Marrero created it in 1954. Barrachina restaurant in Old San Juan claims their bartender invented it in 1963. Either way, the piña colada has been Puerto Rico's official drink since 1978." },
+    { question: "What is chinchorreo?", answer: "Chinchorreo is the Puerto Rican tradition of bar-and-food-hopping along a string of roadside chinchorros — casual open-air bars serving cold beer, fried food, and live music. It's a weekend social ritual, especially at Piñones (east of San Juan) and the Ruta del Lechón in Guavate. Families, friends, and strangers mix freely. The food is cheap ($1-5 per item) and the vibe is pure Puerto Rico." },
+    { question: "How much does food cost in Puerto Rico?", answer: "Street food (alcapurrias, bacalaítos): $1-3 each. Fondas (local lunch counters): $6-10 for a full plate. Bakery breakfast: $3-5. Lechón at Guavate: $12-15/lb. Mid-range restaurant: $15-30/person. Fine dining in San Juan: $40-80/person. Budget travelers eating at fondas, kiosks, and bakeries can eat very well for $20-30/day." },
+    { question: "What are pasteles?", answer: "Pasteles are Puerto Rico's version of tamales — a masa of grated green banana, yautía (taro root), and calabaza spread on a banana leaf, filled with seasoned pork, folded, tied with string, and boiled. Making pasteles is a communal family event, especially before Christmas. They're labor-intensive and deeply traditional — the dish that brings families together." },
+    { question: "What should I eat first in Puerto Rico?", answer: "Start with mofongo at a local restaurant (not a chain), then hit Piñones for bacalaítos and alcapurrias from the kiosks. Visit the Ruta del Lechón in Guavate on a Saturday for whole-roasted lechón. Grab a mallorca and café con leche at a panadería for breakfast. Have a piña colada at the Caribe Hilton or Barrachina. End with asopao de pollo at a fonda. You'll understand Puerto Rico through its food faster than any other way." },
+  ]} />
+
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Get Our Free Puerto Rico Food Guide"
+      description="A printable PDF guide to Puerto Rican cuisine — with the best restaurants, food trails, and dishes you can't miss across the island."
+      bullets={[
+        'Complete Ruta del Lechón guide with the top 5 lechoneras',
+        'Piñones and Luquillo kiosk maps with must-try items',
+        'Mountain coffee trail with farm tour information',
+        'San Juan restaurant recommendations by neighborhood and budget',
+      ]}
+      guideTag="pillar-cuisine"
+    />
+  </div>
+
+  <section class="cuis-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="cuis-crosslinks-heading">Explore More</h3>
+      <div class="cuis-crosslinks-grid">
+        <a href="/history/" class="cuis-crosslink-card">
+          <span class="cuis-crosslink-icon">&#127963;</span>
+          <span class="cuis-crosslink-label">PR History</span>
+          <span class="cuis-crosslink-desc">Taíno heritage, Spanish forts, and Boricua identity</span>
+        </a>
+        <a href="/practical/" class="cuis-crosslink-card">
+          <span class="cuis-crosslink-icon">&#127890;</span>
+          <span class="cuis-crosslink-label">Travel Tips</span>
+          <span class="cuis-crosslink-desc">No passport needed, USD, and US cell coverage</span>
+        </a>
+        <a href="/destinations/" class="cuis-crosslink-card">
+          <span class="cuis-crosslink-icon">&#127796;</span>
+          <span class="cuis-crosslink-label">All Destinations</span>
+          <span class="cuis-crosslink-desc">12 destinations from San Juan to Vieques</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else { document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible')); }
+</script>
+
+<style>
+  .cuis-hero { position: relative; min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; background: linear-gradient(135deg, #C62828 0%, #E65100 50%, #0D7377 100%); }
+  .cuis-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%); }
+  .cuis-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); pointer-events: none; }
+  .cuis-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .cuis-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .cuis-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .cuis-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .cuis-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .cuis-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.5); }
+  .cuis-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .cuis-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.35); text-align: center; animation: cuisBounce 2s ease-in-out infinite; }
+  @keyframes cuisBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+  .cuis-personal { padding-block: var(--space-8); }
+  .cuis-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid var(--color-warm-coral); background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .cuis-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .cuis-personal-quote cite { font-size: var(--text-caption); color: var(--color-warm-coral); font-weight: var(--weight-semibold); font-style: normal; }
+  .cuis-quicknav { padding: 0 0 var(--space-6); }
+  .cuis-quicknav-grid { display: flex; justify-content: center; gap: var(--space-2); flex-wrap: wrap; }
+  .cuis-quicknav-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 40px; font-size: 0.8rem; font-weight: var(--weight-medium); color: var(--color-slate); text-decoration: none; transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+  .cuis-quicknav-chip:hover { background: var(--color-sky); color: var(--color-ocean-teal); transform: translateY(-2px); }
+  .cuis-quicknav-icon { font-size: 1rem; }
+  .cuis-quicknav-label { white-space: nowrap; }
+  .cuis-topic { padding: var(--space-4) 0 var(--space-6); scroll-margin-top: 80px; }
+  .cuis-topic-header { position: relative; border-radius: 20px; padding: var(--space-5) var(--space-6); margin-bottom: var(--space-5); overflow: hidden; }
+  .cuis-topic-header-inner { position: relative; z-index: 1; display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  .cuis-topic-icon { font-size: 1.6rem; }
+  .cuis-topic-title { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: var(--weight-bold); color: #fff; margin: 0; line-height: 1.2; flex: 1; min-width: 200px; }
+  .cuis-topic-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.1); padding: 4px 12px; border-radius: 20px; }
+  .cuis-tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  @media (max-width: 768px) { .cuis-tip-grid { grid-template-columns: 1fr; } }
+  .cuis-tip-card { background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 14px; padding: var(--space-5); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .cuis-tip-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+  .cuis-tip-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0 0 var(--space-2); line-height: 1.3; }
+  .cuis-tip-text { font-size: 0.85rem; color: var(--color-slate); line-height: 1.65; margin: 0; }
+  .cuis-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .cuis-cta-card { background: linear-gradient(135deg, var(--color-deep-night) 0%, #2D3748 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .cuis-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .cuis-cta-text { font-size: 1rem; color: rgba(255, 255, 255, 0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .cuis-cta-button { display: inline-block; background: var(--color-warm-coral); color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .cuis-cta-button:hover { background: #d4553b; transform: translateY(-2px); }
+  .cuis-crosslinks { padding: 0 0 var(--space-10); }
+  .cuis-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .cuis-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .cuis-crosslinks-grid { grid-template-columns: 1fr; } }
+  .cuis-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .cuis-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+  .cuis-crosslink-icon { font-size: 1.8rem; }
+  .cuis-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .cuis-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+  @media (max-width: 640px) { .cuis-hero { min-height: 50vh; padding: 0 var(--space-4) 40px; } .cuis-hero-meta { gap: var(--space-4); } .cuis-scroll-hint { display: none; } .cuis-topic-header { padding: var(--space-4) var(--space-4); } }
+</style>

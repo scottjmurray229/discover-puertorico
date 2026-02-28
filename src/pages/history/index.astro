@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Puerto Rico History', url: '/history/' },
+];
+
+const pageTitle = 'Puerto Rico History — From Taíno Heritage to Boricua Identity';
+const pageDescription = 'Explore 5,000 years of Puerto Rican history — Taíno civilization, Spanish colonization, El Morro fortress, US acquisition, Operation Bootstrap, Hurricane Maria, and the making of Boricua identity.';
+
+interface TopicSection {
+  id: string;
+  icon: string;
+  title: string;
+  gradient: string;
+  items: { label: string; text: string }[];
+}
+
+const topics: TopicSection[] = [
+  {
+    id: 'taino',
+    icon: '🏝️',
+    title: 'Taíno Heritage — Puerto Rico\'s First People',
+    gradient: 'linear-gradient(135deg, #5D4037 0%, #8D6E63 100%)',
+    items: [
+      { label: 'The Taíno Civilization', text: 'The Taíno people arrived in Puerto Rico around 2000 BC, migrating northward from South America through the Caribbean island chain. By the time Columbus arrived in 1493, an estimated 30,000-70,000 Taíno lived on the island they called Borinquen ("Land of the Valiant Lord"). They were an agricultural society growing cassava, corn, and sweet potatoes in organized villages called yucayeques, governed by caciques (chiefs). The Taíno created sophisticated pottery, carved ceremonial stone collars (three-pointed zemís), and played batey — a ball game on rectangular courts.' },
+      { label: 'Taíno Language Lives On', text: 'Though the Taíno people were devastated by colonization, their language survives in everyday Puerto Rican Spanish. "Boricua" (Puerto Rican), "huracán" (hurricane), "hamaca" (hammock), "barbacoa" (barbecue), "canoa" (canoe), and "tabaco" (tobacco) are all Taíno words. The island\'s pre-colonial name, Borinquen, remains central to Puerto Rican identity — "Boricua" is how Puerto Ricans identify themselves. The Taíno aren\'t ancient history; they\'re woven into the language, food, and identity of modern Puerto Rico.' },
+      { label: 'Caguana Ceremonial Park', text: 'The Caguana Ceremonial Ball Courts in Utuado are the most important Taíno archaeological site in the Caribbean — ten stone-lined bateyes (ball courts) and plazas surrounded by granite monoliths carved with petroglyphs dating to 1200 AD. The site was a major ceremonial center where caciques from across the island gathered. A small museum displays Taíno artifacts. The park sits in the central mountains and receives few visitors — it\'s a profound, quiet place where you can sense the deep pre-colonial history of the island.' },
+      { label: 'DNA & Modern Taíno Identity', text: 'For decades, history books stated that the Taíno were "extinct." Recent DNA studies have upended that narrative: a 2018 study found that 61% of Puerto Ricans carry Taíno mitochondrial DNA. The Taíno didn\'t disappear — they were absorbed into the colonial population. Today, a growing movement of Puerto Ricans is reclaiming Taíno identity, language, and cultural practices. The Taíno story is one of devastation and resilience — not extinction — and understanding it reshapes how you see Puerto Rico.' },
+    ],
+  },
+  {
+    id: 'spanish-colonial',
+    icon: '🏰',
+    title: 'Spanish Colonization (1493-1898)',
+    gradient: 'linear-gradient(135deg, #1565C0 0%, #42A5F5 100%)',
+    items: [
+      { label: 'Columbus & the Spanish Arrival', text: 'Christopher Columbus arrived on Puerto Rico\'s west coast on November 19, 1493, during his second voyage. He named the island San Juan Bautista. Juan Ponce de León became the island\'s first governor in 1509, establishing the settlement of Caparra near present-day San Juan. The Spanish quickly began exploiting gold deposits using enslaved Taíno labor. When the gold ran out and the Taíno population collapsed from disease and forced labor, the Spanish turned to importing enslaved Africans and shifted the economy to sugar, tobacco, and cattle.' },
+      { label: 'El Morro & San Cristóbal — Fortresses of Empire', text: 'El Morro (Castillo San Felipe del Morro) is the iconic fortress guarding San Juan Bay — a massive six-level citadel built between 1539 and 1790. It withstood attacks from Sir Francis Drake (1595), the Dutch (1625), and the British (1797). Castillo San Cristóbal, the largest Spanish fortification in the Americas, protected the city\'s landward side. Together, these UNESCO World Heritage fortresses made San Juan one of the most heavily defended cities in the Caribbean. Walking El Morro\'s ramparts with the Atlantic crashing below is the defining Puerto Rico experience.' },
+      { label: 'Sugar, Slavery & Colonial Society', text: 'Sugar became Puerto Rico\'s dominant industry by the 18th century, worked by enslaved Africans who brought their culture, music, religion, and culinary traditions to the island. Slavery was abolished in Puerto Rico on March 22, 1873 — relatively late in the Americas. The Afro-Puerto Rican influence is profound: bomba and plena music, the influence of Yoruba traditions in folk religion, and culinary staples like mofongo and tostones all trace to African heritage. The Hacienda Buena Vista in Ponce preserves a 19th-century coffee and sugar plantation.' },
+      { label: 'Grito de Lares (1868)', text: 'On September 23, 1868, Puerto Rican independence fighters staged an armed uprising in the mountain town of Lares. The revolt — known as El Grito de Lares (Cry of Lares) — was quickly suppressed by Spanish forces, but it became the founding moment of the Puerto Rican independence movement. The leader, Ramón Emeterio Betances, is revered as the father of Puerto Rican independence. September 23 is celebrated annually, and the town of Lares remains a symbol of Puerto Rican self-determination. The central plaza features a monument to the uprising.' },
+    ],
+  },
+  {
+    id: 'us-territory',
+    icon: '🇺🇸',
+    title: 'US Acquisition & 20th Century',
+    gradient: 'linear-gradient(135deg, #B71C1C 0%, #D32F2F 100%)',
+    items: [
+      { label: 'The Spanish-American War (1898)', text: 'On July 25, 1898, US forces invaded Puerto Rico during the Spanish-American War, meeting minimal resistance. The Treaty of Paris transferred Puerto Rico from Spain to the United States. Puerto Rico went from being a Spanish colony to a US territory overnight — without the consent of its people. The transition was jarring: Puerto Rico\'s brief experiment with an autonomous charter from Spain (1897) was replaced by US military government. The American flag was raised over San Juan, beginning a relationship that remains unresolved over 125 years later.' },
+      { label: 'Jones Act & US Citizenship (1917)', text: 'The Jones-Shafroth Act of 1917 granted US citizenship to Puerto Ricans — just in time for 18,000 Puerto Ricans to be drafted into World War I. The Jones Act remains controversial: it also imposed the Merchant Marine Act, requiring that all goods shipped between US ports (including Puerto Rico) be carried on US-built, US-flagged, US-crewed ships. This effectively raises the cost of everything on the island by 15-25% — a hidden tax that makes island life more expensive than it should be.' },
+      { label: 'Operation Bootstrap (1947-1970s)', text: 'Operation Bootstrap (Operación Manos a la Obra) was an ambitious industrialization program that transformed Puerto Rico from an agricultural economy to a manufacturing one. Tax incentives attracted US pharmaceutical, petrochemical, and electronics companies. Per capita income quadrupled. Puerto Rico was held up as a model for developing nations. But the program also accelerated urbanization, displaced rural communities, and created economic dependency on mainland corporations. When tax incentives were phased out (starting with Section 936 repeal in 1996), the economy cratered — a decline Puerto Rico is still recovering from.' },
+      { label: 'Commonwealth Status (1952)', text: 'In 1952, Puerto Rico adopted its own constitution and became a "Free Associated State" (Estado Libre Asociado) — a commonwealth of the United States. Puerto Ricans can vote in presidential primaries but not in the general election. They have a non-voting representative in Congress. They don\'t pay federal income tax but also don\'t receive equal federal benefits. Six plebiscites on the island\'s status (statehood, independence, or enhanced commonwealth) have produced no binding resolution. The status question permeates Puerto Rican politics, identity, and daily conversation.' },
+      { label: 'The Debt Crisis', text: 'By 2015, Puerto Rico\'s government had accumulated $72 billion in debt — declared "unpayable" by the governor. The crisis resulted from decades of borrowing, the phase-out of Section 936 tax incentives, population loss (over 500,000 Puerto Ricans left the island between 2006-2020), and structural economic challenges. In 2016, Congress imposed a fiscal control board (PROMESA) with authority over Puerto Rico\'s finances — a body many Puerto Ricans view as colonial oversight. Austerity measures cut schools, pensions, and public services. The debt crisis reshaped the island\'s social fabric.' },
+    ],
+  },
+  {
+    id: 'hurricanes',
+    icon: '🌀',
+    title: 'Hurricane Maria & Resilience',
+    gradient: 'linear-gradient(135deg, #4A5568 0%, #718096 100%)',
+    items: [
+      { label: 'Hurricane Maria — September 20, 2017', text: 'Hurricane Maria struck Puerto Rico as a Category 4 storm on September 20, 2017, devastating the island in ways that are still felt today. Winds of 155 mph destroyed 80% of the agricultural crop, knocked out the entire electrical grid, collapsed bridges, and damaged or destroyed 300,000 homes. The official death toll was initially listed as 64 but was later revised to an estimated 2,975 — making Maria one of the deadliest natural disasters in US history. The federal response was widely criticized as slow and inadequate.' },
+      { label: 'The Aftermath', text: 'Puerto Rico endured the longest power outage in US history after Maria — 11 months before the last communities regained electricity. Clean water was unavailable for weeks in many areas. FEMA\'s response was later investigated for failures in supply distribution and contract management. The blue tarps that covered damaged roofs became a symbol of both the destruction and the government\'s insufficient response. The diaspora community — particularly in Florida and New York — organized massive relief efforts that often outpaced federal aid.' },
+      { label: 'Hurricane Fiona (2022)', text: 'Five years after Maria, Hurricane Fiona struck Puerto Rico\'s southwest coast on September 18, 2022, as a Category 1 hurricane. Despite being weaker than Maria, Fiona caused catastrophic flooding, knocked out power to the entire island again, and destroyed water infrastructure. The repeat disaster highlighted how much infrastructure had not been rebuilt or fortified since Maria. The emotional toll — another hurricane, another total blackout, another painful recovery — deepened the trauma for islanders still healing from 2017.' },
+      { label: 'Resilience & Rebuilding', text: 'Puerto Rico\'s resilience after Maria and Fiona has been extraordinary. Community organizations, artists, farmers, and entrepreneurs have led grassroots recovery efforts. Solar microgrids are reducing dependence on the fragile central power grid. Urban farms and community gardens are strengthening food security. The diaspora maintains deep connections. Tourism — crucial to the economy — has rebounded. The blue tarps are largely gone, replaced by rebuilt homes. Puerto Rico\'s story after Maria is not just one of suffering; it\'s one of communities rebuilding on their own terms.' },
+    ],
+  },
+  {
+    id: 'boricua-identity',
+    icon: '🇵🇷',
+    title: 'Boricua Identity & Culture',
+    gradient: 'linear-gradient(135deg, #0D7377 0%, #4DB6AC 100%)',
+    items: [
+      { label: 'What Does "Boricua" Mean?', text: 'Boricua comes from Borinquen — the Taíno name for Puerto Rico. To be Boricua is to be Puerto Rican in the deepest cultural sense — it encompasses heritage, language, food, music, and a fierce pride in the island regardless of political status debates. The Puerto Rican flag (a single white star on a blue triangle with red and white stripes) is the most visible expression of Boricua identity — you\'ll see it on cars, buildings, tattoos, jewelry, and draped from balconies. Being Boricua is not about where you live; the diaspora community is just as Boricua as islanders.' },
+      { label: 'Music — Bomba, Plena, Reggaetón', text: 'Puerto Rico has produced an outsized share of the world\'s music. Bomba (Afro-Puerto Rican drum-and-dance tradition) dates to the slavery era and remains vibrantly alive. Plena is the "newspaper of the people" — narrative song accompanied by panderetas (hand drums). Salsa was perfected by Puerto Ricans in New York. Reggaetón was born in San Juan\'s public housing projects in the 1990s and became a global phenomenon through Bad Bunny, Daddy Yankee, Don Omar, and Ivy Queen. Puerto Rico\'s per-capita musical influence is unmatched by any place its size.' },
+      { label: 'The Diaspora', text: 'More Puerto Ricans live on the US mainland (5.8 million) than on the island (3.2 million). The great migration began in the 1940s-50s, accelerated by Operation Bootstrap\'s disruption of rural life. New York, Florida, Connecticut, and Pennsylvania have the largest communities. The diaspora maintains intense connections to the island — returning for holidays, sending remittances, and mobilizing after disasters. The relationship between islanders and stateside Boricuas is complex: deeply bonded by culture but divided by the daily realities of island life versus mainland opportunity.' },
+      { label: 'Art, Literature & Film', text: 'Puerto Rico\'s artistic output is remarkable for its size. The Museo de Arte de Puerto Rico in San Juan houses a world-class collection. The Santurce neighborhood is covered in murals and street art. Writers from Julia de Burgos to Giannina Braschi have shaped Latin American literature. Lin-Manuel Miranda\'s Hamilton and In the Heights drew on Puerto Rican heritage. The island\'s film industry, centered at the Puerto Rico Film Corporation, has produced critically acclaimed work. The art scene in San Juan — particularly Santurce Es Ley and Art Walk — rivals any Latin American capital.' },
+      { label: 'Historic Sites You Can Visit Today', text: 'El Morro and San Cristóbal fortresses (UNESCO World Heritage). Old San Juan\'s 500-year-old colonial streets. The Ponce Historic Zone with its distinctive "Ponce Creole" architecture. Casa Blanca — the Ponce de León family residence since 1521. San Juan Cathedral (second oldest in the Americas). The Caguana Ceremonial Ball Courts in Utuado. Hacienda Buena Vista in Ponce (restored coffee plantation). The Museo de Arte de Ponce with its Pre-Raphaelite masterpiece by Frederic Leighton. Puerto Rico has more history per square mile than almost anywhere in the Western Hemisphere.' },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  breadcrumbs={breadcrumbs}
+>
+  <header class="hist-hero">
+    <div class="hist-hero-gradient"></div>
+    <div class="hist-hero-noise"></div>
+    <div class="hist-hero-content">
+      <h1 class="hist-hero-title">Puerto Rico History & Heritage</h1>
+      <p class="hist-hero-subtitle">From 5,000-year-old Taíno heritage to Spanish fortresses, from US acquisition to Hurricane Maria and the unbreakable Boricua identity.</p>
+      <div class="hist-hero-meta">
+        <div class="hist-hero-meta-item"><span class="hist-hero-meta-label">Eras</span><span class="hist-hero-meta-value">5</span></div>
+        <div class="hist-hero-meta-item"><span class="hist-hero-meta-label">Timeline</span><span class="hist-hero-meta-value">5,000+ Years</span></div>
+        <div class="hist-hero-meta-item"><span class="hist-hero-meta-label">UNESCO Sites</span><span class="hist-hero-meta-value">2</span></div>
+      </div>
+    </div>
+    <div class="hist-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <div class="container-content"><Breadcrumb items={breadcrumbs} /></div>
+
+  <section class="hist-personal reveal">
+    <div class="container-content">
+      <blockquote class="hist-personal-quote">
+        <p>Walking the ramparts of El Morro for the first time, I felt the weight of 500 years pressing through the stone. But Puerto Rico's history isn't just in its fortresses. It's in the Taíno words embedded in the language, the African rhythms in bomba drums, the blue tarps that became symbols of resilience after Maria. Understanding Puerto Rico's past — the colonization, the complicated American relationship, the storms both literal and political — isn't optional for visitors. It's the key to understanding why this island and its people are extraordinary.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="hist-quicknav reveal">
+    <div class="container-content">
+      <div class="hist-quicknav-grid">
+        {topics.map((t) => (
+          <a href={`#${t.id}`} class="hist-quicknav-chip">
+            <span class="hist-quicknav-icon">{t.icon}</span>
+            <span class="hist-quicknav-label">{t.title.split(' ').slice(0, 2).join(' ')}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {topics.map((topic) => (
+    <section class="hist-topic reveal" id={topic.id}>
+      <div class="container-content">
+        <div class="hist-topic-header" style={`background: ${topic.gradient};`}>
+          <div class="hist-topic-header-inner">
+            <span class="hist-topic-icon">{topic.icon}</span>
+            <h2 class="hist-topic-title">{topic.title}</h2>
+            <span class="hist-topic-count">{topic.items.length} topics</span>
+          </div>
+        </div>
+        <div class="hist-tip-grid">
+          {topic.items.map((item) => (
+            <div class="hist-tip-card">
+              <h3 class="hist-tip-label">{item.label}</h3>
+              <p class="hist-tip-text" set:html={item.text} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="hist-cta-section reveal">
+    <div class="container-content">
+      <div class="hist-cta-card">
+        <h2 class="hist-cta-heading">Plan a Puerto Rico Heritage Trip</h2>
+        <p class="hist-cta-text">Tell our AI planner you're interested in history and it will build a Puerto Rico itinerary around colonial forts, Taíno sites, and the stories that shaped the island.</p>
+        <a href="/plan/" class="hist-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={[
+    { question: "Who were the Taíno people?", answer: "The Taíno were the indigenous people of Puerto Rico, arriving around 2000 BC from South America. An estimated 30,000-70,000 Taíno lived on the island they called Borinquen when Columbus arrived in 1493. Though decimated by colonization, the Taíno left a lasting legacy — 61% of Puerto Ricans carry Taíno mitochondrial DNA, and words like 'huracán,' 'hamaca,' and 'barbacoa' are Taíno in origin." },
+    { question: "Why is Puerto Rico a US territory?", answer: "Spain ceded Puerto Rico to the United States in the 1898 Treaty of Paris following the Spanish-American War. Puerto Ricans were granted US citizenship in 1917. In 1952, Puerto Rico became a commonwealth with its own constitution but remains a US territory. Puerto Ricans cannot vote in presidential elections and have no voting representation in Congress. The status question (statehood, independence, or enhanced commonwealth) remains unresolved." },
+    { question: "What happened during Hurricane Maria?", answer: "Hurricane Maria struck Puerto Rico as a Category 4 storm on September 20, 2017. It destroyed 80% of crops, knocked out the entire electrical grid for up to 11 months, and caused an estimated 2,975 deaths. The federal response was widely criticized as slow and inadequate. Maria exposed decades of infrastructure neglect and deepened the island's economic crisis. The recovery effort has been led largely by grassroots community organizations." },
+    { question: "What are the most important historical sites in Puerto Rico?", answer: "El Morro and San Cristóbal fortresses in Old San Juan (UNESCO World Heritage Site), the Caguana Ceremonial Ball Courts in Utuado (Taíno heritage), San Juan Cathedral (second oldest in the Americas), the Ponce Historic Zone, Casa Blanca (Ponce de León family home since 1521), and Hacienda Buena Vista in Ponce (restored 19th-century plantation). Old San Juan itself is a walkable museum of 500 years of history." },
+    { question: "What is the Jones Act and how does it affect Puerto Rico?", answer: "The Jones Act (1920 Merchant Marine Act) requires that goods shipped between US ports be carried on US-built, US-flagged, US-crewed ships. Since Puerto Rico is a US territory, all goods from the mainland must comply — raising prices 15-25% above comparable Caribbean islands. The law is widely blamed for Puerto Rico's higher cost of living and has been called a 'hidden tax' on the island's economy." },
+    { question: "What does Boricua mean?", answer: "Boricua comes from Borinquen, the Taíno name for Puerto Rico meaning 'Land of the Valiant Lord.' Being Boricua means being Puerto Rican in the deepest cultural sense — encompassing heritage, language, food, music, and fierce pride in the island. The term applies equally to islanders and the 5.8 million Puerto Ricans living on the US mainland." },
+  ]} />
+
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Get Our Free Puerto Rico Heritage Trail Guide"
+      description="A printable PDF guide to Puerto Rico's most significant historical sites — from Taíno ball courts to Spanish fortresses and modern landmarks."
+      bullets={[
+        'Old San Juan walking tour with all major historical sites',
+        'Complete El Morro and San Cristóbal visitor guide',
+        'Taíno heritage sites across the island with directions',
+        'Timeline of key events with what to see at each location',
+      ]}
+      guideTag="pillar-history"
+    />
+  </div>
+
+  <section class="hist-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="hist-crosslinks-heading">Explore More</h3>
+      <div class="hist-crosslinks-grid">
+        <a href="/cuisine/" class="hist-crosslink-card">
+          <span class="hist-crosslink-icon">&#127860;</span>
+          <span class="hist-crosslink-label">PR Cuisine</span>
+          <span class="hist-crosslink-desc">Mofongo, lechón, and the food of the island</span>
+        </a>
+        <a href="/practical/" class="hist-crosslink-card">
+          <span class="hist-crosslink-icon">&#127890;</span>
+          <span class="hist-crosslink-label">Travel Tips</span>
+          <span class="hist-crosslink-desc">No passport needed, USD, and practical info</span>
+        </a>
+        <a href="/destinations/" class="hist-crosslink-card">
+          <span class="hist-crosslink-icon">&#127796;</span>
+          <span class="hist-crosslink-label">All Destinations</span>
+          <span class="hist-crosslink-desc">12 destinations from San Juan to Vieques</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else { document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible')); }
+</script>
+
+<style>
+  .hist-hero { position: relative; min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; background: linear-gradient(135deg, #5D4037 0%, #1565C0 50%, #0D7377 100%); }
+  .hist-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%); }
+  .hist-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); pointer-events: none; }
+  .hist-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .hist-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .hist-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .hist-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .hist-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .hist-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.5); }
+  .hist-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .hist-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.35); text-align: center; animation: histBounce 2s ease-in-out infinite; }
+  @keyframes histBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+  .hist-personal { padding-block: var(--space-8); }
+  .hist-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid var(--color-warm-coral); background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .hist-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .hist-personal-quote cite { font-size: var(--text-caption); color: var(--color-warm-coral); font-weight: var(--weight-semibold); font-style: normal; }
+  .hist-quicknav { padding: 0 0 var(--space-6); }
+  .hist-quicknav-grid { display: flex; justify-content: center; gap: var(--space-2); flex-wrap: wrap; }
+  .hist-quicknav-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 40px; font-size: 0.8rem; font-weight: var(--weight-medium); color: var(--color-slate); text-decoration: none; transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+  .hist-quicknav-chip:hover { background: var(--color-sky); color: var(--color-ocean-teal); transform: translateY(-2px); }
+  .hist-quicknav-icon { font-size: 1rem; }
+  .hist-quicknav-label { white-space: nowrap; }
+  .hist-topic { padding: var(--space-4) 0 var(--space-6); scroll-margin-top: 80px; }
+  .hist-topic-header { position: relative; border-radius: 20px; padding: var(--space-5) var(--space-6); margin-bottom: var(--space-5); overflow: hidden; }
+  .hist-topic-header-inner { position: relative; z-index: 1; display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  .hist-topic-icon { font-size: 1.6rem; }
+  .hist-topic-title { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: var(--weight-bold); color: #fff; margin: 0; line-height: 1.2; flex: 1; min-width: 200px; }
+  .hist-topic-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.1); padding: 4px 12px; border-radius: 20px; }
+  .hist-tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  @media (max-width: 768px) { .hist-tip-grid { grid-template-columns: 1fr; } }
+  .hist-tip-card { background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 14px; padding: var(--space-5); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .hist-tip-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+  .hist-tip-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0 0 var(--space-2); line-height: 1.3; }
+  .hist-tip-text { font-size: 0.85rem; color: var(--color-slate); line-height: 1.65; margin: 0; }
+  .hist-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .hist-cta-card { background: linear-gradient(135deg, var(--color-deep-night) 0%, #2D3748 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .hist-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .hist-cta-text { font-size: 1rem; color: rgba(255, 255, 255, 0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .hist-cta-button { display: inline-block; background: var(--color-warm-coral); color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .hist-cta-button:hover { background: #d4553b; transform: translateY(-2px); }
+  .hist-crosslinks { padding: 0 0 var(--space-10); }
+  .hist-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .hist-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .hist-crosslinks-grid { grid-template-columns: 1fr; } }
+  .hist-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .hist-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+  .hist-crosslink-icon { font-size: 1.8rem; }
+  .hist-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .hist-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+  @media (max-width: 640px) { .hist-hero { min-height: 50vh; padding: 0 var(--space-4) 40px; } .hist-hero-meta { gap: var(--space-4); } .hist-scroll-hint { display: none; } .hist-topic-header { padding: var(--space-4) var(--space-4); } }
+</style>
