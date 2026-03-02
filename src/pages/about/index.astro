@@ -8,11 +8,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import scottImg from '../../images/scott-murray.jpg';
-// scottImg removed — not used on this page
+import jeniceImg from '../../images/jenice-murray.jpg';
 ---
 
 <BaseLayout
-  title="About — Scott Murray"
+  title="About Us — Scott & Jenice Murray"
   description="I'm Scott — an American travel planner with years of Puerto Rico experience. Real prices, honest recommendations, and insider knowledge. This is my story."
 >
 
@@ -123,16 +123,16 @@ import scottImg from '../../images/scott-murray.jpg';
       </div>
     </div>
     <div class="profile-card reveal">
-      <div class="profile-banner scott"><div class="profile-banner-bg"></div></div>
-      <Image src={scottImg} alt="Local Connections" class="profile-avatar scott-av" width={96} height={96} format="webp" loading="lazy" />
+      <div class="profile-banner jenice"><div class="profile-banner-bg"></div></div>
+      <Image src={jeniceImg} alt="Jenice Murray" class="profile-avatar jenice-av" width={96} height={96} format="webp" loading="lazy" />
       <div class="profile-body">
-        <div class="profile-name">Local Connections</div>
-        <div class="profile-role">On-the-Ground Intel · Local Network · The Puerto Rican Perspective</div>
-        <p class="profile-bio">The best travel advice doesn't come from guidebooks — it comes from the people who live there. Over years of visiting Puerto Rico, I've built relationships with locals across the island — restaurant owners in Ponce, surf instructors in Rincon, boat captains in Fajardo. Their knowledge is what makes our recommendations different. They know the real prices, the best-kept-secret beaches, and which "tourist attractions" locals would never bother with.</p>
+        <div class="profile-name">Jenice</div>
+        <div class="profile-role">Co-founder · Local Expert · Cultural Perspective</div>
+        <p class="profile-bio">Filipina by birth, world traveler by marriage. Jenice brings an outsider-turned-insider perspective to every destination — someone who understands what it means to experience a place through its food, festivals, and people. Her eye for cultural detail and genuine curiosity about local life shapes the recommendations that make Discover Puerto Rico different from every other travel site.</p>
         <div class="profile-stats">
-          <div class="profile-stat"><div class="profile-stat-num">Real</div><div class="profile-stat-label">Local knowledge</div></div>
-          <div class="profile-stat"><div class="profile-stat-num">Island-wide</div><div class="profile-stat-label">Coverage</div></div>
-          <div class="profile-stat"><div class="profile-stat-num">Verified</div><div class="profile-stat-label">Prices & tips</div></div>
+          <div class="profile-stat"><div class="profile-stat-num">20+</div><div class="profile-stat-label">Years traveling</div></div>
+          <div class="profile-stat"><div class="profile-stat-num">Pampanga</div><div class="profile-stat-label">Hometown</div></div>
+          <div class="profile-stat"><div class="profile-stat-num">Real</div><div class="profile-stat-label">Local insights</div></div>
         </div>
       </div>
     </div>
@@ -475,7 +475,7 @@ import scottImg from '../../images/scott-murray.jpg';
   .profile-banner.scott {
     background: linear-gradient(135deg, #0c3547 0%, #0D7377 40%, #14B8A6 70%, #38D9A9 100%);
   }
-  .profile-banner.scott {
+  .profile-banner.jenice {
     background: linear-gradient(135deg, #78350F 0%, #D4A574 40%, #FBBF24 70%, #FDE68A 100%);
   }
   .profile-banner::after {
@@ -501,7 +501,7 @@ import scottImg from '../../images/scott-murray.jpg';
   }
   .profile-card:hover .profile-avatar { transform: scale(1.08); }
   .profile-avatar.scott-av { background: linear-gradient(135deg, #0D7377, #14B8A6); }
-  .profile-avatar.scott-av { background: linear-gradient(135deg, #D4A574, #FBBF24); }
+  .profile-avatar.jenice-av { background: linear-gradient(135deg, #D4A574, #FBBF24); }
   .profile-body { padding: 20px 32px 32px; text-align: center; }
   .profile-name {
     font-family: var(--font-serif);
