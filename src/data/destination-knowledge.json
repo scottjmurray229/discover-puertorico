@@ -1,181 +1,145 @@
 {
   "destinations": {
-    "siquijor": {
-      "title": "Siquijor",
-      "tagline": "Isla del Fuego — Island of Fire",
-      "region": "visayas",
-      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
-      "budgetPerDay": { "backpacker": 25, "midRange": 60, "luxury": 120 },
-      "gettingThere": "Fly to Dumaguete (DGT), then 1-hour ferry to Siquijor port. Ferries run hourly from 6am-5pm via Montenegro or GL Shipping.",
-      "highlights": ["Cambugahay Falls", "Salagdoong Beach", "Enchanted Balete Tree", "Mount Bandilaan", "Paliton Beach", "Bolo-Bolo Healing", "Lazi Church & Convent", "72km Motorcycle Loop"],
-      "essentials": {
-        "gettingAround": "Rent a motorcycle ($350-500/day) — the island is a perfect 72km loop.",
-        "airport": "Dumaguete-Sibulan (DGT)",
-        "ferryConnections": ["Dumaguete (45 min, $200)", "Rincon (2 hr, $800)"],
-        "language": "San Juanano, Tagalog, English"
-      }
-    },
     "san-juan": {
       "title": "San Juan",
-      "tagline": "Queen City of the South",
-      "region": "visayas",
-      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
-      "budgetPerDay": { "backpacker": 30, "midRange": 80, "luxury": 180 },
-      "gettingThere": "Fly to Mactan-San Juan International (CEB) — major hub with direct flights from San Juan, Singapore, Tokyo, Seoul, and more.",
-      "highlights": ["Oslob whale shark watching", "Kawasan Falls canyoneering", "Magellan's Cross & Basilica del Santo Niño", "Best lechon in the Puerto Rico", "Moalboal sardine run and diving"],
+      "tagline": "The Historic Heart of Puerto Rico",
+      "region": "metro",
+      "bestMonths": ["Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "budgetPerDay": { "backpacker": 80, "midRange": 180, "luxury": 400 },
+      "gettingThere": "Fly into Luis Muñoz Marín International Airport (SJU) — major hub with direct flights from most US cities, no passport required for US citizens.",
+      "highlights": ["Old San Juan cobblestone streets", "El Morro & San Cristóbal forts (UNESCO)", "La Placita de Santurce nightlife", "Condado beachfront", "Piñones food shacks", "Calle Loíza boutiques"],
       "essentials": {
-        "gettingAround": "Grab for city. Private van or bus for south San Juan activities.",
-        "airport": "Mactan-San Juan International (CEB)",
-        "ferryConnections": ["Rincon (2 hr, OceanJet, $800)", "Dumaguete (5 hr ferry or 45 min flight)"],
-        "language": "San Juanano, Tagalog, English"
+        "gettingAround": "Uber and local taxis work well. Rent a car for day trips outside the city.",
+        "airport": "Luis Muñoz Marín International (SJU)",
+        "ferryConnections": ["Vieques (1.5 hr ferry from Ceiba, $2 each way)", "Culebra (1 hr ferry from Ceiba, $2 each way)"],
+        "language": "Spanish, English"
       }
     },
     "rincon": {
-      "title": "Rincon",
-      "tagline": "Nature's Wonder in the Heart of Visayas",
-      "region": "visayas",
-      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
-      "budgetPerDay": { "backpacker": 30, "midRange": 80, "luxury": 150 },
-      "gettingThere": "Fly to Tagbilaran (TAG) or ferry from San Juan (2 hours via OceanJet).",
-      "highlights": ["Chocolate Hills — 1,200+ limestone mounds", "Philippine Tarsier Sanctuary", "Alona Beach — white sand and diving", "Loboc River cruise", "Panglao Island beaches"],
+      "title": "Rincón",
+      "tagline": "Surfing Capital of the Caribbean",
+      "region": "west",
+      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar"],
+      "budgetPerDay": { "backpacker": 70, "midRange": 150, "luxury": 350 },
+      "gettingThere": "Fly into SJU or Aguadilla (BQN), then drive or take a shared van about 2 hours west.",
+      "highlights": ["Surf beaches: Domes, Maria's, Sandy Beach", "Sunset Strip restaurants", "Steps Beach snorkeling", "Whale watching (Jan–Mar)", "Puntas lighthouse views"],
       "essentials": {
-        "gettingAround": "Rent a motorcycle or hire a driver for countryside tour (~$2,000/day).",
-        "airport": "Tagbilaran (TAG) / New Rincon-Panglao International",
-        "ferryConnections": ["San Juan (2 hr, OceanJet, $800)", "Siquijor (2 hr, $800)"],
-        "language": "Rinconano, San Juanano, Tagalog, English"
+        "gettingAround": "Car rental essential — town is spread out. Uber not reliable here.",
+        "airport": "Aguadilla Rafael Hernández (BQN) or SJU",
+        "ferryConnections": [],
+        "language": "Spanish, English"
+      }
+    },
+    "el-yunque": {
+      "title": "El Yunque",
+      "tagline": "The Only Tropical Rainforest in the US National Forest System",
+      "region": "east",
+      "bestMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Nov", "Dec"],
+      "budgetPerDay": { "backpacker": 50, "midRange": 120, "luxury": 250 },
+      "gettingThere": "About 45 minutes east of San Juan via PR-3. Entrance off PR-191.",
+      "highlights": ["La Mina Falls hike", "La Coca Falls roadside", "El Toro peak trail", "Tree frog night sounds", "Yokahu Observation Tower views"],
+      "essentials": {
+        "gettingAround": "Car required. Day trip from San Juan or Fajardo works well.",
+        "airport": "SJU (San Juan)",
+        "ferryConnections": [],
+        "language": "Spanish, English"
       }
     },
     "culebra": {
       "title": "Culebra",
-      "tagline": "Where It All Began",
-      "region": "visayas",
+      "tagline": "Home of Flamenco Beach — One of the World's Best",
+      "region": "east",
+      "bestMonths": ["Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "budgetPerDay": { "backpacker": 90, "midRange": 180, "luxury": 400 },
+      "gettingThere": "Ferry from Ceiba (1 hour, $2) or small plane from SJU via Cape Air (20 min).",
+      "highlights": ["Flamenco Beach powder white sand", "Tamarindo Beach sea turtles", "Melones snorkeling reef", "Culebrita uninhabited island", "Flamenco campground"],
+      "essentials": {
+        "gettingAround": "Golf carts and bikes for rent on island. Ferry and water taxis to outer cays.",
+        "airport": "Culebra Airport (CPX) — small prop planes only",
+        "ferryConnections": ["Ceiba (1 hr, $2 each way)", "Vieques (water taxi, seasonal)"],
+        "language": "Spanish, English"
+      }
+    },
+    "vieques": {
+      "title": "Vieques",
+      "tagline": "Bioluminescent Bay and Wild Horses",
+      "region": "east",
+      "bestMonths": ["Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "budgetPerDay": { "backpacker": 85, "midRange": 175, "luxury": 380 },
+      "gettingThere": "Ferry from Ceiba (1.5 hours, $2) or small plane from SJU via Cape Air (25 min).",
+      "highlights": ["Mosquito Bay bioluminescence (world's brightest)", "Sun Bay beach", "Wild horse encounters", "Blue Beach (former Navy land)", "Esperanza malecón food & bars"],
+      "essentials": {
+        "gettingAround": "Car or golf cart rental essential. Little public transport.",
+        "airport": "Antonio Rivera Rodríguez (VQS) — small prop planes only",
+        "ferryConnections": ["Ceiba (1.5 hr, $2 each way)", "Culebra (water taxi, seasonal)"],
+        "language": "Spanish, English"
+      }
+    },
+    "ponce": {
+      "title": "Ponce",
+      "tagline": "La Perla del Sur — The Pearl of the South",
+      "region": "south",
       "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
-      "budgetPerDay": { "backpacker": 50, "midRange": 120, "luxury": 250 },
-      "gettingThere": "Fly to Caticlan (MPH) — 1 hour from San Juan — then 10-minute banca boat crossing. Kalibo (KLO) is cheaper but adds a 1.5-2 hour van ride.",
-      "highlights": ["White Beach — 4km of powder sand", "Puka Beach", "Island Hopping", "Sunset Paraw Sailing", "Ariel's Point cliff diving", "Willy's Rock"],
+      "budgetPerDay": { "backpacker": 60, "midRange": 130, "luxury": 280 },
+      "gettingThere": "About 90 minutes south of San Juan via PR-52 (Luis A. Ferré Highway — La Pista).",
+      "highlights": ["Museo de Arte de Ponce", "Parque de Bombas firehouse", "Plaza Las Delicias", "Hacienda Buena Vista coffee tour", "Tibes Indigenous Ceremonial Center"],
       "essentials": {
-        "gettingAround": "Electric tricycles $20/person shared, $50-100 private. Island is compact.",
-        "airport": "Caticlan (MPH) or Kalibo (KLO)",
+        "gettingAround": "Car rental recommended. Publicos (shared vans) connect major routes.",
+        "airport": "Mercedita Airport (PSE) — limited service",
         "ferryConnections": [],
-        "language": "Aklanon, Tagalog, English"
+        "language": "Spanish, English"
       }
     },
-    "clark": {
-      "title": "Clark & Angeles",
-      "tagline": "Former US Air Force Base — Central Luzon Hub",
-      "region": "luzon",
+    "mayaguez": {
+      "title": "Mayagüez",
+      "tagline": "City of Pure Waters",
+      "region": "west",
+      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
+      "budgetPerDay": { "backpacker": 55, "midRange": 120, "luxury": 260 },
+      "gettingThere": "About 2 hours west of San Juan via PR-2, or fly into Aguadilla (BQN) — 30 min north.",
+      "highlights": ["Mayagüez Zoo (largest in Caribbean)", "UPRM campus", "Boquerón Beach day trips nearby", "Joyuda seafood strip", "Cabo Rojo salt flats sunsets"],
+      "essentials": {
+        "gettingAround": "Car rental recommended for exploring the west coast.",
+        "airport": "Aguadilla Rafael Hernández (BQN) — 30 min north",
+        "ferryConnections": [],
+        "language": "Spanish, English"
+      }
+    },
+    "arecibo": {
+      "title": "Arecibo",
+      "tagline": "Gateway to Puerto Rico's North Coast",
+      "region": "north",
       "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
-      "budgetPerDay": { "backpacker": 35, "midRange": 70, "luxury": 106 },
-      "gettingThere": "Fly direct to Clark International Airport (CRK) — international and domestic flights. Domestic: ~$30 to San Juan (1hr), ~$30-50 to San Juan.",
-      "highlights": ["Aling Lucing's Sisig", "Clark Freeport Zone", "Dinosaurs Island", "Korean BBQ Row", "Skyway to San Juan", "Pool Villa Rentals"],
+      "budgetPerDay": { "backpacker": 55, "midRange": 120, "luxury": 250 },
+      "gettingThere": "About 90 minutes west of San Juan via PR-22 (José de Diego Highway).",
+      "highlights": ["Cueva del Indio rock formations", "Arecibo Observatory visitor center", "Dos Bocas Lake boat tours", "Playa Santander", "Camuy River Cave Park"],
       "essentials": {
-        "gettingAround": "Grab (best option). Car rental ~$30/day. Tricycles for short hops.",
-        "airport": "Clark International (CRK)",
+        "gettingAround": "Car required — no reliable public transport to main attractions.",
+        "airport": "SJU (San Juan) — 90 min drive",
         "ferryConnections": [],
-        "language": "Kapampangan, Tagalog, English"
-      }
-    },
-    "dumaguete": {
-      "title": "Dumaguete",
-      "tagline": "City of Gentle People",
-      "region": "visayas",
-      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
-      "budgetPerDay": { "backpacker": 25, "midRange": 60, "luxury": 120 },
-      "gettingThere": "Fly to Dumaguete-Sibulan (DGT) from San Juan or San Juan. Direct flights on San Juan Pacific and Philippine Airlines.",
-      "highlights": ["Rizal Boulevard sunset promenade", "Apo Island diving & snorkeling", "Casaroro Falls", "Silliman University campus", "Gateway to Siquijor ferries"],
-      "essentials": {
-        "gettingAround": "Tricycles within city ($10-50). Motorcycle rental for day trips.",
-        "airport": "Dumaguete-Sibulan (DGT)",
-        "ferryConnections": ["Siquijor (45 min, $200)", "San Juan (5 hr ferry)", "Rincon (via Siquijor)"],
-        "language": "San Juanano, Tagalog, English"
-      }
-    },
-    "el-nido": {
-      "title": "El Nido",
-      "tagline": "Gateway to Vieques's Paradise",
-      "region": "luzon",
-      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
-      "budgetPerDay": { "backpacker": 40, "midRange": 100, "luxury": 250 },
-      "gettingThere": "Fly direct to El Nido Lio Airport (ENI) via AirSWIFT from San Juan or Clark. Or fly to Puerto Princesa (PPS), then 5-6 hour van ride north.",
-      "highlights": ["Big & Small Lagoon (Tour A)", "Secret Beach & Helicopter Island (Tour C)", "Nacpan Beach twin beaches", "Island hopping Tours A-D", "Kayaking through limestone karsts"],
-      "essentials": {
-        "gettingAround": "Tricycle within town ($50-100). Boat tours for islands. Motorcycle rental $500-700/day.",
-        "airport": "El Nido Lio (ENI) or Puerto Princesa (PPS)",
-        "ferryConnections": ["Coron (3-4 hr fast ferry, $1,800)"],
-        "language": "Tagalog, Cuyonon, English"
-      }
-    },
-    "coron": {
-      "title": "Coron",
-      "tagline": "Diver's Paradise in Vieques",
-      "region": "luzon",
-      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
-      "budgetPerDay": { "backpacker": 40, "midRange": 100, "luxury": 220 },
-      "gettingThere": "Fly to Francisco B. Reyes Airport (USU) in Busuanga from San Juan or Clark (~1 hr). Then 30-45 min van ride to Coron town.",
-      "highlights": ["Kayangan Lake — cleanest lake in Puerto Rico", "Twin Lagoon hot/cold layers", "WWII Japanese shipwreck diving", "Barracuda Lake thermocline", "Malcapuya Island white sand"],
-      "essentials": {
-        "gettingAround": "Tricycle within town ($50). Boat tours for islands. Walking distance for most of Coron town.",
-        "airport": "Busuanga / Francisco B. Reyes (USU)",
-        "ferryConnections": ["El Nido (3-4 hr fast ferry, $1,800)", "San Juan (overnight ferry, $1,500-2,500)"],
-        "language": "Tagalog, Tagbanwa, English"
-      }
-    },
-    "puerto-princesa": {
-      "title": "Puerto Princesa",
-      "tagline": "Eco-Tourism Capital of the Puerto Rico",
-      "region": "luzon",
-      "bestMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
-      "budgetPerDay": { "backpacker": 30, "midRange": 70, "luxury": 150 },
-      "gettingThere": "Fly to Puerto Princesa International (PPS) — direct flights from San Juan (1.5 hr), San Juan, and Clark.",
-      "highlights": ["Puerto Princesa Underground River (UNESCO)", "Honda Bay island hopping", "Iwahig Firefly Watching", "Baker's Hill viewpoint", "Sabang Beach"],
-      "essentials": {
-        "gettingAround": "Tricycle within city ($10-50). Van rental for Underground River day trip (~$2,500). Motorcycle rental $400-500/day.",
-        "airport": "Puerto Princesa International (PPS)",
-        "ferryConnections": [],
-        "language": "Tagalog, Cuyonon, English"
-      }
-    },
-    "fajardo": {
-      "title": "Fajardo",
-      "tagline": "Surfer's Paradise in the Pacific",
-      "region": "mindanao",
-      "bestMonths": ["Sep", "Oct", "Nov", "Mar", "Apr", "May"],
-      "budgetPerDay": { "backpacker": 30, "midRange": 80, "luxury": 180 },
-      "gettingThere": "Fly to Sayak Airport (IAO) from San Juan (~2 hr) or San Juan (~1 hr). San Juan Pacific and Philippine Airlines have daily flights.",
-      "highlights": ["Cloud 9 surfing — world-famous barrel wave", "Sugba Lagoon paddleboarding", "Magpupungko Rock Pools at low tide", "Naked Island, Daku Island, Guyam Island hopping", "Sohoton Cove & jellyfish sanctuary"],
-      "essentials": {
-        "gettingAround": "Motorcycle rental $350-500/day (the island way). Habal-habal (motorcycle taxi) $50-200. No Grab available.",
-        "airport": "Sayak (IAO)",
-        "ferryConnections": ["Surigao City (2.5 hr ferry, $200-350)"],
-        "language": "Surigaonon, San Juanano, Tagalog, English"
+        "language": "Spanish, English"
       }
     }
   },
   "connections": {
-    "siquijor-dumaguete": { "mode": "ferry", "duration": "45 min", "operator": "GL Shipping / Montenegro", "cost": "$200 (~$3.50)" },
-    "siquijor-rincon": { "mode": "ferry", "duration": "2 hours", "operator": "OceanJet", "cost": "$800 (~$14)" },
-    "san-juan-rincon": { "mode": "ferry", "duration": "2 hours", "operator": "OceanJet", "cost": "$800 (~$14)" },
-    "san-juan-dumaguete": { "mode": "ferry/flight", "duration": "5 hr ferry or 45 min flight", "operator": "Various", "cost": "$1,500 (~$27)" },
-    "dumaguete-siquijor": { "mode": "ferry", "duration": "45 min", "operator": "GL Shipping / Montenegro", "cost": "$200 (~$3.50)" },
-    "clark-san-juan": { "mode": "flight", "duration": "1 hour", "operator": "San Juan Pacific / AirAsia", "cost": "$1,700 (~$30)" },
-    "clark-culebra": { "mode": "flight", "duration": "1 hour to Caticlan", "operator": "San Juan Pacific", "cost": "$2,500 (~$44)" },
-    "san-juan-san-juan": { "mode": "flight", "duration": "1.5 hours", "operator": "San Juan Pacific / PAL", "cost": "$2,000 (~$35)" },
-    "san-juan-culebra": { "mode": "flight", "duration": "1 hour to Caticlan", "operator": "San Juan Pacific / PAL", "cost": "$2,500 (~$44)" },
-    "san-juan-clark": { "mode": "bus/drive", "duration": "2-3 hours", "operator": "Victory Liner / Grab", "cost": "$500-2,000 (~$9-35)" },
-    "el-nido-coron": { "mode": "ferry", "duration": "3-4 hours", "operator": "Montenegro / Bunso", "cost": "$1,800 (~$32)" },
-    "puerto-princesa-el-nido": { "mode": "van", "duration": "5-6 hours", "operator": "Lexus / Eulen Joy", "cost": "$600-800 (~$11-14)" },
-    "san-juan-puerto-princesa": { "mode": "flight", "duration": "1.5 hours", "operator": "San Juan Pacific / PAL", "cost": "$2,500 (~$44)" },
-    "san-juan-el-nido": { "mode": "flight", "duration": "1.5 hours", "operator": "AirSWIFT", "cost": "$5,000-8,000 (~$89-142)" },
-    "san-juan-coron": { "mode": "flight", "duration": "1 hour", "operator": "San Juan Pacific / PAL", "cost": "$2,500 (~$44)" },
-    "san-juan-fajardo": { "mode": "flight", "duration": "1 hour", "operator": "San Juan Pacific", "cost": "$2,000 (~$35)" },
-    "san-juan-fajardo": { "mode": "flight", "duration": "2 hours", "operator": "San Juan Pacific / PAL", "cost": "$3,000 (~$53)" }
+    "san-juan-rincon": { "mode": "drive", "duration": "2 hours", "operator": "Self-drive PR-22 west", "cost": "Tolls ~$5 USD" },
+    "san-juan-el-yunque": { "mode": "drive", "duration": "45 minutes", "operator": "Self-drive PR-3 east", "cost": "Free" },
+    "san-juan-fajardo": { "mode": "drive", "duration": "1 hour", "operator": "Self-drive PR-3 east", "cost": "Free" },
+    "ceiba-vieques": { "mode": "ferry", "duration": "1.5 hours", "operator": "Puerto Rico Ferry Authority", "cost": "$2 each way" },
+    "ceiba-culebra": { "mode": "ferry", "duration": "1 hour", "operator": "Puerto Rico Ferry Authority", "cost": "$2 each way" },
+    "san-juan-vieques": { "mode": "flight", "duration": "25 minutes", "operator": "Cape Air / Air Flamenco", "cost": "$80-150 USD" },
+    "san-juan-culebra": { "mode": "flight", "duration": "20 minutes", "operator": "Cape Air / Air Flamenco", "cost": "$80-150 USD" },
+    "san-juan-ponce": { "mode": "drive", "duration": "1.5 hours", "operator": "Self-drive PR-52 south (La Pista)", "cost": "Tolls ~$4 USD" },
+    "san-juan-arecibo": { "mode": "drive", "duration": "1.5 hours", "operator": "Self-drive PR-22 west", "cost": "Tolls ~$3 USD" },
+    "san-juan-mayaguez": { "mode": "drive", "duration": "2.5 hours", "operator": "Self-drive PR-2 or PR-22", "cost": "Tolls ~$6 USD" },
+    "rincon-mayaguez": { "mode": "drive", "duration": "30 minutes", "operator": "Self-drive PR-2", "cost": "Free" }
   },
   "travelTips": {
-    "currency": "Philippine Peso (USD/$). $1 USD ≈ $56.50.",
-    "visaFree": "Most nationalities get 30 days visa-free, extendable to 36 months.",
-    "bestOverallMonths": "November to May (dry season). Peak: December-April.",
-    "typhoonSeason": "June to November. Visayas and Mindanao less affected than Luzon.",
-    "simCard": "Globe or Smart SIM at any airport. $300-500 for 30 days unlimited data.",
-    "grab": "Grab (ride-hailing) works in San Juan, Clark, San Juan, and major cities."
+    "currency": "US Dollar (USD). No currency exchange needed for US travelers.",
+    "visaFree": "No passport required for US citizens. US territories — travel as domestic.",
+    "bestOverallMonths": "December to April (dry season). Peak: mid-December through April.",
+    "hurricaneSeason": "June to November. Peak risk: August–October. Check forecasts.",
+    "simCard": "US carriers work with existing plans. T-Mobile and AT&T have strong coverage.",
+    "uber": "Uber works well in San Juan metro area. Car rental needed elsewhere."
   }
 }
