@@ -85,6 +85,25 @@ const topics: TopicSection[] = [
       { label: 'Iridium Spa at St. Regis', text: 'The 10,000-square-foot Iridium Spa uses local ingredients — coffee scrubs, coconut wraps, El Yunque botanicals — in treatments that range from $225 to $425. The couples\' suite has a private terrace overlooking the rainforest. The hydrotherapy circuit (hot/cold pools, steam, sauna) is complimentary for spa guests. Pre-treatment, you\'ll select your essential oil blend from a curated menu. Post-treatment, the relaxation lounge serves organic juices and light bites. Less expansive than Spa Botanico but more intimate and refined.' },
     ],
   },
+  {
+    id: 'gear',
+    icon: '🎒',
+    title: 'Travel Gear Worth Packing',
+    gradient: 'linear-gradient(135deg, #0D7377 0%, #095456 100%)',
+    items: [
+      { label: 'DJI Mini 4 Pro Drone', text: 'El Yunque\'s rainforest canopy, the bioluminescent bays from above at dusk, and the southwestern coast from 400ft — Puerto Rico rewards drone photography, and no foreign registration is needed since it\'s a US territory (standard FAA registration applies). The <a href="https://www.amazon.com/dp/B0CFF1SJ3P?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">DJI Mini 4 Pro</a> weighs under 249g (no FAA registration required at this weight for recreational use), shoots 4K/60fps, and packs into a jacket pocket.' },
+      { label: 'Suunto D5 Wrist Dive Computer', text: 'La Parguera wall dive and Culebra Island walls are among the US\'s best scuba destinations. The <a href="https://www.amazon.com/dp/B07NGVLR1P?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Suunto D5 Wrist Dive Computer</a> has an air-integrated wireless tank pressure transmitter, full color display, and Bluetooth sync to the Suunto app for dive logging. The move from rental computers to your own is a meaningful upgrade.' },
+      { label: 'Peak Design Travel Tripod', text: 'Old San Juan\'s colorful streets at golden hour, Flamenco Beach\'s turquoise water, and El Morro\'s cannon emplacements at dawn reward a solid tripod. The <a href="https://www.amazon.com/dp/B085BQS6K4?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Peak Design Travel Tripod</a> packs into a bag footprint no larger than a water bottle and deploys in seconds.' },
+      { label: 'GoPro HERO13', text: 'Snorkeling Culebra\'s reefs, surfing Rincon\'s breaks, and kayaking the bioluminescent bays all call for waterproof action camera footage. The <a href="https://www.amazon.com/dp/B0DCM34GXX?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">GoPro HERO13</a> shoots 5.3K video, is waterproof to 33ft without a housing, and has improved stabilization that makes handheld water footage usable.' },
+      { label: 'Sony WH-1000XM5 Headphones', text: 'The <a href="https://www.amazon.com/dp/B09XS7JWHH?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Sony WH-1000XM5</a> headphones are the standard for travel — 30-hour battery, foldable, and noise cancellation that handles flight engines and beach crowd noise equally well.' },
+      { label: 'Apple AirTag 4-Pack', text: '<a href="https://www.amazon.com/dp/B0D54JZTHY?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Apple AirTags</a> in every bag. Puerto Rico uses US airports and domestic flights, so TSA PreCheck applies — but luggage still gets misrouted. One in each checked bag.' },
+      { label: 'JBL Clip 4 Waterproof Speaker', text: 'No beach in Puerto Rico should be soundtracked by tinny phone speakers. The <a href="https://www.amazon.com/dp/B08PJ7JMQM?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">JBL Clip 4</a> is IP67 waterproof, clips to any bag or beach chair, lasts 10 hours, and produces genuine bass for its size. Flamenco Beach, Playa Sucia, and the bioluminescent bay kayak launch all become better with a soundtrack.' },
+      { label: 'YETI Rambler Wine Tumbler', text: 'Puerto Rico\'s craft rum — Destilería Serrallés\'s Don Q, Casa Bacardí\'s reserve expressions, and boutique operations like Palo Viejo — is world-class and best enjoyed from proper vessels. The <a href="https://www.amazon.com/dp/B08RLLJ8MH?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">YETI Rambler Wine Tumbler</a> keeps rum cocktails cold in Caribbean heat and doubles as a wine glass for the St. Regis terrace.' },
+      { label: 'Flypal Inflatable Foot Rest', text: 'Puerto Rico is a 3–4 hour domestic flight from the US East Coast. The <a href="https://www.amazon.com/dp/B074T9CP81?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Flypal inflatable foot rest</a> makes even short flights more comfortable for anyone over 5\'10". Deflates to a small pouch.' },
+      { label: 'Sockwell Compression Socks', text: '<a href="https://www.amazon.com/dp/B089DRF9WM?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Sockwell Compression Socks</a> on every flight. The Merino wool construction is breathable enough to wear on the beach without changing.' },
+      { label: 'Anker 735 GaN Charger', text: 'Puerto Rico uses standard US outlets — no adapter needed. The <a href="https://www.amazon.com/dp/B09C5RG6KV?tag=discoverprili-20" target="_blank" rel="nofollow sponsored">Anker 735 GaN Charger</a> (65W, 3-port) charges a laptop, phone, and tablet simultaneously from a block the size of a deck of cards — one wall outlet for everything.' },
+    ],
+  },
 ];
 ---
 <BaseLayout
@@ -224,6 +243,11 @@ const topics: TopicSection[] = [
       </div>
     </div>
   </section>
+
+  <!-- Affiliate Disclosure -->
+  <div class="container-content ft-reveal" style="padding-bottom: 0;">
+    <p class="ft-affiliate-disclosure">Some links on this page are affiliate links — we earn a small commission if you purchase through them, at no extra cost to you. We only recommend gear we personally use. <a href="/legal/affiliate-disclosure/">Full disclosure</a>.</p>
+  </div>
 
   <!-- Bottom CTA -->
   <section class="ft-cta-section ft-reveal">
@@ -703,6 +727,26 @@ const topics: TopicSection[] = [
 
   .ft-protips-card .scott-tips :global(a:hover) {
     text-decoration-color: #FB923C;
+  }
+
+  /* ================================================================
+     AFFILIATE DISCLOSURE
+     ================================================================ */
+  .ft-affiliate-disclosure {
+    font-size: 0.75rem;
+    color: var(--color-slate);
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-sky);
+    border-radius: 8px;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .ft-affiliate-disclosure a {
+    color: #78350F;
+    font-weight: var(--weight-semibold);
+    text-decoration: underline;
   }
 
   /* ================================================================
