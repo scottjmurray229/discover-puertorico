@@ -2,6 +2,7 @@
 title: "El Yunque Rainforest: What to Know Before You Go"
 description: "El Yunque is the only tropical rainforest in the US National Forest System, and it's worth the trip from San Juan. Here's how to do it right."
 pubDate: 2026-03-01
+dateModified: 2026-03-08
 heroImage: ""
 heroVideo: ""
 author: "Scott"

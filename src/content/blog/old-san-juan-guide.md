@@ -2,6 +2,7 @@
 title: "Old San Juan Guide: Everything to See, Eat, and Do in the Walled City"
 description: "Complete guide to Old San Juan — the forts, the blue cobblestone streets, the best restaurants, where to stay, and how to spend two to three days in Puerto Rico's colonial heart."
 pubDate: 2026-02-22
+dateModified: 2026-03-08
 heroImage: ""
 author: "Scott"
 tags: ["puerto-rico", "san-juan", "old-san-juan", "colonial", "history"]

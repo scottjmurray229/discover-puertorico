@@ -2,6 +2,7 @@
 title: "Puerto Rico First-Timer Guide: Everything You Need to Know Before You Go"
 description: "Complete first-timer guide to Puerto Rico — when to visit, where to stay, how to get around, safety, money, food, and how to make the most of your first trip."
 pubDate: 2026-02-18
+dateModified: 2026-03-08
 heroImage: ""
 author: "Scott"
 tags: ["puerto-rico", "first-timer", "planning", "practical", "budget"]

@@ -2,6 +2,7 @@
 title: "Puerto Rico Bioluminescent Bay: Everything You Need to Know"
 description: "Complete guide to Puerto Rico's three bioluminescent bays — which is best, how to book, what to expect, when to go, and the science behind the glow."
 pubDate: 2026-02-12
+dateModified: 2026-03-08
 heroImage: ""
 author: "Scott"
 tags: ["puerto-rico", "bioluminescent-bay", "vieques", "fajardo", "wildlife"]

@@ -2,6 +2,7 @@
 title: "Old San Juan in 48 Hours: What to Prioritize"
 description: "Old San Juan is small enough to walk entirely but dense enough to take days to really see. Here's how we'd spend 48 hours and what we'd skip."
 pubDate: 2026-03-01
+dateModified: 2026-03-08
 heroImage: ""
 heroVideo: ""
 author: "Scott"

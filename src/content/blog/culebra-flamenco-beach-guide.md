@@ -2,6 +2,7 @@
 title: "Culebra and Flamenco Beach: Complete Guide to Puerto Rico's Best Island"
 description: "Complete guide to visiting Culebra — how to get there, where to stay, Flamenco Beach, snorkeling with sea turtles, and what to do on the island."
 pubDate: 2026-02-28
+dateModified: 2026-03-08
 heroImage: ""
 author: "Scott"
 tags: ["puerto-rico", "culebra", "flamenco-beach", "beaches", "snorkeling"]

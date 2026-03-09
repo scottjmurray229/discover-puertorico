@@ -2,6 +2,7 @@
 title: "Puerto Rico vs US Virgin Islands: Which Is Worth It?"
 description: "Honest comparison of Puerto Rico and the US Virgin Islands — beaches, costs, culture, logistics, and which destination better fits different types of travelers."
 pubDate: 2026-02-08
+dateModified: 2026-03-08
 heroImage: ""
 author: "Scott"
 tags: ["puerto-rico", "caribbean", "trip-planning", "beaches", "comparison"]
