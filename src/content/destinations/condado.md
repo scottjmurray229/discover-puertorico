@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "Is Condado walkable?", answer: "Very walkable. Ashford Avenue runs the length of the neighborhood with restaurants, shops, and hotels on both sides. The beach is always just a block or two away. You can walk to Old San Juan in about 30 minutes along the waterfront or take a quick Uber." }
   - { question: "What's the difference between Condado and Isla Verde?", answer: "Condado is more upscale and walkable with better restaurants and nightlife. Isla Verde has wider beaches and more resort-style hotels at slightly lower prices. Both are great — Condado for culture and dining, Isla Verde for pure beach time." }
+  - { question: "What are the best restaurants in Condado?", answer: "1919 Restaurant at the Condado Vanderbilt is Puerto Rico's most acclaimed fine dining — José Juan Cuevas's creative Puerto Rican cuisine at its highest expression. For mid-range, Santaella in Santurce (10-minute walk) serves excellent creative Caribbean plates. For casual, La Placita de Santurce fills Thursday and Friday nights with locals and is the best nightlife scene on the island." }
+  - { question: "Is Condado beach good for swimming?", answer: "Condado beach has calm sections excellent for swimming and rougher areas preferred by surfers. The lagoon side (Condado Lagoon) is completely calm and popular for stand-up paddleboarding and kayaking. The ocean side has more wave action — generally manageable for confident swimmers but occasionally rough. Check conditions in the morning; afternoon trade winds can increase wave action." }
+  - { question: "What is the Condado Lagoon?", answer: "A protected saltwater lagoon behind the beach strip, connected to the ocean by channels under the bridges. The Parque Lineal del Condado trail runs along the lagoon and offers a peaceful escape from Ashford Avenue. Stand-up paddleboard rentals are available on the lagoon side. The lagoon is calm, shallow, and warm — more approachable than the ocean for children and beginner paddlers." }
+  - { question: "Is Condado safe at night?", answer: "Condado is one of Puerto Rico's safest neighborhoods for visitors. Ashford Avenue is active and well-lit at night, Uber and Lyft work reliably, and the restaurant and bar scene keeps the streets populated until late. Standard urban awareness applies — do not leave valuables visible in rental cars and avoid walking long distances alone after midnight in unfamiliar blocks." }
+  - { question: "How far is Condado from Old San Juan?", answer: "About a 30-minute walk along the waterfront Paseo Lineal, or 10 minutes by Uber ($10-15). The walk is pleasant and passes the Capitol building and the entrance to the Paseo de la Princesa. Most visitors staying in Condado visit Old San Juan at least once — it is close enough for an evening dinner or a morning of fort exploration without changing your hotel." }
 affiliatePicks:
   - name: "Condado Vanderbilt Hotel"
     type: "hotel"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/condado-hero.mp4" heading="San Juan's Beachfront Playground" subheading="Luxury hotels on the lagoon, Art Deco streets, and the island's best restaurant scene." />
 
 ## Why Condado
 

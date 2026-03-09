@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "When is Carnival in Ponce?", answer: "The week before Ash Wednesday, usually in February or March. Ponce's Carnival is the most famous in Puerto Rico, with vejigante characters in horned papier-mâché masks chasing children through the streets. It's loud, colorful, and genuinely exciting. Book accommodation well in advance." }
   - { question: "Is Ponce worth visiting?", answer: "Absolutely. Ponce is Puerto Rico's cultural capital — more museums, better-preserved architecture, and deeper traditions than San Juan. It's less touristy and gives you a window into authentic Puerto Rican life. The art museum alone justifies the trip." }
+  - { question: "What is the Hacienda Buena Vista?", answer: "A beautifully restored 19th-century coffee and corn plantation in the mountains north of Ponce. The hydraulic machinery still works — water from the mountain stream powers the original grist mill and coffee pulper. The Conservation Trust of Puerto Rico runs guided tours on weekends ($12 adults). One of the most educational and atmospheric historic sites in Puerto Rico. Reserve ahead." }
+  - { question: "How do I get from San Juan to Ponce?", answer: "Drive 1.5 hours south on the Luis A. Ferré Highway (PR-52), a modern toll road through the mountains. The toll is about $6. No direct train or regular bus service exists. Rent a car — you will want one to explore the surrounding coast and mountain coffee region. Ponce is also a natural stopping point on a counterclockwise loop of the island." }
+  - { question: "What is Ponce's architecture known for?", answer: "Over 300 buildings in Ponce's historic district are classified as architectural landmarks. The dominant style is Ponce Creole — a local interpretation of neoclassical Spanish colonial architecture with decorative features adapted to the tropical climate, including wide balconies, tall ceilings, and ornate ironwork. The Plaza las Delicias anchors the historic zone; the surrounding blocks contain some of the finest 19th-century streetscapes in the Caribbean." }
+  - { question: "Is Ponce safe for tourists?", answer: "The historic center and Plaza las Delicias area are safe and well-maintained tourist environments. Standard urban awareness applies elsewhere — Ponce is Puerto Rico's second-largest city and has higher-crime neighborhoods away from the tourist zone. Stick to the historic center, use rideshare apps at night rather than walking long distances, and ask your hotel about current conditions in specific areas." }
+  - { question: "Are there beaches near Ponce?", answer: "La Guancha boardwalk and beach area is 5 minutes south of the city center — a local family beach with food kiosks, beer gardens, and a relaxed atmosphere. Caja de Muertos (Dead Man's Island) is a 45-minute ferry ride offshore and has excellent snorkeling and a lighthouse worth visiting. The La Parguera bioluminescent bay (one of Puerto Rico's three) is 45 minutes west — visible on new moon nights from guided boat tours." }
 affiliatePicks:
   - name: "Museo de Arte de Ponce"
     type: "activity"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/ponce-hero.mp4" heading="The Pearl of the South" subheading="Neoclassical streets, Carnival vejigantes, and the finest art museum in the Caribbean." />
 
 ## Why Ponce
 

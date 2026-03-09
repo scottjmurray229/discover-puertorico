@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "Is Isla Verde good for families?", answer: "Excellent for families. The beach is wide and gently sloping with calm sections perfect for kids. Several all-inclusive and family-friendly resorts line the beach. Lifeguards are on duty during the day." }
   - { question: "How far is Isla Verde from Old San Juan?", answer: "About 20 minutes by Uber ($15-20) or 30 minutes by bus. Most visitors split their time — beach days in Isla Verde, culture and dining in Old San Juan and Condado." }
+  - { question: "What is the water sports scene at Isla Verde?", answer: "Isla Verde has the best concentration of water sports on the main island. Jet ski rentals, parasailing, stand-up paddleboarding, surfing lessons, and catamaran rentals are all available directly on the beach from several competing operators. Prices are competitive — jet ski rental runs $60-80 for 30 minutes, parasailing $75-90 per person, SUP boards $25-35 per hour." }
+  - { question: "What are the Piñones kiosks?", answer: "Just east of Isla Verde, Piñones is a beachside strip of food kiosks serving traditional Puerto Rican snacks — alcapurrias (deep-fried fritters filled with ground beef or crab), bacalaítos (salt cod fritters), and piña coladas. It is where San Juan families come on weekend afternoons for cheap, authentic Puerto Rican food on the beach. The short drive from Isla Verde is completely worth it." }
+  - { question: "Is Isla Verde beach better than Condado beach?", answer: "For pure beach time, most visitors prefer Isla Verde — it has wider sand, more consistent calm water, and more beach infrastructure (chairs, umbrellas, water sports). Condado beach is more urban and intimate. Both have excellent swimming areas. If beach perfection is your goal, Isla Verde; if you want to walk to better restaurants and nightlife, Condado." }
+  - { question: "What budget accommodation exists in Isla Verde?", answer: "Budget options in Isla Verde are limited compared to Condado — this is primarily a mid-range to luxury hotel strip. Coral by the Sea and a handful of similar smaller hotels offer rooms around $100-120 per night. Guesthouses on the residential streets behind the beach strip can be found in the $70-90 range. For true budget travel, Condado and Ocean Park have better hostel and guesthouse options." }
+  - { question: "How do I get from San Juan airport to Isla Verde?", answer: "Isla Verde is the closest major beach area to Luis Muñoz Marín Airport — a 5-minute, $8-10 Uber or Lyft ride. This makes it the most convenient choice if you want to start your vacation at the beach immediately upon arrival. The proximity also makes it a smart choice for the last night before a morning flight home." }
 affiliatePicks:
   - name: "Fairmont El San Juan Hotel"
     type: "hotel"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/isla-verde-hero.mp4" heading="Puerto Rico's Best Beach, Minutes from the Airport" subheading="Wide golden sand, water sports, resort pools, and the Piñones kiosks down the road." />
 
 ## Why Isla Verde
 

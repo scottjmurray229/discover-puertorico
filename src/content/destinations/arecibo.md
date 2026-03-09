@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "Is the Arecibo Observatory still open?", answer: "The telescope collapsed in December 2020, but the visitor center and grounds remain open as a science education center ($12 admission). The site is still fascinating — you can see the remnants of the 1,000-foot dish and learn about its 57 years of discoveries. Plans for a next-generation facility are in development." }
   - { question: "What are the caves like?", answer: "Incredible. Cueva Ventana is a short hike to a cave opening that frames a valley view like a giant window — one of Puerto Rico's most photogenic spots. Río Camuy Cave Park has guided tours through massive underground chambers with a river running through them. Both are must-sees." }
+  - { question: "Can I combine Arecibo with other north coast attractions?", answer: "Easily. The north coast between San Juan and Rincón has several compelling stops. From Arecibo: the Observation Network park for science history (30 min east), the Río Camuy caves (45 min), the Cueva Ventana (near Arecibo town), and the Karst Country side roads for dramatic sinkhole landscapes. A full day drives the north coast with stops at the ruins, caves, and lighthouse." }
+  - { question: "What is the lighthouse at Arecibo?", answer: "The Faro los Morrillos de Arecibo sits on a headland with dramatic views of the Atlantic and the karst landscape. The lighthouse is historic (1898) and the surrounding area is a pleasant stop for photos. It is less dramatic than the Cabo Rojo lighthouse to the south but worth a 20-minute detour on a north coast drive." }
+  - { question: "What is the Karst Country?", answer: "The region around Arecibo sits atop Puerto Rico's limestone karst terrain — a landscape of conical hills (mogotes), sinkholes, caves, and underground rivers formed over millions of years as groundwater dissolved the limestone. The Río Camuy carved the third-largest underground river cave system in the Western Hemisphere through this rock. The rolling mogote landscape visible from Route 10 south of Arecibo is uniquely beautiful and unlike any other Caribbean landscape." }
+  - { question: "Is Arecibo a good base for exploring western Puerto Rico?", answer: "Reasonably good. From Arecibo you are 45 minutes from the north coast beaches, 1 hour from Rincón, and 1.5 hours from San Juan. The caves and observatory site are the primary reasons to come; most visitors do Arecibo as a day trip from San Juan or as a stop on a west coast loop rather than basing there for multiple nights. Accommodation in the area is limited." }
+  - { question: "Is there a beach in Arecibo?", answer: "Balneario Carlos Rojas in Arecibo is a government-run beach with lifeguards, facilities, and calm water — decent but not among Puerto Rico's best. The more rewarding option is to continue west to the less-visited beaches of the northwest coast near Barceloneta and Manatí, which have good surfing and quiet stretches of golden sand. The north coast is not the island's best beach region, but it has options." }
 affiliatePicks:
   - name: "Río Camuy Cave Park Tour"
     type: "activity"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/arecibo-hero.mp4" heading="Caves, Coast, and Cosmic Legacy" subheading="Underground rivers, the world's former largest telescope, and karst landscapes unlike anything in the Caribbean." />
 
 ## Why Arecibo
 

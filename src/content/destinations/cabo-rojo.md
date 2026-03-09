@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "What are the salt flats?", answer: "The Cabo Rojo Salt Flats are a surreal landscape of pink-white salt pans stretching to the sea, with the red limestone cliffs and lighthouse as a backdrop. It's one of the most photogenic spots in Puerto Rico. The area is a wildlife refuge home to migratory birds, including occasional flamingos. Free access, open 9 AM to 5 PM." }
   - { question: "Is Cabo Rojo good for a beach vacation?", answer: "Excellent. Playa Buyé is a palm-lined crescent with calm clear water. Playa Sucia (Playuela) below the lighthouse is stunning but requires a short hike down. Boquerón Beach is the most accessible with facilities. All are significantly less crowded than San Juan beaches." }
+  - { question: "What is the Cabo Rojo lighthouse and how do I get there?", answer: "Los Morrillos Lighthouse sits at the southwestern tip of Puerto Rico on dramatic red limestone cliffs dropping 200 feet to the sea. The road to the lighthouse is unpaved and requires some care in a regular car. Park at the end of the road and walk the final 10-15 minutes along the cliffs. The lighthouse itself is historic (1882) and the views — red cliffs, turquoise Caribbean, salt flats stretching inland — are among the most spectacular in Puerto Rico." }
+  - { question: "Where is the best seafood in Cabo Rojo?", answer: "Boquerón is the seafood capital of the southwest. The main street running to the beach is lined with restaurants and kiosks serving fresh oysters, whole fried snapper, mofongo with lobster, and cold Medalla beer. La Bodega de Melao is a local favorite. The oysters here — farmed in the calm waters of Boquerón Bay — are excellent and cheap compared to anywhere else on the island." }
+  - { question: "Does Cabo Rojo have flamingos?", answer: "Sometimes. The Cabo Rojo Wildlife Refuge salt flats are part of a migratory bird corridor and flamingos are occasional visitors. Sightings are not guaranteed — the flats are more reliably populated by herons, egrets, sandpipers, and other shorebirds. The best flamingo viewing in Puerto Rico is at the Boquerón Wildlife Refuge, where a resident population is present year-round." }
+  - { question: "Is Cabo Rojo easy to get to?", answer: "It requires a car — there is no meaningful public transit in the southwest. From San Juan, the drive is about 2.5 hours via PR-2 west. Alternatively, fly into Rafael Hernández Airport (BQN) in Aguadilla, 45 minutes north, which serves JetBlue and Spirit from the mainland. This option makes the southwest much more accessible for visitors specifically targeting Cabo Rojo and Rincón." }
+  - { question: "What is the best time to visit Cabo Rojo?", answer: "December through May is ideal — the southwest is Puerto Rico's driest region and receives significantly less rain than the north coast or rainforest areas. Summer brings more humidity but the beaches remain beautiful. The salt flats are accessible year-round and are most photogenic in morning light when the pink hues are most vivid and shadows define the landscape." }
 affiliatePicks:
   - name: "Combate Beach Resort"
     type: "hotel"
@@ -38,6 +43,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/cabo-rojo-hero.mp4" heading="Red Cliffs, Salt Flats, and Endless Beaches" subheading="Puerto Rico's most dramatic southwestern corner — and its best oysters." />
 
 ## Why Cabo Rojo
 

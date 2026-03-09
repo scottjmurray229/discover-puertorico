@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "Is Fajardo a good base for island-hopping?", answer: "It's the best base. The Ceiba ferry terminal (15 min south) has ferries to Vieques and Culebra. Fajardo's marinas offer day trips to Icacos, Palominos, and Palominitos islands. El Yunque is a 20-minute drive. You can see a lot of eastern Puerto Rico without changing hotels." }
   - { question: "How does the Fajardo bio bay compare to Vieques?", answer: "Laguna Grande in Fajardo is the second-brightest bio bay in Puerto Rico (after Mosquito Bay in Vieques). It's easier to access — no ferry required — and tours are cheaper ($45-55 vs $55-65). The experience is magical but less intense than Vieques. If you can't get to Vieques, Fajardo's bio bay is still incredible." }
+  - { question: "What is Icacos Island and how do I get there?", answer: "Icacos (La Cordillera) is an uninhabited cay about 5 kilometers offshore from Fajardo with exceptional clear-water snorkeling and pristine sand beaches. Boat charters and catamaran tours depart from Las Croabas marina daily, typically 9am-12pm, returning by 4pm. Cost is $65-90 per person with snorkel equipment and drinks included. It is one of the best snorkeling sites accessible from the main island." }
+  - { question: "Is Seven Seas Beach good for families?", answer: "Excellent. Seven Seas (Balneario Las Croabas) is a protected government beach with lifeguards, calm water, picnic facilities, and shade structures. It is consistently one of the best family beaches on the main island — sheltered from Atlantic swell and clean. The adjacent El Conquistador resort area has additional amenities. Parking is available for a small fee." }
+  - { question: "Can I visit El Yunque from Fajardo?", answer: "Very easily — El Yunque's main entrance on Route 191 is about 20 minutes from Fajardo. A logical two-day itinerary from a Fajardo base: Day 1, El Yunque for the forest and La Mina Falls. Day 2, morning Icacos Island snorkel trip, evening bioluminescent bay tour. This makes Fajardo one of the most activity-efficient bases in Puerto Rico." }
+  - { question: "What is the Las Croabas fishing village?", answer: "A small, photogenic fishing village at the northeastern tip of the main island, adjacent to the marina. It has a cluster of seafood restaurants serving fresh catches — snapper, lobster, and mofongo — at honest local prices. The view across to the surrounding cays is excellent, and the village has an authentic, unhurried atmosphere that contrasts with the resort hotels nearby." }
+  - { question: "How far is Fajardo from San Juan?", answer: "About 1 hour by car east via Route 3 (or slightly faster via PR-66 toll road). The airport (SJU) to Fajardo with normal traffic takes 55-70 minutes. This makes Fajardo an excellent first or last night stop — convenient to the airport while giving immediate access to the eastern marine environments. Many visitors split their Puerto Rico trip between San Juan and a Fajardo-based east coast exploration." }
 affiliatePicks:
   - name: "Fajardo Bio Bay Kayak Tour"
     type: "tour"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/fajardo-hero.mp4" heading="Gateway to the Islands" subheading="Bioluminescent lagoons, ferry connections to Vieques and Culebra, and pristine cays offshore." />
 
 ## Why Fajardo
 

@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "How do I see the bioluminescent bay?", answer: "Book a kayak or electric boat tour ($55-65 per person) of Mosquito Bay. Go on a new moon night for the brightest glow — the microorganisms (dinoflagellates) light up electric blue when disturbed. It's genuinely one of the most surreal natural experiences on Earth. Book weeks in advance." }
   - { question: "Do I need a car on Vieques?", answer: "Yes. The island has no public transit and beaches are spread across former military land connected by dirt roads. Rent a Jeep or SUV ($85-110/day). Golf carts work for town but not the remote beaches. Book your rental before arriving — supply is limited." }
+  - { question: "Which beach is the best on Vieques?", answer: "Sun Bay (Sombé) is the most accessible and beautiful — a sweeping crescent of palm-backed white sand with calm, clear water and a small campground. Red Beach (Playa Caracas) has stunning red-tinged cliffs and excellent snorkeling. Blue Beach (Playa La Chiva) is consistently considered the finest, with powder-white sand and jewel-blue water, but requires a high-clearance vehicle to reach on the unpaved former military road." }
+  - { question: "Are the wild horses safe to approach?", answer: "Keep a respectful distance. The horses of Vieques are genuinely wild and can be unpredictable — they are not domesticated and will not behave like tourist-attraction animals. Observe from a distance, do not feed them, and do not try to pet or ride them. They frequently appear on Sun Bay beach and along the roadsides, and watching them in their natural environment from a few meters away is genuinely magical without creating a risk." }
+  - { question: "How far is Vieques from San Juan?", answer: "The Ceiba ferry terminal is about 90 minutes by car from San Juan, then a 1-hour ferry crossing to Vieques. Total travel time door-to-door: 2.5-3.5 hours. The puddle jumper flight from SJU takes 25 minutes but costs $80-120 one-way. For a short stay (2-3 nights), the flight is worth the time savings. For a longer stay, the ferry cost savings add up significantly." }
+  - { question: "What happened to Vieques after Hurricane Maria?", answer: "Hurricane Maria in 2017 severely damaged Vieques — the island lost power for over a year and the tourism infrastructure took years to recover. As of 2026, Vieques has largely rebuilt. The bioluminescent bay, beaches, and most accommodation are fully operational. The recovery has been uneven and some former hotels and restaurants have not returned, so advance research on specific properties is recommended." }
+  - { question: "Is the Vieques bioluminescent bay better than Fajardo?", answer: "Yes, significantly. Mosquito Bay holds the Guinness World Record for the highest concentration of bioluminescent dinoflagellates. A paddle or boat ride on a dark night produces an intensity of blue-green light that is markedly brighter than Laguna Grande in Fajardo or La Parguera in Lajas. If you can only see one bio bay, Mosquito Bay in Vieques is the one." }
 affiliatePicks:
   - name: "Mosquito Bay Bioluminescent Kayak Tour"
     type: "tour"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/vieques-hero.mp4" heading="Puerto Rico's Hidden Island Paradise" subheading="The world's brightest bio bay, wild horses on empty beaches, and pristine reefs the crowds haven't found." />
 
 ## Why Vieques
 

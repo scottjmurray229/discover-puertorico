@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "When is the best surf season in Rincón?", answer: "November through April brings the best North Atlantic swells. Maria's Beach and Domes are the iconic spots — Maria's for intermediate to advanced surfers, Domes for bigger waves. Summer is flat but perfect for snorkeling and swimming at Steps Beach." }
   - { question: "Is Rincón good for non-surfers?", answer: "Absolutely. The sunsets alone are worth the trip. Add whale watching (Jan-Mar), snorkeling at Steps Beach, yoga retreats, craft breweries, and some of the island's best casual dining. Rincón is a vibe, not just a surf spot." }
+  - { question: "How do I see humpback whales from Rincón?", answer: "Humpback whales pass through the Mona Passage between Puerto Rico and the Dominican Republic from January through March. You can often spot them from the Rincón lighthouse cliffs on calm days. Guided whale-watching boat tours ($60-90 per person) depart from Rincón's harbor during peak season — February is the best month. Sightings are common but not guaranteed; morning departures in calm weather have the best odds." }
+  - { question: "Where should I stay in Rincón?", answer: "The Surf Zone, around Sandy Beach and María's, is ideal for surfers — walking distance to the breaks and close to the best bars and restaurants. The lighthouse area (Punta Higuero) has quieter, hillside villas with sunset views. Budget travelers do well in the residential neighborhoods between the beach clusters. Avoid arriving without a reservation December through March — Rincón books up fast." }
+  - { question: "What is the food scene like in Rincón?", answer: "Surprisingly excellent for a small town. The expat surf community has supported a diverse restaurant scene with Puerto Rican, American, and international options. Tamboo Tavern at Sandy Beach is the classic beach bar and grill. The English Rose does better-than-expected international food. The craft brewery scene has grown significantly — several local breweries operate taprooms worth visiting." }
+  - { question: "Is Rincón family-friendly?", answer: "Yes, outside of the active surf season. Sandy Beach, Steps Beach, and Playa Córcega have calmer sections excellent for children. Summer (June-September) brings flat water perfect for family swimming. During prime swell season (December-March), the surf breaks can have large, powerful waves — keep children away from Domes and María's during swells and stick to the protected beach sections." }
+  - { question: "How far is Rincón from San Juan?", answer: "About 2.5 hours by car via PR-22 west. Alternatively, fly into Aguadilla's Rafael Hernández Airport (BQN) — Spirit and JetBlue serve it from the mainland — which puts you just 20 minutes north of Rincón. The BQN option is significantly faster for visitors coming from the eastern US. A rental car is essential; there is no public transit." }
 affiliatePicks:
   - name: "The Lazy Parrot Inn"
     type: "hotel"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/rincon-hero.mp4" heading="Where the Caribbean Meets the Atlantic" subheading="World-class surf, humpback whales, and the most spectacular sunsets in Puerto Rico." />
 
 ## Why Rincón
 

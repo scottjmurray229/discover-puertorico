@@ -28,6 +28,11 @@ relatedDestinations:
 faqItems:
   - { question: "Is Flamenco Beach really that good?", answer: "Yes. It's not hype. A mile-long horseshoe of powdery white sand meeting impossibly clear turquoise water, backed by green hills. It has been rated #1 beach in the world by multiple publications. The rusted WWII tanks at the western end add a surreal photo op. And because Culebra is hard to reach, it never feels overcrowded." }
   - { question: "Can I do Culebra as a day trip?", answer: "You can but it's rushed. The first ferry leaves Ceiba at 9 AM, the last returns around 3 PM. You'll get about 4 hours at the beach. For the full experience — snorkeling Tamarindo, exploring Culebrita, sunset at Zoni — spend at least two nights." }
+  - { question: "How do I book the Culebra ferry?", answer: "Reserve online at porferry.com — do this as far in advance as possible, especially for weekend travel December through March. Tickets cost $2.50 each way and sell out weeks ahead in peak season. The ferry runs from Ceiba (eastern Puerto Rico, about 90 minutes from San Juan). If the ferry is full, puddle jumper flights from SJU via Vieques Air Link cost $90-130 one-way and take 25 minutes." }
+  - { question: "What is the snorkeling like in Culebra?", answer: "Outstanding. Tamarindo Beach, a short drive from Flamenco, has calm, clear, shallow water with a healthy reef and resident sea turtles. Hawksbill and leatherback turtles feed on the seagrass beds and are genuinely easy to spot. Culebrita (a small uninhabited cay off the eastern tip) has excellent reef snorkeling accessible by water taxi or guided boat tour." }
+  - { question: "Is there a bioluminescent bay in Culebra?", answer: "Yes — Laguna Flamenco, adjacent to Flamenco Beach, has bioluminescent microorganisms visible on dark nights. It is not as intense as Mosquito Bay in Vieques or Laguna Grande in Fajardo, but it is beautiful and completely free to access on your own in a kayak. Visibility is best on new moon nights with clear skies." }
+  - { question: "When do sea turtles nest on Culebra?", answer: "Sea turtle nesting season runs April through July. Leatherback, hawksbill, and green sea turtles all nest on Flamenco Beach and surrounding beaches. The nonprofit Culebra Leatherback Project runs night patrols and sometimes invites visitors to observe (not disturb) nesting. Contact them through their website for information about participatory observation opportunities." }
+  - { question: "Where should I stay on Culebra?", answer: "Accommodation on Culebra is limited and ranges from basic guesthouses in Dewey (the main town) to a handful of villas near Flamenco Beach and Club Seabourne (the closest thing to a resort). Budget travelers do well in Dewey — it is a five-minute golf cart ride from Flamenco. Book any accommodation at least two months ahead for December through April visits." }
 affiliatePicks:
   - name: "Club Seabourne"
     type: "hotel"
@@ -43,6 +48,8 @@ lastVerified: 2026-02-28
 contentStatus: "published"
 draft: false
 ---
+
+<immersive-break-inline videoSrc="/videos/destinations/culebra-hero.mp4" heading="Home to the World's Best Beach" subheading="Flamenco's white sand, sea turtles at Tamarindo, and island tranquility that earns every cliché." />
 
 ## Why Culebra
 
