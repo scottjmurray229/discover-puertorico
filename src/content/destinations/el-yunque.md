@@ -2,6 +2,14 @@
 title: "El Yunque"
 description: "Hike through El Yunque National Forest — the only tropical rainforest in the US National Forest System — with waterfalls, cloud forests, and rare wildlife."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "El Yunque rainforest cascade and bamboo forest canopy, Puerto Rico"
 tagline: "America's only tropical rainforest — cloud forest hiking, 50-foot waterfalls, parrots, and the cool green opposite of San Juan's heat"
 region: "east"
@@ -53,7 +61,7 @@ El Yunque is the only tropical rainforest in the entire US National Forest Syste
 
 The forest gets over 200 inches of rain per year in its highest elevations, feeding dozens of streams and waterfalls. It's home to the coquí, a tiny tree frog found nowhere else on Earth, whose distinctive "ko-KEE!" call fills the evening air. At just 45 minutes from San Juan, it's the easiest tropical rainforest in the world to access.
 
-## Things to Do
+## What Are the Top Things to Do in El Yunque?
 
 **La Mina Falls** — The most popular trail. A 0.7-mile paved path descends through the forest to a 35-foot waterfall with a swimming hole at its base. Expect crowds by 11 AM — go early. The water is cold and refreshing.
 
@@ -65,7 +73,7 @@ The forest gets over 200 inches of rain per year in its highest elevations, feed
 
 **El Toro Trail** — The challenging option. 3.5 miles to the highest peak (3,533 feet) through cloud forest. You'll likely be in the clouds at the summit. Bring layers — it's 15°F cooler up top.
 
-## Where to Eat
+## What Should I Eat in El Yunque?
 
 **Yuquiyú Delights** — Food truck near the forest entrance serving alcapurrias, empanadillas, and fresh-squeezed juice. Perfect fuel before or after a hike. $3-8.
 

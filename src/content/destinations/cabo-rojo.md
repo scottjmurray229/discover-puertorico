@@ -2,6 +2,14 @@
 title: "Cabo Rojo"
 description: "Discover Cabo Rojo's dramatic red cliffs, salt flats, pristine beaches, and the best seafood on Puerto Rico's southwestern coast."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Cabo Rojo Lighthouse and salt flats with flamingos, western Puerto Rico"
 tagline: "Dramatic red cliffs, working salt flats, the Cabo Rojo Lighthouse at sunset, and some of the island's most undisturbed beaches"
 region: "west"
@@ -53,7 +61,7 @@ Cabo Rojo is Puerto Rico's most underrated destination. While tourists crowd San
 
 The lighthouse at Los Morrillos — perched on the cliff edge with Caribbean views in every direction — is the single best viewpoint in Puerto Rico. And when you're done with nature, the fishing village of Boquerón has the island's best seafood strip: a row of open-air restaurants serving oysters, whole fried fish, and $3 Medalla beers.
 
-## Things to Do
+## What Are the Top Things to Do in Cabo Rojo?
 
 **Los Morrillos Lighthouse** — Drive or hike to this 1882 lighthouse at the southwestern tip of Puerto Rico. The red limestone cliffs are stunning. Below the lighthouse, Playa Sucia (Playuela) is one of the island's best beaches — a short, steep trail down. Free.
 
@@ -65,7 +73,7 @@ The lighthouse at Los Morrillos — perched on the cliff edge with Caribbean vie
 
 **Joyuda Seafood Strip** — A stretch of waterfront restaurants on Route 102 serving the freshest seafood on the island. Pull up to any one and order the chillo frito entero (whole fried snapper, $18-25). Eat overlooking the water.
 
-## Where to Eat
+## What Should I Eat in Cabo Rojo?
 
 **Annie's Seafood** — On the Joyuda strip. The mofongo relleno de mariscos (mashed plantain stuffed with seafood) is worth the drive from anywhere on the island. $15-25.
 

@@ -2,6 +2,14 @@
 title: "Isla Verde"
 description: "Relax on Isla Verde's wide golden beaches, enjoy resort amenities, and experience San Juan's best swimming and water sports."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Isla Verde resort hotels and palm-lined Atlantic beach, San Juan, Puerto Rico"
 tagline: "International-calibre beach resort a 10-minute drive from the airport — and the most convenient beach introduction to Puerto Rico"
 region: "metro"
@@ -58,7 +66,7 @@ If you came to Puerto Rico for the beach, Isla Verde is where you start. This Bl
 
 Isla Verde has a more resort-oriented vibe than Condado. The big hotels line the beach, water sports operators set up every morning, and the pace is decidedly relaxed. It's also the cheapest of the three San Juan beach neighborhoods and the closest to the airport.
 
-## Things to Do
+## What Are the Top Things to Do in Isla Verde?
 
 **Isla Verde Beach** — The main event. Over a mile of golden sand with sections for every mood — calm swimming near the Marriott, body surfing near the Ritz, and quieter stretches at either end. Free public access at multiple points.
 
@@ -68,7 +76,7 @@ Isla Verde has a more resort-oriented vibe than Condado. The big hotels line the
 
 **Pine Grove Beach** — The quieter, more local end of Isla Verde. Calmer water, fewer tourists, palm tree shade. Popular with families on weekends.
 
-## Where to Eat
+## What Should I Eat in Isla Verde?
 
 **Metropol** — Cuban-Puerto Rican diner that's been serving enormous portions since the 1960s. The carne frita con tostones ($16) feeds two people. Cash preferred.
 

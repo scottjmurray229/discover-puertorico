@@ -2,6 +2,14 @@
 title: "Ponce"
 description: "Explore Ponce's stunning neoclassical architecture, world-class art museum, vibrant Carnival traditions, and the authentic heart of Puerto Rican culture."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Parque de Bombas colorful firehouse and Ponce Cathedral twin towers, Puerto Rico"
 tagline: "Puerto Rico's second city — Art Deco Parque de Bombas, plaza culture, pique hot sauce, and the island's proudest regional identity"
 region: "south"
@@ -58,7 +66,7 @@ If San Juan is Puerto Rico's face, Ponce is its heart. Known as "La Perla del Su
 
 Ponce's Museo de Arte is genuinely world-class — not "world-class for the Caribbean," but legitimately one of the best art museums in the Western Hemisphere. The city's Carnival traditions date back centuries and feature the vejigantes, costumed characters in terrifying horned masks who chase screaming children through the streets. It's wild.
 
-## Things to Do
+## What Are the Top Things to Do in Ponce?
 
 **Museo de Arte de Ponce** — The Edward Durell Stone-designed building houses over 4,500 works spanning the 14th to 20th centuries. The Pre-Raphaelite collection is the largest outside Britain. "Flaming June" by Frederic Leighton is the star. $6 admission.
 
@@ -70,7 +78,7 @@ Ponce's Museo de Arte is genuinely world-class — not "world-class for the Cari
 
 **Hacienda Buena Vista** — 19th-century coffee plantation restored to working condition. Guided tours ($8) show the water-powered machinery and coffee production process. 30 minutes north of Ponce in the mountains.
 
-## Where to Eat
+## What Should I Eat in Ponce?
 
 **Lola Eclectic Cuisine** — Chef Marisol's creative Puerto Rican fusion in a restored colonial house. The plantain-crusted fish and rum cocktails are standouts. $20-35 per entrée.
 

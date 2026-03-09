@@ -2,6 +2,14 @@
 title: "Condado"
 description: "Discover Condado's luxury beachfront hotels, upscale dining, and vibrant nightlife in San Juan's most glamorous neighborhood."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Condado Beach luxury hotels and turquoise Atlantic, San Juan, Puerto Rico"
 tagline: "Condado Lagoon, Atlantic-facing hotels, the best hotel bar scene in San Juan, and upscale dining without leaving the resort strip"
 region: "metro"
@@ -58,7 +66,7 @@ Condado is where San Juan goes upscale without losing its Caribbean soul. This n
 
 The beach here is calmer than Isla Verde's — a protected crescent of golden sand perfect for swimming. And when the sun goes down, Condado transforms into Puerto Rico's most walkable dining and nightlife district.
 
-## Things to Do
+## What Are the Top Things to Do in Condado?
 
 **Condado Beach** — The main draw. Calm, clear water with lifeguards. The western end near the Vanderbilt is less crowded. Beach chairs and umbrella rentals available ($15-20).
 
@@ -68,7 +76,7 @@ The beach here is calmer than Isla Verde's — a protected crescent of golden sa
 
 **La Ventana al Mar** — Small oceanfront park at the eastern end of Condado. Great for sunset watching with food trucks and live music on weekends.
 
-## Where to Eat
+## What Should I Eat in Condado?
 
 **1919** — The Vanderbilt's fine dining restaurant. Chef Juan José Cuevas creates modern Puerto Rican tasting menus that rival anything in New York. $120 per person with wine pairing. Reservations essential.
 

@@ -2,6 +2,14 @@
 title: "Arecibo"
 description: "Explore Arecibo's dramatic caves, hidden beaches, rum heritage, and the legacy of the legendary Arecibo Observatory on Puerto Rico's north coast."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Arecibo Observatory radio telescope dish amid karst limestone hills, Puerto Rico"
 tagline: "The Camuy River Cave system, Arecibo's legendary radio telescope site, and Puerto Rico's wild north coast to yourself"
 region: "north"
@@ -58,7 +66,7 @@ Arecibo is where Puerto Rico reveals its wild, geological side. The northern coa
 
 The region is anchored by two landmarks: the Río Camuy Cave Park, where underground rivers have carved enormous chambers you can walk through, and Cueva Ventana, a cave that opens to a picture-window view of a river valley below. Add the legacy of the Arecibo Observatory — which for decades was the world's largest radio telescope — and you have one of the most unique day trips on the island.
 
-## Things to Do
+## What Are the Top Things to Do in Arecibo?
 
 **Cueva Ventana** — The "Window Cave." A guided hike through a cave system in the karst hills opens to a natural window overlooking the Río Grande de Arecibo valley. The view is stunning and the photos are iconic. $20/person, tours hourly. Wear closed-toe shoes.
 
@@ -70,7 +78,7 @@ The region is anchored by two landmarks: the Río Camuy Cave Park, where undergr
 
 **Playa Peña Blanca** — Hidden beach at the base of white limestone cliffs. Accessed via a steep trail from the road. No facilities but dramatic scenery and usually empty.
 
-## Where to Eat
+## What Should I Eat in Arecibo?
 
 **Salitre Meson Costero** — Oceanfront restaurant serving excellent seafood with dramatic cliff views. The mofongo de pulpo (octopus) is outstanding. $15-28.
 

@@ -2,6 +2,14 @@
 title: "Fajardo"
 description: "Use Fajardo as your gateway to Puerto Rico's eastern islands, bioluminescent bays, world-class snorkeling, and island-hopping adventures."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Fajardo Ferry terminal and Las Cabezas de San Juan bioluminescent reserve, Puerto Rico"
 tagline: "Kayaking Las Cabezas de San Juan bioluminescent lagoon, ferry point to Culebra and Vieques, and the east coast's best seafood"
 region: "east"
@@ -58,7 +66,7 @@ Fajardo is where Puerto Rico's eastern adventures begin. Sitting on the northeas
 
 It's not glamorous — Fajardo is a working town, not a resort destination. But it's perfectly positioned: El Yunque is 20 minutes south, the island ferries leave from Ceiba 15 minutes away, and three marinas offer every kind of boat excursion imaginable.
 
-## Things to Do
+## What Are the Top Things to Do in Fajardo?
 
 **Laguna Grande Bio Bay** — Puerto Rico's second-brightest bioluminescent bay, accessible without a ferry ride. Kayak tours ($45-55) paddle through mangrove channels into the glowing lagoon. New moon nights are brightest. Book 1-2 weeks ahead.
 
@@ -68,7 +76,7 @@ It's not glamorous — Fajardo is a working town, not a resort destination. But 
 
 **Las Cabezas de San Juan Nature Reserve** — A 316-acre peninsula with seven ecosystems, from mangroves to dry forest. Guided tours ($12) include the 19th-century lighthouse and bioluminescent lagoon viewing. Reservations required.
 
-## Where to Eat
+## What Should I Eat in Fajardo?
 
 **La Estación** — Casual seafood and Puerto Rican dishes in a renovated gas station. Great fish tacos and craft cocktails. $14-22.
 

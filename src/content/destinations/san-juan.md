@@ -2,6 +2,14 @@
 title: "San Juan"
 description: "Explore Old San Juan's colorful colonial streets, historic forts, vibrant nightlife, and world-class dining in Puerto Rico's capital city."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Condado Beach skyline and Atlantic surf, San Juan, Puerto Rico"
 tagline: "500 years of Spanish colonial history inside walls that still stand — and the best mofongo, rum, and nightlife in the Caribbean"
 region: "metro"
@@ -64,7 +72,7 @@ But San Juan is more than a museum. This is a city that stays up late, eats well
 
 <immersive-break-inline videoSrc="/videos/destinations/san-juan-hero.mp4" heading="500 Years of History Meet Caribbean Soul" subheading="Blue cobblestones, colonial fortresses, and a food scene that punches far above its weight." />
 
-## Things to Do
+## What Are the Top Things to Do in San Juan?
 
 **Castillo San Felipe del Morro** — The crown jewel. This massive 16th-century fortress took 250 years to build and guards the entrance to San Juan Bay. Entry is $10 and includes both El Morro and Castillo San Cristóbal. Go early morning or late afternoon for the best light and fewer crowds.
 
@@ -76,7 +84,7 @@ But San Juan is more than a museum. This is a city that stays up late, eats well
 
 **Museo de Arte de Puerto Rico** — World-class art museum in Santurce with both Puerto Rican and international collections. The sculpture garden alone is worth the visit. $6 admission.
 
-## Where to Stay
+## Where Should I Stay in San Juan?
 
 **Hotel El Convento** — $250/night. Historic luxury in a converted convent. Rooftop pool, perfect location. The standard for Old San Juan stays.
 
@@ -86,7 +94,7 @@ But San Juan is more than a museum. This is a city that stays up late, eats well
 
 **Condado Vanderbilt** — $350/night. Beachfront luxury in Condado. Full-service spa, oceanfront pool, and three excellent restaurants.
 
-## Where to Eat
+## What Should I Eat in San Juan?
 
 **Marmalade** — Fine dining on Calle Fortaleza. The tasting menu ($85) is one of the best meals on the island. Reservations essential.
 

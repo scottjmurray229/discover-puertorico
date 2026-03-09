@@ -2,6 +2,14 @@
 title: "Vieques"
 description: "Experience Vieques' pristine beaches, the world's brightest bioluminescent bay, wild horses, and untouched Caribbean beauty."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Bioluminescent Mosquito Bay glowing at night and wild horses, Vieques, Puerto Rico"
 tagline: "Wild horses on the beach, bioluminescent bay, no cruise ships, no chain hotels — Vieques is Puerto Rico's best-kept secret"
 region: "east"
@@ -58,7 +66,7 @@ Vieques is what happens when the US Navy leaves and nature reclaims the land. Fo
 
 Then there's Mosquito Bay. Certified by Guinness as the brightest bioluminescent bay in the world, it contains up to 700,000 dinoflagellates per gallon of water. On a dark night, every paddle stroke lights up electric blue. Every fish leaves a glowing trail. It's science fiction brought to life.
 
-## Things to Do
+## What Are the Top Things to Do in Vieques?
 
 **Mosquito Bay Bio Tour** — The island's crown jewel. Book a kayak or electric boat tour ($55-65) on a moonless night. The water erupts in blue-green light with every movement. This is a once-in-a-lifetime experience. Book 2-3 weeks in advance for new moon dates.
 
@@ -70,7 +78,7 @@ Then there's Mosquito Bay. Certified by Guinness as the brightest bioluminescent
 
 **Wild Horse Watching** — Over 2,000 wild Paso Fino horses roam freely. You'll see them on the roads, on the beaches, and grazing in fields. They're docile but keep your distance.
 
-## Where to Eat
+## What Should I Eat in Vieques?
 
 **El Quenepo** — Vieques' best restaurant. Creative Caribbean cuisine with local ingredients on a candlelit patio. The whole snapper and coconut-crusted shrimp are excellent. $25-45 per entrée. Reservations essential.
 

@@ -2,6 +2,14 @@
 title: "Culebra"
 description: "Visit Culebra for Flamenco Beach — consistently rated the world's best beach — plus incredible snorkeling, sea turtles, and island tranquility."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Flamenco Beach crescent turquoise bay with camper tents, Culebra, Puerto Rico"
 tagline: "Flamenco Beach is consistently ranked among the world's finest — and on weekdays in low season it is nearly empty"
 region: "east"
@@ -58,7 +66,7 @@ Culebra exists to make you question every beach you've ever loved. Flamenco Beac
 
 But Culebra is more than one beach. This tiny island (7 miles long, 4 miles wide) has dozens of coves, excellent snorkeling with resident sea turtles, and an uninhabited offshore island you can kayak to. The pace of life here is deliberately slow — no chain restaurants, no traffic lights, no high-rises.
 
-## Things to Do
+## What Are the Top Things to Do in Culebra?
 
 **Flamenco Beach** — Go early (before 10 AM) for the best parking and calmest water. Walk west to find the rusted WWII Sherman tanks half-buried in the sand — among the most photographed spots in Puerto Rico. Bring your own shade; umbrella rentals are $20.
 
@@ -68,7 +76,7 @@ But Culebra is more than one beach. This tiny island (7 miles long, 4 miles wide
 
 **Zoni Beach** — The local's beach on the eastern end. Wilder, windier, and almost empty. Leatherback sea turtles nest here from April to July. Spectacular at sunset.
 
-## Where to Eat
+## What Should I Eat in Culebra?
 
 **Susie's** — The island's institution. Puerto Rican home cooking on a porch overlooking the harbor. The mofongo is among the best on any island. $12-20. Cash only.
 

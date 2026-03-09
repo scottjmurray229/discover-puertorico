@@ -2,6 +2,14 @@
 title: "Rincón"
 description: "Discover Rincón's world-class surf breaks, stunning sunsets, whale watching, and laid-back bohemian vibe on Puerto Rico's west coast."
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "Spanish, English"
+  bestTime: "December to April (dry season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-4 (AST, no daylight saving)"
+  emergencyNumber: "911"
 heroAlt: "Rincon lighthouse and Atlantic surf break on the western tip of Puerto Rico"
 tagline: "Where the Atlantic swells meet the Caribbean — Puerto Rico's surf capital, with yoga, farm-to-table food, and the best sunsets on the island"
 region: "west"
@@ -60,7 +68,7 @@ The town sits at the westernmost point of Puerto Rico, where the Caribbean Sea m
 
 The vibe is permanently relaxed. Yoga studios sit next to taco shops. Craft breweries open onto ocean views. Nobody's in a hurry.
 
-## Things to Do
+## What Are the Top Things to Do in Rincón?
 
 **Surf Maria's Beach** — The most famous wave in Puerto Rico. A reef break that produces clean, consistent waves from November through April. Intermediate to advanced. Boards available for rent at multiple shops ($30-40/day).
 
@@ -72,7 +80,7 @@ The vibe is permanently relaxed. Yoga studios sit next to taco shops. Craft brew
 
 **Craft Beer Trail** — Rincón has a surprising craft beer scene. Rincón Beer Company and Island Brewing Co. both brew excellent tropical IPAs and stouts with ocean views. $6-8 per pint.
 
-## Where to Eat
+## What Should I Eat in Rincón?
 
 **The Pool Bar Sushi** — Yes, a sushi restaurant at a pool bar in rural Puerto Rico. And it's genuinely excellent. Fresh fish, creative rolls, casual atmosphere. $18-30 per person.
 
