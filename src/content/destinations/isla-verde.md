@@ -2,7 +2,7 @@
 title: "Isla Verde"
 description: "Relax on Isla Verde's wide golden beaches, enjoy resort amenities, and experience San Juan's best swimming and water sports."
 heroImage: ""
-tagline: "Puerto Rico's Best Beach, Minutes from the Airport"
+tagline: "International-calibre beach resort a 10-minute drive from the airport — and the most convenient beach introduction to Puerto Rico"
 region: "metro"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr"]
 budgetPerDay:

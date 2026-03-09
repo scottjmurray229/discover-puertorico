@@ -2,7 +2,7 @@
 title: "Fajardo"
 description: "Use Fajardo as your gateway to Puerto Rico's eastern islands, bioluminescent bays, world-class snorkeling, and island-hopping adventures."
 heroImage: ""
-tagline: "Gateway to the Islands"
+tagline: "Kayaking Las Cabezas de San Juan bioluminescent lagoon, ferry point to Culebra and Vieques, and the east coast's best seafood"
 region: "east"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr", "May"]
 budgetPerDay:

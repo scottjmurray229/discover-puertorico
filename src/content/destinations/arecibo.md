@@ -2,7 +2,7 @@
 title: "Arecibo"
 description: "Explore Arecibo's dramatic caves, hidden beaches, rum heritage, and the legacy of the legendary Arecibo Observatory on Puerto Rico's north coast."
 heroImage: ""
-tagline: "Caves, Coast, and Cosmic Legacy"
+tagline: "The Camuy River Cave system, Arecibo's legendary radio telescope site, and Puerto Rico's wild north coast to yourself"
 region: "north"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr"]
 budgetPerDay:

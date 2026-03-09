@@ -2,7 +2,7 @@
 title: "Culebra"
 description: "Visit Culebra for Flamenco Beach — consistently rated the world's best beach — plus incredible snorkeling, sea turtles, and island tranquility."
 heroImage: ""
-tagline: "Home to the World's Best Beach"
+tagline: "Flamenco Beach is consistently ranked among the world's finest — and on weekdays in low season it is nearly empty"
 region: "east"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr", "May"]
 budgetPerDay:

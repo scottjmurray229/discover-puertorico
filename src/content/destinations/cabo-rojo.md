@@ -2,7 +2,7 @@
 title: "Cabo Rojo"
 description: "Discover Cabo Rojo's dramatic red cliffs, salt flats, pristine beaches, and the best seafood on Puerto Rico's southwestern coast."
 heroImage: ""
-tagline: "Red Cliffs, Salt Flats, and Endless Beaches"
+tagline: "Dramatic red cliffs, working salt flats, the Cabo Rojo Lighthouse at sunset, and some of the island's most undisturbed beaches"
 region: "west"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr", "May"]
 budgetPerDay:

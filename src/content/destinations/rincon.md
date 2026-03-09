@@ -2,7 +2,7 @@
 title: "Rincón"
 description: "Discover Rincón's world-class surf breaks, stunning sunsets, whale watching, and laid-back bohemian vibe on Puerto Rico's west coast."
 heroImage: ""
-tagline: "Where the Caribbean Meets the Atlantic"
+tagline: "Where the Atlantic swells meet the Caribbean — Puerto Rico's surf capital, with yoga, farm-to-table food, and the best sunsets on the island"
 region: "west"
 bestMonths: ["Nov", "Dec", "Jan", "Feb", "Mar"]
 budgetPerDay:

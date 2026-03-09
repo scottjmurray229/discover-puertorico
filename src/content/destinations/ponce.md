@@ -2,7 +2,7 @@
 title: "Ponce"
 description: "Explore Ponce's stunning neoclassical architecture, world-class art museum, vibrant Carnival traditions, and the authentic heart of Puerto Rican culture."
 heroImage: ""
-tagline: "The Pearl of the South"
+tagline: "Puerto Rico's second city — Art Deco Parque de Bombas, plaza culture, pique hot sauce, and the island's proudest regional identity"
 region: "south"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr"]
 budgetPerDay:

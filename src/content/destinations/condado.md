@@ -2,7 +2,7 @@
 title: "Condado"
 description: "Discover Condado's luxury beachfront hotels, upscale dining, and vibrant nightlife in San Juan's most glamorous neighborhood."
 heroImage: ""
-tagline: "San Juan's Beachfront Playground"
+tagline: "Condado Lagoon, Atlantic-facing hotels, the best hotel bar scene in San Juan, and upscale dining without leaving the resort strip"
 region: "metro"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr"]
 budgetPerDay:
