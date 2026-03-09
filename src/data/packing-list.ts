@@ -22,7 +22,7 @@ export const PUERTO_RICO_CONFIG: PackingConfig = {
   currency: 'USD',
   plugType: 'Type A/B',
   plugVoltage: '120V',
-  affiliateTag: 'discovermore-20',
+  affiliateTag: 'discoverphili-20',
   destinationEssentials: PUERTO_RICO_ESSENTIALS,
   gearRecommendations: PUERTO_RICO_GEAR_RECOMMENDATIONS,
 };
