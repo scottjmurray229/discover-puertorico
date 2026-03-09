@@ -2,6 +2,7 @@
 title: "Bioluminescent Bays"
 description: "Discover Puerto Rico's three bioluminescent bays — Mosquito Bay, Laguna Grande, and La Parguera — where the water glows electric blue at night."
 heroImage: ""
+heroAlt: "Glowing bioluminescent bay water illuminating kayak paddles, Puerto Rico"
 tagline: "Paddle a kayak through water that glows electric blue around every stroke — Puerto Rico's bioluminescent bays are one of nature's rarest phenomena"
 region: "south"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr", "May"]

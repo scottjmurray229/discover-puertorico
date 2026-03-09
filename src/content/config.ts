@@ -11,6 +11,7 @@ const destinations = defineCollection({
     description: z.string().default(''),
     heroVideo: z.string().default(''),
     heroImage: z.string().default(''),
+    heroAlt: z.string().optional(),
     tagline: z.string().default(''),
     region: z.enum(['metro', 'west', 'east', 'south', 'north']),
     bestMonths: z.array(z.string()).default([]),

@@ -2,6 +2,7 @@
 title: "El Yunque"
 description: "Hike through El Yunque National Forest — the only tropical rainforest in the US National Forest System — with waterfalls, cloud forests, and rare wildlife."
 heroImage: ""
+heroAlt: "El Yunque rainforest cascade and bamboo forest canopy, Puerto Rico"
 tagline: "America's only tropical rainforest — cloud forest hiking, 50-foot waterfalls, parrots, and the cool green opposite of San Juan's heat"
 region: "east"
 bestMonths: ["Jan", "Feb", "Mar", "Apr", "May"]

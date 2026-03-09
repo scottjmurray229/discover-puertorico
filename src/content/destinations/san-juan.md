@@ -2,6 +2,7 @@
 title: "San Juan"
 description: "Explore Old San Juan's colorful colonial streets, historic forts, vibrant nightlife, and world-class dining in Puerto Rico's capital city."
 heroImage: ""
+heroAlt: "Condado Beach skyline and Atlantic surf, San Juan, Puerto Rico"
 tagline: "500 years of Spanish colonial history inside walls that still stand — and the best mofongo, rum, and nightlife in the Caribbean"
 region: "metro"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr"]

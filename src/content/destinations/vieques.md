@@ -2,6 +2,7 @@
 title: "Vieques"
 description: "Experience Vieques' pristine beaches, the world's brightest bioluminescent bay, wild horses, and untouched Caribbean beauty."
 heroImage: ""
+heroAlt: "Bioluminescent Mosquito Bay glowing at night and wild horses, Vieques, Puerto Rico"
 tagline: "Wild horses on the beach, bioluminescent bay, no cruise ships, no chain hotels — Vieques is Puerto Rico's best-kept secret"
 region: "east"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr", "May"]

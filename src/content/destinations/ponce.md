@@ -2,6 +2,7 @@
 title: "Ponce"
 description: "Explore Ponce's stunning neoclassical architecture, world-class art museum, vibrant Carnival traditions, and the authentic heart of Puerto Rican culture."
 heroImage: ""
+heroAlt: "Parque de Bombas colorful firehouse and Ponce Cathedral twin towers, Puerto Rico"
 tagline: "Puerto Rico's second city — Art Deco Parque de Bombas, plaza culture, pique hot sauce, and the island's proudest regional identity"
 region: "south"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr"]

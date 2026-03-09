@@ -2,6 +2,7 @@
 title: "Culebra"
 description: "Visit Culebra for Flamenco Beach — consistently rated the world's best beach — plus incredible snorkeling, sea turtles, and island tranquility."
 heroImage: ""
+heroAlt: "Flamenco Beach crescent turquoise bay with camper tents, Culebra, Puerto Rico"
 tagline: "Flamenco Beach is consistently ranked among the world's finest — and on weekdays in low season it is nearly empty"
 region: "east"
 bestMonths: ["Dec", "Jan", "Feb", "Mar", "Apr", "May"]
