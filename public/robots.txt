@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://discoverpuertorico.info/sitemap-index.xml
+Sitemap: https://discoverpuertorico.info/video-sitemap.xml
