@@ -5,6 +5,36 @@ export const PUERTO_RICO_ESSENTIALS: PackingItem[] = [
   { id: 'pr-repellent', name: 'Insect Repellent (DEET)', category: 'destination', description: 'El Yunque rainforest mosquitoes are aggressive and dengue has been present. DEET-based repellent for any forest or inland activity.', essential: true, amazonSearchFallback: 'deet+insect+repellent+tropical', affiliatePrice: '$8–15' },
   { id: 'pr-hikeshoes', name: 'Trail Running Shoes / Hiking Shoes', category: 'destination', description: 'El Yunque rainforest trails are muddy and steep. Mosquito Bay kayaking requires solid footwear in and out of kayaks. Beach sandals won\'t cut it for anything beyond the resort.', essential: false, amazonSearchFallback: 'trail+running+shoes+waterproof+hiking' },
   { id: 'pr-drybag', name: 'Dry Bag (10–20L)', category: 'destination', description: 'Bioluminescent bay kayaking, snorkeling at Culebra, and boat trips to Vieques — your gear gets wet regularly in Puerto Rico. A dry bag is essential for protecting electronics.', essential: true, amazonSearchFallback: 'dry+bag+10l+20l+waterproof', affiliatePrice: '$15–30' },
+  {
+    id: 'vpn-subscription',
+    name: 'VPN Subscription',
+    category: 'electronics',
+    description: 'Secure your data on public WiFi — essential for hotel, airport, and cafe networks abroad.',
+    essential: false,
+    affiliateUrl: 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=XXXXX&url_id=902',
+    affiliatePrice: '~$3/month',
+    affiliatePartner: 'NordVPN',
+  },
+  {
+    id: 'action-camera',
+    name: 'Waterproof Action Camera',
+    category: 'gear',
+    description: 'Capture snorkeling, diving, and beach adventures hands-free.',
+    essential: false,
+    affiliateUrl: 'https://www.insta360.com/sal/go-ultra?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRSG7H5RTR',
+    affiliatePrice: '~$299',
+    affiliatePartner: 'Insta360',
+  },
+  {
+    id: 'phone-gimbal',
+    name: 'Phone Gimbal for Travel Vlogging',
+    category: 'electronics',
+    description: 'Stabilized video from your phone — no editing needed.',
+    essential: false,
+    affiliateUrl: 'https://www.insta360.com/sal/flow-2-pro?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRSG7H5RTR',
+    affiliatePrice: '~$149',
+    affiliatePartner: 'Insta360',
+  },
 ];
 
 export const PUERTO_RICO_GEAR_RECOMMENDATIONS: GearRecommendation[] = [
